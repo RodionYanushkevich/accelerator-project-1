@@ -1,0 +1,37 @@
+.offers-big-card__container {
+  background-color: $base-red;
+  color: $base-white;
+}
+
+.offers-big-card__container h4 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+
+  @media ($tablet-breakpoint) {
+    font-size: 24px;
+  }
+
+  @media ($desktop-breakpoint) {
+    font-size: 26px;
+  }
+}
+
+.offers-big-card__container span {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100%;
+
+  @media ($tablet-breakpoint) {
+    font-size: 70px;
+  }
+}
+
+.offers-big-card__container a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: inherit;
+}

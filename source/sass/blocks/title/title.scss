@@ -8,11 +8,11 @@
   font-size: 32px;
   line-height: 100%;
 
-  @media ($table-breakpoint) {
+  @media ($tablet-breakpoint) {
     font-size: 42px;
   }
 
-  @media ($table-breakpoint) {
+  @media ($desktop-breakpoint) {
     font-size: 54px;
   }
 }

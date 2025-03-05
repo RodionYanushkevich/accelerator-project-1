@@ -33,7 +33,7 @@
 .hero__image {
   display: none;
 
-  @media ($table-breakpoint) {
+  @media ($tablet-breakpoint) {
     display: block;
   }
 }

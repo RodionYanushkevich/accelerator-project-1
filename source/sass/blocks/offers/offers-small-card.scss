@@ -1,0 +1,32 @@
+.offers-small-card {
+  color: $primary-lighter;
+  border-width: 7px;
+  border-style: solid;
+  border-image: linear-gradient(136deg, #d10a42 0%, #00359f 100%) 1;
+}
+
+.offers-small-card h4 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+
+  @media ($tablet-breakpoint) {
+    font-size: 26px;
+  }
+}
+
+.offers-small-card p {
+  @media ($tablet-breakpoint) {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+.offers-small-card a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: inherit;
+}
