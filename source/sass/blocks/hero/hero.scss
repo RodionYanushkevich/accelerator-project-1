@@ -1,0 +1,40 @@
+
+
+.hero__city-descripion {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.hero__title {
+  margin: 0;
+  padding: 0;
+
+  font-family: $seccond-family;
+  font-weight: 800;
+  font-size: 62px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.hero__description {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+}
+
+.hero__image {
+  display: none;
+
+  @media ($table-breakpoint) {
+    display: block;
+  }
+}
+

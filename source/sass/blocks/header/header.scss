@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__link {
+  font-family: $seccond-family;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 100%;
+
+  text-decoration: none;
+  color: $base-white;
+}
