@@ -1,4 +1,11 @@
+.faq {
+  box-sizing: border-box;
+  padding: 70px 15px;
+}
+
 .faq__buttons-list {
+  margin: 0;
+  padding: 0;
   display: flex;
 
   list-style: none;
@@ -10,5 +17,7 @@
 }
 
 .faq__accordion-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }

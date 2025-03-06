@@ -1,9 +1,21 @@
 .header {
+  box-sizing: border-box;
+  max-width: 1336px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 15px 18px;
-  @mefia ()
+
+  @media ($tablet-breakpoint) {
+    padding: 30px 45px;
+  }
+
+  @media ($desktop-breakpoint) {
+    align-self: center;
+    width: 100%;
+    padding: 30px 103px;
+  }
 }
 
 .header__link {
