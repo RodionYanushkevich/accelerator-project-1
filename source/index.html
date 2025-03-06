@@ -203,7 +203,7 @@
         </li>
 
         <li class="features__list-item">
-          <h6>100 <span>Тренажёров<span></h6>
+          <h6>100 <span>Тренажёров</span></h6>
           <p>Современные тренажёры на все группы мышц</p>
         </li>
 
@@ -385,12 +385,12 @@
         <div class="reviews-slider__wrapper">
           <!-- слайд 1 -->
           <div class="reviews-slider__slide">
-            <h6 class="reviews-slider__title">Анна Орлова</h6>
+            <h6>Анна Орлова</h6>
             <picture>
               <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/img/reviews/anna-photo-tablet@1x.webp 1x, img/reviews/anna-photo-tablet@2x.webp 2x" width="80" height="80">
-              <img class="reviews-slider__image" src="img/reviews/anna-photo-mobile@1x.webp" srcset="img/reviews/anna-photo-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
+              <img src="img/reviews/anna-photo-mobile@1x.webp" srcset="img/reviews/anna-photo-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
             </picture>
-            <blockquote class="reviews-slider__description">«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
+            <blockquote>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
           </div>
           <!-- слайд 2 -->
           <div class="reviews-slider__slide">
@@ -419,15 +419,15 @@
       </div>
     </section>
 
-    <div class="body__contact-form contact-form" data-test="form">
+    <div class="body__contact-form" data-test="form">
       <section class="form-section">
         <h3 class="form-section__tittle title ">Бесплатное занятие</h3>
         <form class="form-section__form form" method="post" action="https://echo.htmlacademy.ru">
           <span class="form__inputs-wrapper">
-            <label class="form__label" for="name">Имя</label>
-            <input class="form__input" id="name" name="name" pattern="[A-Za-z]+" required autocomplete="off">
-            <label class="form__label" for="phone-number">Телефон</label>
-            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off">
+            <label class="form__label" for="name"></label>
+            <input class="form__input" id="name" name="name" pattern="[A-Za-z]+" required autocomplete="off" placeholder="Имя">
+            <label class="form__label" for="phone-number"></label>
+            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон">
           </span>
           <button class="form__button" type="submit">отправить</button>
         </form>

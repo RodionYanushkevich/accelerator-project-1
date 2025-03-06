@@ -8,3 +8,7 @@
 .faq__accordion-list:not(:first-child) {
   display: none;
 }
+
+.faq__accordion-list {
+  list-style: none;
+}

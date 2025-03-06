@@ -38,4 +38,22 @@
 
 /* FAQ */
 @import "./blocks/faq/faq";
+@import "./blocks/faq/accordion";
 @import "./blocks/slider/slider";
+
+/* REVIEWS */
+@import "./blocks/reviews/reviews";
+@import "./blocks/reviews/reviews-slider";
+
+
+/* FORM */
+@import "./blocks/form-section/form-section";
+@import "./blocks/form-section/form";
+
+/* CONTACTS */
+@import "./blocks/contacts/contacts";
+
+/* FOOTER */
+@import "./blocks/footer/footer";
+@import "./blocks/footer/navigation";
+@import "./blocks/footer/social";
