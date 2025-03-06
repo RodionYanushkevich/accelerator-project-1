@@ -1,0 +1,32 @@
+.form {
+  color: $base-white;
+  background-color: $base-primary;
+}
+
+.form__input {
+  background-color: transparent;
+}
+
+.form__input::placeholder {
+  font-family: $primary-family;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 157%;
+  opacity: 0.4;
+
+  @media ($tablet-breakpoint) {
+    font-weight: 400;
+  }
+}
+
+.form__button {
+  font-family: $primary-family;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}

@@ -1,0 +1,23 @@
+.price__filter-list,
+.price__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.price__filter-list {
+  display: flex;
+}
+
+.price__filter-button {
+  font-family: $primary-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: $base-primary;
+
+  background-color: transparent;
+  border: none;
+}

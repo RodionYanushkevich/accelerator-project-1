@@ -1,0 +1,45 @@
+.price-card__title {
+  margin: 0;
+  padding: 0;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+
+  @media ($tablet-breakpoint) {
+    font-size: 24px;
+  }
+
+  @media ($desktop-breakpoint) {
+    font-size: 26px;
+  }
+}
+
+.price-card__description {
+  @media ($desktop-breakpoint) {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+.price-card__product-price {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: $base-secondary;
+
+  @media ($tablet-breakpoint) {
+    font-size: 60px;
+    line-height: 150%;
+  }
+}
+
+.price-card__link {
+  text-transform: uppercase;
+  text-decoration: none;
+
+  font-size: 12px;
+  line-height: 100%;
+  color: $base-primary;
+}

@@ -1,0 +1,26 @@
+.accordion h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+
+  @media ($tablet-breakpoint) {
+    font-size: 22px;
+  }
+
+  @media ($desktop-breakpoint) {
+    font-size: 24px;
+  }
+}
+
+.accordion p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 125%;
+
+  @media ($tablet-breakpoint) {
+    font-size: 18px;
+    line-height: 133%;
+  }
+}

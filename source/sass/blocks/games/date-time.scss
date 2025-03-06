@@ -1,0 +1,41 @@
+.date-time {
+  font-size: 16px;
+  line-height: 125%;
+
+  @media ($tablet-breakpoint) {
+    font-size: 18px;
+    line-height: 133%;
+  }
+}
+
+.date-time__description {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 125%;
+
+  @media ($tablet-breakpoint) {
+    font-size: 18px;
+    line-height: 133%;
+  }
+}
+
+.date-time__value {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+
+  @media ($desktop-breakpoint) {
+    font-size: 40px;
+  }
+}
+
+.date-time__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+
+  @media ($tablet-breakpoint) {
+    font-size: 14px;
+    line-height: 157%;
+  }
+}

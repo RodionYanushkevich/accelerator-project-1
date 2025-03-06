@@ -1,0 +1,22 @@
+
+@mixin font-face($font-family, $font-weight, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: normal;
+    src: $font-src;
+    font-display: swap;
+  }
+}
+
+@mixin width($mobile, $tablet, $desktop) {
+  width: $mobile;
+
+  @media ($viewport-tablet) {
+    width: $tablet;
+  }
+
+  @media ($viewport-desktop) {
+    width: $desktop;
+  }
+}

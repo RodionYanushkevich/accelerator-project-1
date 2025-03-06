@@ -1,0 +1,31 @@
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contacts__item-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+
+  @media ($tablet-breakpoint) {
+    font-size: 24px;
+  }
+}
+
+.contacts__item-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  font-style: normal;
+
+  text-decoration: none;
+  color: $base-primary;
+
+  @media ($tablet-breakpoint) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+  }
+}

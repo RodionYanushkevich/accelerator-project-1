@@ -1,7 +1,59 @@
-// Vendor
-// ---------------------------------
 
-@import "vendor/normalize";
+/* GLOBAL */
+@import "./common/mixins";
+@import "./common/variables";
+@import "./common/fonts";
+@import "./common/global";
+@import "./common/visually-hidden";
+
+/* BlOCKS */
+@import "./blocks/page/page";
+@import "./blocks/body/body";
+@import "./blocks/title/title";
+@import "./blocks/header/header";
+@import "./blocks/hero/hero";
+
+/* ABOUT */
+@import "./blocks/about/about";
+
+/* PRICE */
+@import "./blocks/price/price";
+@import "./blocks/price/price-card";
+
+/* JURI */
+@import "./blocks/juri/jury";
+
+/* GAMES */
+@import "./blocks/games/games";
+@import "./blocks/games/games-card";
+@import "./blocks/games/date-time";
+
+/* FEATURES */
+@import "./blocks/features/features";
+
+/* OFFERS */
+@import "./blocks/offers/offers";
+@import "./blocks/offers/offers-big-card";
+@import "./blocks/offers/offers-small-card";
 
 /* FAQ */
 @import "./blocks/faq/faq";
+@import "./blocks/faq/accordion";
+@import "./blocks/slider/slider";
+
+/* REVIEWS */
+@import "./blocks/reviews/reviews";
+@import "./blocks/reviews/reviews-slider";
+
+
+/* FORM */
+@import "./blocks/form-section/form-section";
+@import "./blocks/form-section/form";
+
+/* CONTACTS */
+@import "./blocks/contacts/contacts";
+
+/* FOOTER */
+@import "./blocks/footer/footer";
+@import "./blocks/footer/navigation";
+@import "./blocks/footer/social";
