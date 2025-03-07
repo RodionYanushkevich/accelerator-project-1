@@ -1,21 +1,23 @@
 .about {
   position: relative;
+
   box-sizing: border-box;
   align-self: center;
   display: flex;
   max-width: 320px;
   flex-direction: column;
   row-gap: 36px;
-  padding: 40px 0;
+  padding: 41px 0 40px;
 
   @media ($tablet-breakpoint) {
     max-width: 768px;
-    padding: 60px 45px 120px;
+    padding: 61px 45px 120px;
+
     text-align: center;
   }
 
   @media ($desktop-breakpoint) {
-    max-width: 1336px;
+    max-width: $desktop-max-width;
     text-align: start;
     flex-direction: row;
     column-gap: 145px;
@@ -23,21 +25,43 @@
   }
 }
 
-
+// Контентая область
 .about__wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  row-gap: 11px;
   padding: 0 15px;
+
+  @media ($tablet-breakpoint) {
+    align-self: center;
+    text-align: center;
+    row-gap: 19px;
+    width: 502px;
+  }
+
+  @media ($desktop-breakpoint) {
+    align-self: unset;
+    text-align: unset;
+    padding: 0;
+    row-gap: 5px;
+  }
 }
 
 .about__wrapper p {
   margin: 0;
 
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 157%;
+
   @media ($tablet-breakpoint) {
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
+  }
+
+  @media ($desktop-breakpoint) {
+    padding-bottom: 3px;
   }
 }
 
@@ -49,25 +73,36 @@
   }
 }
 
+.about__title {
+  @media ($desktop-breakpoint) {
+    padding-bottom: 21px;
+  }
+}
+
 .about__subtitle {
   margin: 0;
-  padding-bottom: 36px;
+  padding-bottom: 25px;
 
   font-weight: 400;
   font-size: 18px;
   line-height: 111%;
 
   @media ($tablet-breakpoint) {
+    padding-bottom: 17px;
     font-size: 20px;
     line-height: 100%;
   }
 
   @media ($desktop-breakpoint) {
     font-size: 22px;
+    padding-bottom: 89px;
   }
 }
 
 .about__iframe-video-wrapper {
+  position: relative;
+
+
   @media ($tablet-breakpoint) {
     transform: translateX(-50%);
     position: absolute;
@@ -76,6 +111,62 @@
   }
 
   @media ($desktop-breakpoint) {
-    bottom: 125px;
+    bottom: unset;
+    top: 405px;
   }
 }
+
+.about__video-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+  background-color: transparent;
+  color: $base-white;
+
+  border: 2px solid rgba(209, 10, 66, 0.2);
+
+  transform: translateY(-50%) translateX(-50%);
+  cursor: pointer;
+
+
+  @media ($desktop-breakpoint) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.about__video-button::after {
+  content: "";
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  border-radius: 50%;
+
+  border: none;
+
+  @media ($desktop-breakpoint) {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.about__video-button svg {
+  position: absolute;
+  color: inherit;
+
+  @media ($desktop-breakpoint) {
+    transform: translateX(2px) translateY(-1px);
+    width: 17px;
+    height: 17px;
+  }
+}
+
