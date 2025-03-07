@@ -78,37 +78,37 @@
     <section class="price" data-test="price" id="price">
       <h3 class="price__title title ">Абонементы</h3>
       <ul class="price__filter-list">
-        <li class="price__filter-item"><button class="price__filter-button" type="button">1 месяц</button></li>
-        <li class="price__filter-item"><button class="price__filter-button" type="button">6 месяцев</button></li>
+        <li class="price__filter-item price__filter-item--current"><button class="price__filter-button" type="button">1 месяц</button></li>
+        <li class="price__filter-item "><button class="price__filter-button" type="button">6 месяцев</button></li>
         <li class="price__filter-item"><button class="price__filter-button" type="button">12 месяцев</button></li>
       </ul>
 
-      <ul class="price__list">
-        <li class="price__list-item">
+      <ul class="price__cards-list">
+        <li class="price__cards-list-item">
           <!-- card1 -->
           <article class="price__card-wrapper price-card">
             <h4 class="price-card__title">С тренером</h4>
             <p class="price-card__description">12 занятий</p>
             <span class="price-card__product-price">5000</span>
-            <a class="price-card__link" href="#">Купить абонемент</a>
+            <a class="price-card__link button" href="#">Купить абонемент</a>
           </article>
         </li>
-        <li class="price__list-item">
+        <li class="price__cards-list-item">
           <!-- card2 -->
           <article class="price__card-wrapper price-card">
             <h4 class="price-card__title">Дневной</h4>
             <p class="price-card__description">с 8:00 до 17:00</p>
             <span class="price-card__product-price">1700</span>
-            <a class="price-card__link" href="#">Купить абонемент</a>
+            <a class="price-card__link button" href="#">Купить абонемент</a>
           </article>
         </li>
-        <li class="price__list-item">
+        <li class="price__cards-list-item">
           <!-- card2 -->
           <article class="price__card-wrapper price-card">
             <h4 class="price-card__title">Полный день</h4>
             <p class="price-card__description">с 8:00 до 22:00</p>
             <span class="price-card__product-price">2700</span>
-            <a class="price-card__link" href="#">Купить абонемент</a>
+            <a class="price-card__link button" href="#">Купить абонемент</a>
           </article>
         </li>
       </ul>
@@ -123,7 +123,7 @@
           <div class="games-card__date-wrapper date-time">
             <div class="date-time__container">
               <p class="date-time__description">Дата</p>
-              <time class="date-time__value" datetime="2019-03-07">7 <span class="date-time__text">марта 2019</span></time>
+              <time class="date-time__value" datetime="2019-03-07"><span>7</span> <span class="date-time__text">Марта<br> 2019</span></time>
             </div>
 
             <div class="date-time__container">
@@ -132,13 +132,13 @@
             </div>
           </div>
 
-          <p class="games-card__description">Ежегодные соревнования по CrossFit</p>
-          <a class="games-card__link" href="#">заполнить заявку</a>
+          <p class="games-card__description">Ежегодные соревнования<br> по CrossFit</p>
+          <a class="games-card__link button" href="#">заполнить заявку</a>
         </div>
 
         <picture>
-          <source type="image/webp" media="(min-width:1366px)" srcset="img/games/games-desktop@1x.webp 1x, img/games/games-desktop@2x.webp 2x" width="600" height="500">
-          <source type="image/webp" media="(min-width:768px)" srcset="img/games/games-tablet@2x.webp 1x, img/games/games-tablet@2x.webp 2x" width="378" height="348">
+          <source type="image/webp" media="(min-width:1366px)" srcset="img/games/games-desktop@1x.webp 1x, img/games/games-desktop@2x.webp 2x" width="660" height="500">
+          <source type="image/webp" media="(min-width:768px)" srcset="img/games/games-tablet@1x.webp 1x, img/games/games-tablet@2x.webp 2x" width="378" height="348">
           <img class="games-card__image" src="img/games/games-mobile@1x.webp" srcset="img/games/games-mobile@2x.webp" alt="Спортсмен в движении с эффектом взрыва белого песка из под его руки" width="290" height="290">
         </picture>
       </article>
