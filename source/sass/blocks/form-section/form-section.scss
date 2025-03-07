@@ -3,6 +3,7 @@
 
   // justify-self: center;
   width: 100%;
+
   background-color: $base-primary;
   padding: 70px 15px;
   display: flex;
@@ -18,7 +19,8 @@
   }
 
   @media ($desktop-breakpoint) {
-    max-width: 1336px;
+    padding: 60px 103px;
+    width: 683px;
   }
 }
 

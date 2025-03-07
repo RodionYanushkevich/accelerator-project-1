@@ -2,3 +2,9 @@
   align-self: center;
   padding: 40px;
 }
+
+.reviews__title {
+  @media ($tablet-breakpoint) {
+    font-size: 54px;
+  }
+}

@@ -1,5 +1,7 @@
 .body {
   max-width: 100vw;
+
+  background-color: $base-white;
 }
 
 .body__hero-wrapper {
@@ -16,4 +18,10 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  @media ($desktop-breakpoint) {
+    flex-direction: row;
+    justify-content: center;
+    background: linear-gradient(to right, $base-primary 50%, $base-white 50%);
+  }
 }
