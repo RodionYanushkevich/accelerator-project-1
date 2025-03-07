@@ -9,15 +9,14 @@
   <link rel="preload" href="./fonts/roboto/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/roboto/RobotoCondensed-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/roboto/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="module" src="js/main.js" defer></script>
+
   <link rel="icon" href="img/favicon.png">
   <title>SUPERGYM</title>
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
 <body class="page__body body">
-  <!-- пример использования спрайта -->
-
-  <!-- примеры требуемых атрибутов data-test="*" -->
   <div class="body__hero-wrapper" data-test="hero">
     <!-- HEADER -->
     <header class="body__header header">
@@ -115,7 +114,8 @@
     </section>
     <!-- Games -->
     <section class="body__games games" data-test="games">
-
+      <!-- WHAAAAA -->
+      <h2 class="visually-hidden">СУПЕР ИГРА</h2>
       <article class="games__card games-card">
         <div class="games-card__container">
           <h2 class="games-card__title">SUPER GAMES</h2>
@@ -148,52 +148,68 @@
       <h3 class="juri__title title ">Жюри</h3>
       <span class="visually-hidden">Список членов жюри</span>
       <!-- попробуй потом список... -->
-      <div class="juri__slider-containter slider swiper">
+      <div class="juri__slider-containter slider swiper-container">
         <div class="slider__wrapper swiper-wrapper">
           <!-- слайд 1 -->
           <div class="slider__slide swiper-slide">
-            <h6 class="slider__juri-title">Анна Павлова</h6>
-            <img class="slider__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
+            <figure>
+              <img class="slider__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
+              <figcaption class="slider__juri-title">Анна Павлова</figcaption>
+            </figure>
           </div>
           <!-- слайд 2 -->
           <div class="slider__slide swiper-slide">
-            <h6 class="slider__juri-title">Алексей Лавров</h6>
-            <img class="slider__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
+            <figure>
+              <img class="slider__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
+              <figcaption class="slider__juri-title">Алексей Лавров</figcaption>
+            </figure>
           </div>
           <!-- слайд 3 -->
           <div class="slider__slide swiper-slide">
-            <h6 class="slider__juri-title">Александр Пашков</h6>
-            <img class="slider__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
+            <figure>
+              <img class="slider__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
+              <figcaption class="slider__juri-title">Александр Пашков</figcaption>
+            </figure>
           </div>
           <!-- слайд 4 -->
           <div class="slider__slide swiper-slide">
-            <h6 class="slider__juri-title">Мария Кетова</h6>
-            <img class="slider__image" src="img/slider/ketova-photo@1x.webp" srcset="img/slider/ketova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
+            <figure>
+              <img class="slider__image" src="img/slider/ketova-photo@1x.webp" srcset="img/slider/ketova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
+              <figcaption class="slider__juri-title">Мария Кетова</figcaption>
+            </figure>
           </div>
           <!-- слайд 5 -->
           <div class="slider__slide swiper-slide">
-            <h6 class="slider__juri-title">Алексей Лавров</h6>
-            <img class="slider__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
+            <figure>
+              <img class="slider__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
+              <figcaption class="slider__juri-title">Алексей Лавров</figcaption>
+            </figure>
           </div>
           <!-- слайд 6 -->
           <div class="slider__slide swiper-slide">
-            <h6 class="slider__juri-title">Анна Павлова</h6>
-            <img class="slider__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
+            <figure>
+              <img class="slider__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
+              <figcaption class="slider__juri-title">Анна Павлова</figcaption>
+            </figure>
           </div>
           <!-- слайд 7 -->
           <div class="slider__slide swiper-slide">
-            <h6 class="slider__juri-title">Александр Пашков</h6>
-            <img class="slider__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
+            <figure>
+              <img class="slider__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
+              <figcaption class="slider__juri-title">Александр Пашков</figcaption>
+            </figure>
           </div>
           <!-- слайд 8 -->
           <div class="slider__slide swiper-slide">
-            <h6 class="slider__juri-title">Мария Кетова</h6>
-            <img class="slider__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
+            <figure>
+              <img class="slider__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
+              <figcaption class="slider__juri-title">Мария Кетова</figcaption>
+            </figure>
           </div>
         </div>
-        <div class="slider__button swiper-prev"></div>
-        <div class="slider__button swiper-next"></div>
       </div>
+      <div class="slider__button swiper-prev"></div>
+      <div class="slider__button swiper-next"></div>
     </section>
     <!-- ПРЕИМУЩЕСТВА -->
     <section class="body__features features" data-test="features">
@@ -300,7 +316,6 @@
               <svg width="14" height="14">
                 <use href="/__spritemap#sprite-plus"></use>
               </svg>
-              </span>
             </button>
             <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
           </li>
@@ -595,7 +610,6 @@
     </ul>
   </footer>
 
-  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

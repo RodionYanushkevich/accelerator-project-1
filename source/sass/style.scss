@@ -7,6 +7,9 @@
 @import "./common/button";
 @import "./common/visually-hidden";
 
+/* VENDOR */
+@import "./vendor/swiper.css";
+
 /* BlOCKS */
 @import "./blocks/page/page";
 @import "./blocks/body/body";
@@ -23,6 +26,7 @@
 
 /* JURI */
 @import "./blocks/juri/jury";
+@import "./blocks/juri/slider/slider";
 
 /* GAMES */
 @import "./blocks/games/games";
@@ -40,12 +44,10 @@
 /* FAQ */
 @import "./blocks/faq/faq";
 @import "./blocks/faq/accordion";
-@import "./blocks/slider/slider";
 
 /* REVIEWS */
 @import "./blocks/reviews/reviews";
 @import "./blocks/reviews/reviews-slider";
-
 
 /* FORM */
 @import "./blocks/form-section/form-section";

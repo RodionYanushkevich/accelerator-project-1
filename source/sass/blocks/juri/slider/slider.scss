@@ -1,0 +1,35 @@
+.slider figure {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: min-content;
+}
+
+.slider__juri-title {
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 100%;
+  width: max-content;
+  color: $base-white;
+
+  transform: translateX(-50%);
+}
+
+// .slider__slide.swiper-slide {
+//   display: block;
+// }
+
+.swiper-container {
+  box-sizing: border-box;
+  padding: 0 30px;
+  width: 320px;
+}
+
+.swiper-slide {
+  padding: 0 30px;
+  width: 100%;
+}

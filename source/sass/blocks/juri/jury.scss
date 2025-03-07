@@ -1,3 +1,23 @@
 .juri {
-  display: none;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 19px;
+  min-width: $mobile;
+  padding: 41px 15px;
+
+  max-width: 320px;
+
+  // border: 1px solid black;
+  // color: black;
+}
+
+.juri__slider-containter {
+  box-sizing: border-box;
+
+  width: 320px;
+  padding: 0;
 }
