@@ -1,28 +1,36 @@
 
 .hero {
+  box-sizing: border-box;
+
   display: grid;
   align-self: center;
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: minmax(46px, min-content) minmax(124px, min-content) 48px auto;
 
-  // row-gap: 14px;
-  column-gap: 21px;
+  column-gap: 20px;
 
   padding: 48px 15px 32px;
 
   @media ($tablet-breakpoint) {
-    grid-template-columns: repeat(3, min-content) 1fr;
-    grid-template-rows: repeat(3, min-content);
-
-    // row-gap: 14px;
-    column-gap: 0;
     padding: 0 45px 100px;
+
+    grid-template-rows: minmax(83px, min-content) min-content 19px min-content;
+    grid-template-columns: minmax(113px, min-content) min-content 1fr;
+
+    row-gap: unset;
+    column-gap: 28px;
   }
 
   @media ($desktop-breakpoint) {
-    padding: 30px 175px 120px;
-    grid-template-columns: 115px 270px auto;
+    padding: 30px 175px 120px 250px;
+
+    row-gap: unset;
+    column-gap: unset;
+
+    grid-template-rows: minmax(106px, min-content) minmax(305px, min-content)  min-content;
+
+    grid-template-columns: minmax(115px, min-content) 270px 56px auto;
   }
 }
 
@@ -39,10 +47,23 @@
   text-align: end;
 
   @media ($tablet-breakpoint) {
-    font-size: 42px;
+    align-self: end;
+    padding-bottom: 10px;
 
     grid-row: 1/2;
     grid-column: 2/3;
+
+    font-weight: 400;
+    font-size: 42px;
+
+    text-align: end;
+  }
+
+  @media ($desktop-breakpoint) {
+    padding-bottom: unset;
+
+    font-weight: 600;
+    font-size: 54px;
   }
 }
 
@@ -65,11 +86,16 @@
     grid-row: 2/3;
     grid-column: 2/3;
 
+    font-weight: 400;
     font-size: 72px;
     line-height: 118%;
+    letter-spacing: 0.03em;
   }
 
   @media ($desktop-breakpoint) {
+    align-self: center;
+
+    font-weight: 800;
     font-size: 92px;
     line-height: 120%;
     letter-spacing: 0.04em;
@@ -94,27 +120,39 @@
     grid-row: 2/3;
     grid-column: 1/2;
   }
+
+  @media ($desktop-breakpoint) {
+    align-self: center;
+  }
 }
 
 .hero picture {
-  grid-column: 3/4;
-  grid-row: 1/-1;
-}
-
-.hero__image {
   display: none;
 
   @media ($tablet-breakpoint) {
+    grid-column: 3/4;
+    grid-row: 1/-1;
     display: block;
+  }
+
+  @media ($desktop-breakpoint) {
+    grid-column: 4/5;
+    grid-row: 1/-1;
   }
 }
 
 .hero__link {
-  grid-row: 3/4;
+  grid-row: 4/5;
   grid-column: 1/-1;
 
   @media ($tablet-breakpoint) {
+    font-weight: 400;
+    grid-row: 4/5;
     grid-column: 2/3;
+    align-self: start;
+  }
+
+  @media ($tablet-breakpoint) {
     grid-row: 3/4;
   }
 }
