@@ -17,7 +17,7 @@
   }
 
   @media ($desktop-breakpoint) {
-    max-width: $desktop-max-width;
+    max-width: $desktop;
     text-align: start;
     flex-direction: row;
     column-gap: 145px;

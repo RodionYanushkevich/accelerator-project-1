@@ -1,4 +1,5 @@
 .juri {
+  // position: relative;
   box-sizing: border-box;
 
   display: flex;
@@ -6,18 +7,21 @@
   align-items: center;
   justify-content: center;
   row-gap: 19px;
-  min-width: $mobile;
-  padding: 41px 15px;
+  padding: 41px;
 
-  max-width: 320px;
+  @media ($tablet-breakpoint) {
+    row-gap: 46px;
+  }
 
-  // border: 1px solid black;
-  // color: black;
+  @media ($desktop-breakpoint) {
+    padding: 100px 45px;
+    row-gap: 45px;
+  }
 }
 
-.juri__slider-containter {
-  box-sizing: border-box;
-
-  width: 320px;
-  padding: 0;
+.juri__title {
+  @media ($tablet-breakpoint) {
+    font-weight: 600;
+    font-size: 54px;
+  }
 }

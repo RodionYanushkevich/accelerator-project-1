@@ -147,69 +147,81 @@
     <section class="body__juri juri" data-test="juri">
       <h3 class="juri__title title ">Жюри</h3>
       <span class="visually-hidden">Список членов жюри</span>
-      <!-- попробуй потом список... -->
-      <div class="juri__slider-containter slider swiper-container">
-        <div class="slider__wrapper swiper-wrapper">
-          <!-- слайд 1 -->
-          <div class="slider__slide swiper-slide">
-            <figure>
-              <img class="slider__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
-              <figcaption class="slider__juri-title">Анна Павлова</figcaption>
-            </figure>
+
+      <div class="slider-juri">
+        <!-- SWIPER -->
+        <div class="slider-juri__swiper  swiper-container">
+          <div class="slider-juri__wrapper swiper-wrapper">
+            <!-- слайд 1 -->
+            <div class="slider-juri__slide swiper-slide">
+              <figure class="slider-juri__figure">
+                <img class="slider-juri__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
+                <figcaption class="slider-juri__title">Анна Павлова</figcaption>
+              </figure>
+            </div>
+            <!-- слайд 2 -->
+            <div class="slider-juri__slide swiper-slide">
+              <figure class="slider-juri__figure">
+                <img class="slider-juri__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
+                <figcaption class="slider-juri__title">Алексей Лавров</figcaption>
+              </figure>
+            </div>
+            <!-- слайд 3 -->
+            <div class="slider-juri__slide swiper-slide">
+              <figure class="slider-juri__figure">
+                <img class="slider-juri__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
+                <figcaption class="slider-juri__title">Александр Пашков</figcaption>
+              </figure>
+            </div>
+            <!-- слайд 4 -->
+            <div class="slider-juri__slide swiper-slide">
+              <figure class="slider-juri__figure">
+                <img class="slider-juri__image" src="img/slider/ketova-photo@1x.webp" srcset="img/slider/ketova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
+                <figcaption class="slider-juri__title">Мария Кетова</figcaption>
+              </figure>
+            </div>
+            <!-- слайд 5 -->
+            <div class="slider-juri__slide swiper-slide">
+              <figure class="slider-juri__figure">
+                <img class="slider-juri__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
+                <figcaption class="slider-juri__title">Алексей Лавров</figcaption>
+              </figure>
+            </div>
+            <!-- слайд 6 -->
+            <div class="slider-juri__slide swiper-slide">
+              <figure class="slider-juri__figure">
+                <img class="slider-juri__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
+                <figcaption class="slider-juri__title">Анна Павлова</figcaption>
+              </figure>
+            </div>
+            <!-- слайд 7 -->
+            <div class="slider-juri__slide swiper-slide">
+              <figure class="slider-juri__figure">
+                <img class="slider-juri__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
+                <figcaption class="slider-juri__title">Александр Пашков</figcaption>
+              </figure>
+            </div>
+            <!-- слайд 8 -->
+            <div class="slider-juri__slide swiper-slide">
+              <figure>
+                <img class="slider-juri__image" src="img/slider/ketova-photo@1x.webp" srcset="img/slider/ketova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
+                <figcaption class="slider-juri__title">Мария Кетова</figcaption>
+              </figure>
+            </div>
+            <!-- конец слайдов -->
           </div>
-          <!-- слайд 2 -->
-          <div class="slider__slide swiper-slide">
-            <figure>
-              <img class="slider__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
-              <figcaption class="slider__juri-title">Алексей Лавров</figcaption>
-            </figure>
+          <div class="slider-juri__slider-button swiper-button-prev">
+            <svg width="16" height="32">
+              <use href="__spritemap#sprite-arrow"></use>
+            </svg>
           </div>
-          <!-- слайд 3 -->
-          <div class="slider__slide swiper-slide">
-            <figure>
-              <img class="slider__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
-              <figcaption class="slider__juri-title">Александр Пашков</figcaption>
-            </figure>
-          </div>
-          <!-- слайд 4 -->
-          <div class="slider__slide swiper-slide">
-            <figure>
-              <img class="slider__image" src="img/slider/ketova-photo@1x.webp" srcset="img/slider/ketova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
-              <figcaption class="slider__juri-title">Мария Кетова</figcaption>
-            </figure>
-          </div>
-          <!-- слайд 5 -->
-          <div class="slider__slide swiper-slide">
-            <figure>
-              <img class="slider__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
-              <figcaption class="slider__juri-title">Алексей Лавров</figcaption>
-            </figure>
-          </div>
-          <!-- слайд 6 -->
-          <div class="slider__slide swiper-slide">
-            <figure>
-              <img class="slider__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
-              <figcaption class="slider__juri-title">Анна Павлова</figcaption>
-            </figure>
-          </div>
-          <!-- слайд 7 -->
-          <div class="slider__slide swiper-slide">
-            <figure>
-              <img class="slider__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
-              <figcaption class="slider__juri-title">Александр Пашков</figcaption>
-            </figure>
-          </div>
-          <!-- слайд 8 -->
-          <div class="slider__slide swiper-slide">
-            <figure>
-              <img class="slider__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
-              <figcaption class="slider__juri-title">Мария Кетова</figcaption>
-            </figure>
+          <div class="slider-juri__slider-button swiper-button-next">
+            <svg width="16" height="32">
+              <use href="__spritemap#sprite-arrow"></use>
+            </svg>
           </div>
         </div>
       </div>
-      <div class="slider__button swiper-prev"></div>
-      <div class="slider__button swiper-next"></div>
     </section>
     <!-- ПРЕИМУЩЕСТВА -->
     <section class="body__features features" data-test="features">
