@@ -5,11 +5,15 @@
   margin: 0;
 
   @media ($tablet-breakpoint) {
-    padding: 57px 45px;
+    padding: 60px 45px;
   }
 
   @media ($desktop-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     padding: 100px 45px;
+    align-items: center;
   }
 }
 
