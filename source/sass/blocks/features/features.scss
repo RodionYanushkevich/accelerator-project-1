@@ -10,7 +10,7 @@
   min-width: $mobile;
   width: 100%;
   padding: 40px 0;
-  row-gap: 40px;
+  row-gap: 39px;
 
   @media ($tablet-breakpoint) {
     padding: 60px 45px;
@@ -200,11 +200,11 @@
 .features__list-item:nth-child(3n) {
   padding: 30px 0 40px;
   margin: 5px 0;
+  width: 100%;
   row-gap: 20px;
 
   background-color: $primary-lighter;
   color: $base-white;
-  width: 100%;
 
   @media ($tablet-breakpoint) {
     width: 320px;
