@@ -1,6 +1,10 @@
 .faq {
   box-sizing: border-box;
   padding: 70px 15px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
 }
 
 .faq__buttons-list {
@@ -20,4 +24,9 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
 }
+

@@ -1,0 +1,33 @@
+.faq-buttons {
+  display: flex;
+  flex-direction: row;
+
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 290px;
+}
+
+
+.faq-buttons__button {
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  margin: 0;
+  min-width: 140px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+
+  border: 1px solid rgba(16, 38, 84, 0.2);
+  background-color: $base-white;
+}
+
+.faq-buttons__button--current {
+  // градиент смещение, разберись
+  background: linear-gradient(calc(-59deg - 180deg), #d10a42 0%, #00359f 100%);
+  color: $base-white;
+}

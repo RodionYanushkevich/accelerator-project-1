@@ -9,7 +9,7 @@
 
   min-width: $mobile;
   width: 100%;
-  padding: 40px 0;
+  padding: 41px 0 39px;
   row-gap: 39px;
 
   @media ($tablet-breakpoint) {
@@ -47,6 +47,7 @@
     grid-template-rows: min-content 262px min-content;
 
     column-gap: 30px;
+    width: 678px;
   }
 
   @media ($desktop-breakpoint) {

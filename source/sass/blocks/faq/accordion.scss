@@ -7,6 +7,7 @@
   padding: 20px 0;
   font-family: $primary-family;
   border-bottom: 1px solid #74819c;
+  justify-content: space-between;
 
   // max-width: 290px;
   column-gap: 22px;
@@ -69,6 +70,8 @@
   border: 1px solid $base-primary;
   background-color: $base-white;
   color: $base-primary;
+
+  // margin-left: auto;
 
   @media ($tablet-breakpoint) {
     width: 40px;
