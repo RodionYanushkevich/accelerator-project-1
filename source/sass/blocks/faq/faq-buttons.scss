@@ -5,6 +5,10 @@
   gap: 10px;
   flex-wrap: wrap;
   max-width: 290px;
+
+  @media ($tablet-breakpoint) {
+    max-width: unset;
+  }
 }
 
 
@@ -24,6 +28,12 @@
 
   border: 1px solid rgba(16, 38, 84, 0.2);
   background-color: $base-white;
+
+  @media ($tablet-breakpoint) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+  }
 }
 
 .faq-buttons__button--current {

@@ -5,6 +5,12 @@
   display: flex;
   flex-direction: column;
   row-gap: 35px;
+
+  @media ($tablet-breakpoint) {
+    align-items: center;
+    row-gap: 45px;
+    padding: 60px 45px;
+  }
 }
 
 .faq__buttons-list {

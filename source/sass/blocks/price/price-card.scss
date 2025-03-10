@@ -80,7 +80,11 @@
     height: 33px;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url("../../../img/sprite/rubl.svg");
+
+    // background-image: url("../../../img/sprite/rubl.svg");
+    background-image: url("../__spritemap#sprite-rubl-view");
+
+    // background-image: url("../../../img/sprite/rubl.svg");
 
     @media ($tablet-breakpoint) {
       width: 30px;
