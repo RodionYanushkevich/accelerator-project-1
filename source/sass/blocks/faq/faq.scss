@@ -18,23 +18,24 @@
 
   @media ($desktop-breakpoint) {
     box-sizing: border-box;
-
     padding: 100px 103px;
-    max-width: $desktop;
+
+    // max-width: $desktop;
     column-gap: 40px;
     row-gap: 49px;
 
     display: grid;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: 260px 860px;
     grid-template-rows: repeat(2, min-content);
 
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
 .faq__title {
   @media ($desktop-breakpoint) {
     grid-column: 1/-1;
+    max-width: $desktop;
   }
 }
 
