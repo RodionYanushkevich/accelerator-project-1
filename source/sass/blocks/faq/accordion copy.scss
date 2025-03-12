@@ -3,44 +3,47 @@
   box-sizing: border-box;
   display: grid;
 
+  // columns
   grid-template-columns: auto min-content;
   grid-template-rows: min-content 1fr;
+  padding: 20px 0;
   justify-content: space-between;
 
-  font-family: $primary-family;
+  // max-width: 290px;
+  min-height: 81px;
 
+  font-family: $primary-family;
   column-gap: 22px;
   row-gap: 20px;
+  border-bottom: 1px solid #74819c;
 
-  padding: 20px 0;
-  border-top: 1px solid #74819c;
+  // КОСТЫЛЬ
+
+  &:first-child {
+    border-top: 1px solid #74819c;
+
+    @media ($tablet-breakpoint) {
+      border-top: none;
+      box-shadow: 0 1px 0 0 inset #74819c;
+    }
+  }
 
   @media ($tablet-breakpoint) {
-    row-gap: 10px;
     column-gap: 78px;
 
-    padding: 24px 0 22px;
+    padding: 23px 0;
+
+    // padding: 31px 0 23px;
+    row-gap: 11px;
+
+    // grid-template-columns: 560px min-content;
   }
 
   @media ($desktop-breakpoint) {
-    padding: 23px 0 22px;
     grid-template-columns: 660px min-content;
-    row-gap: 23px;
+    row-gap: 24px;
+    padding: 23px 0 22px;
   }
-}
-
-.faq__accordion-list {
-  @media ($tablet-breakpoint) {
-    margin-top: 1px;
-  }
-
-  @media ($desktop-breakpoint) {
-    margin-top: 0;
-  }
-}
-
-.accordion:last-child {
-  border-bottom: 1px solid #74819c;
 }
 
 .accordion h5 {
@@ -97,6 +100,8 @@
   border: 1px solid $base-primary;
   background-color: transparent;
   color: $base-primary;
+
+  // margin-left: auto;
 
   @media ($tablet-breakpoint) {
     width: 40px;

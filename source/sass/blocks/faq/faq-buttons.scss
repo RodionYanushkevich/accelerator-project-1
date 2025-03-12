@@ -6,8 +6,6 @@
   gap: 10px;
   flex-wrap: wrap;
 
-  // max-width: 290px;
-
   @media ($tablet-breakpoint) {
     max-width: unset;
   }
@@ -44,26 +42,21 @@
   }
 
   @media ($desktop-breakpoint) {
-    // flex-grow: 1;
     padding: 20px 0 14px;
-
-    // min-height: 54px;
     width: 100%;
   }
 }
 
 .faq-buttons__list-item {
   @media ($desktop-breakpoint) {
-    flex-grow: 1;
+    // flex-grow: 1;
 
-    // width: 100%;
+    width: 100%;
   }
 }
 
 .faq-buttons__button--current {
   // градиент смещение, разберись
-  // background: linear-gradient(calc(-59deg - 180deg), #d10a42 0%, #00359f 100%);
-
   min-height: 46px;
 
   border: none;
