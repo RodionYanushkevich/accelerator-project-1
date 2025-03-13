@@ -1,7 +1,31 @@
 .footer {
+  display: flex;
+  width: 100%;
+  background-color: #030a1a;
+  justify-content: center;
+}
+
+.footer__wrapper {
   box-sizing: border-box;
   color: $base-white;
-  background-color: #030a1a;
+
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 30px;
+
   width: 100%;
   padding: 40px 15px;
+
+  @media ($tablet-breakpoint) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 45px;
+    align-items: start;
+  }
+
+  @media ($desktop-breakpoint) {
+    max-width: $desktop;
+    padding: 40px 103px 41px;
+  }
 }

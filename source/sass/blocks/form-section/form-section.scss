@@ -19,6 +19,7 @@
   }
 
   @media ($desktop-breakpoint) {
+    align-items: unset;
     padding: 60px 103px;
     width: 683px;
   }
@@ -27,5 +28,9 @@
 .form-section__tittle {
   @media ($tablet-breakpoint) {
     font-size: 54px;
+  }
+
+  @media ($desktop-breakpoint) {
+    text-align: start;
   }
 }

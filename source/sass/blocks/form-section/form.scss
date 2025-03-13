@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: column;
   row-gap: 36px;
+
+  @media ($tablet-breakpoint) {
+    row-gap: 35px;
+  }
 }
 
 .form__inputs-wrapper {
@@ -20,10 +24,12 @@
 }
 
 .form__input {
+  box-sizing: border-box;
   background-color: transparent;
   outline: none;
   border: none;
   border-bottom: 1px solid #74819c;
+  min-height: 27px;
 
   @media ($tablet-breakpoint) {
     width: 50%;
@@ -43,3 +49,8 @@
   }
 }
 
+.form__button {
+  @media ($tablet-breakpoint) {
+    padding: 25px 0;
+  }
+}

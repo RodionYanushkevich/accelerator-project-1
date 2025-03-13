@@ -2,8 +2,17 @@
   display: flex;
   margin: 0;
   padding: 0;
-  column-gap: 10px;
+  gap: 20px;
   list-style: none;
+  flex-wrap: wrap;
+
+  @media ($tablet-breakpoint) {
+    gap: 15px;
+  }
+
+  @media ($desktop-breakpoint) {
+    gap: 10px;
+  }
 }
 
 .social__link {
@@ -18,5 +27,10 @@
 
   background-color: $base-white;
   border-radius: 50%;
-  padding: 3px;
+
+  // padding: 3px;
+}
+
+.social__link .social__ok-icon {
+  margin-left: 0.5px;
 }

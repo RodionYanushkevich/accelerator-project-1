@@ -1,16 +1,17 @@
-
 .contacts {
   align-self: center;
   box-sizing: border-box;
   min-width: 320px;
   display: flex;
   flex-direction: column;
-  row-gap: 42px;
-  padding: 40px 15px;
+  row-gap: 39px;
+  padding: 36px 15px 40px;
 
   @media ($tablet-breakpoint) {
     align-self: unset;
     padding: 60px 164px;
+
+    row-gap: 36px;
   }
 
   @media ($desktop-breakpoint) {
@@ -23,6 +24,10 @@
   @media ($tablet-breakpoint) {
     text-align: center;
     font-size: 54px;
+  }
+
+  @media ($desktop-breakpoint) {
+    text-align: start;
   }
 }
 
@@ -42,6 +47,7 @@
     grid-template-columns: repeat(2, minmax(190px, min-content));
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;
+    row-gap: 14px;
 
     &::after {
       content: "";
@@ -54,15 +60,14 @@
   }
 }
 
-// ты тут
 .contacts__item {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
 
-  // @media ($tablet-breakpoint) {
-  //   align-items: center;
-  // }
+  @media ($tablet-breakpoint) {
+    row-gap: 6px;
+  }
 }
 
 .contacts__item:first-child {

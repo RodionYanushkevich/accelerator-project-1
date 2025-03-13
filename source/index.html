@@ -573,58 +573,60 @@
     <!-- FOOTER -->
   </main>
   <footer class="body__footer footer" data-test="footer">
-    <picture>
-      <source type="image/svg+xml" media="(min-width:1366px)" srcset="img/logo-desktop.svg" width="130" height="26">
-      <source type="image/svg+xml" media="(min-width:768px)" srcset="img/logo-tablet.svg" width="110" height="22">
-      <img class="footer__logo-image logo-image" src="img/logo-mobile.svg" alt="Логотип SUPERGYM" width="100" height="20">
-    </picture>
-    <nav class="footer__navigation navigation">
+    <div class="footer__wrapper">
+      <picture>
+        <source type="image/svg+xml" media="(min-width:1366px)" srcset="img/logo-desktop.svg" width="130" height="26">
+        <source type="image/svg+xml" media="(min-width:768px)" srcset="img/logo-tablet.svg" width="110" height="22">
+        <img class="footer__logo-image logo-image" src="img/logo-mobile.svg" alt="Логотип SUPERGYM" width="100" height="20">
+      </picture>
+      <nav class="footer__navigation navigation">
 
-      <ul class="navigation__list">
-        <li class="navigation__list-item">
-          <a class="navigation__link" href="#">Услуги</a>
+        <ul class="navigation__list">
+          <li class="navigation__list-item">
+            <a class="navigation__link" href="#">Услуги</a>
+          </li>
+          <li class="navigation__list-item">
+            <a class="navigation__link" href="#">Абонементы</a>
+          </li>
+          <li class="navigation__list-item">
+            <a class="navigation__link" href="#">Акции</a>
+          </li>
+          <li class="navigation__list-item">
+            <a class="navigation__link" href="#">Тренеры</a>
+          </li>
+          <li class="navigation__list-item">
+            <a class="navigation__link" href="#">Расписание</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="footer__social-list social">
+        <li class="social__item">
+          <a class="social__link" href="#" title="наша страница ВКонтекте">
+            <span class="visually-hidden">Вконтакте</span>
+            <svg class="social__vk-icon" width="13" height="8">
+              <use href="/__spritemap#sprite-vk"></use>
+            </svg>
+          </a>
         </li>
-        <li class="navigation__list-item">
-          <a class="navigation__link" href="#">Абонементы</a>
+        <li class="social__item">
+          <a class="social__link" href="#" title="наша страница Однокласники">
+            <span class="visually-hidden">Однокласники</span>
+            <svg class="social__ok-icon" width="10" height="17">
+              <use href="/__spritemap#sprite-odnoklassniki"></use>
+            </svg>
+          </a>
         </li>
-        <li class="navigation__list-item">
-          <a class="navigation__link" href="#">Акции</a>
-        </li>
-        <li class="navigation__list-item">
-          <a class="navigation__link" href="#">Тренеры</a>
-        </li>
-        <li class="navigation__list-item">
-          <a class="navigation__link" href="#">Расписание</a>
+        <li class="social__item">
+          <a class="social__link" href="#" title="наша страница Reddit">
+            <span class="visually-hidden">Reddit</span>
+            <svg class="social__reddit-icon" width="15" height="15">
+              <use href="/__spritemap#sprite-reddit"></use>
+            </svg>
+          </a>
         </li>
       </ul>
-    </nav>
-
-    <ul class="footer__social-list social">
-      <li class="social__item">
-        <a class="social__link" href="#" title="наша страница ВКонтекте">
-          <span class="visually-hidden">Вконтакте</span>
-          <svg width="22" height="22">
-            <use href="/__spritemap#sprite-vk"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#" title="наша страница Однокласники">
-          <span class="visually-hidden">Однокласники</span>
-          <svg width="22" height="22">
-            <use href="/__spritemap#sprite-ok"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#" title="наша страница Reddit">
-          <span class="visually-hidden">Reddit</span>
-          <svg width="22" height="22">
-            <use href="/__spritemap#sprite-reddit"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
+    </div>
   </footer>
 
 </body>
