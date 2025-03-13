@@ -1,11 +1,35 @@
+.navigation {
+  display: flex;
+
+  @media ($desktop-breakpoint) {
+    flex-grow: 1;
+    max-width: 600px;
+  }
+}
+
 .navigation__list {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style: none;
   flex-wrap: wrap;
-  gap: 10px;
+
+  row-gap: 20px;
+  column-gap: 35px;
+
+  @media ($tablet-breakpoint) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  @media ($desktop-breakpoint) {
+    justify-content: space-between;
+  }
 }
 
+
 .navigation__link {
+  display: block;
   font-family: $primary-family;
   font-style: normal;
   font-weight: 400;
@@ -13,7 +37,11 @@
   line-height: 143%;
   color: inherit;
 
+  width: min-content;
+
   text-decoration: none;
+
+  // padding: 5px 17.5px;
 
   @media ($tablet-breakpoint) {
     line-height: 157%;

@@ -1,6 +1,26 @@
+.price-card {
+  box-sizing: border-box;
+  padding: 53px 42px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+
+  background: $base-white;
+
+  @media ($tablet-breakpoint) {
+    padding: 65px;
+    row-gap: 24px;
+  }
+
+  @media ($desktop-breakpoint) {
+    min-width: 360px;
+    row-gap: 17px;
+  }
+}
+
 .price-card__title {
   margin: 0;
-  padding: 0;
 
   font-style: normal;
   font-weight: 700;
@@ -17,29 +37,93 @@
 }
 
 .price-card__description {
-  @media ($desktop-breakpoint) {
+  margin: 0;
+  padding: 0;
+
+  @media ($tablet-breakpoint) {
     font-size: 16px;
     line-height: 150%;
   }
 }
 
 .price-card__product-price {
+  position: relative;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  padding-top: 47px;
+
   font-weight: 700;
   font-size: 48px;
   line-height: 150%;
   color: $base-secondary;
 
+  z-index: 1;
+
   @media ($tablet-breakpoint) {
+    padding-top: 57px;
+
     font-size: 60px;
     line-height: 150%;
+  }
+
+  @media ($desktop-breakpoint) {
+    padding-top: 60px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 33px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    // background-image: url("../../../img/sprite/rubl.svg");
+    background-image: url("../__spritemap#sprite-rubl-view");
+
+    // background-image: url("../../../img/sprite/rubl.svg");
+
+    @media ($tablet-breakpoint) {
+      width: 30px;
+      height: 42px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 24px;
+    content: "5000";
+    display: inline;
+    font-weight: 700;
+    font-size: 80px;
+    color: #e8e8e8;
+
+    opacity: 0.48;
+    z-index: -1;
+
+    @media ($tablet-breakpoint) {
+      bottom: 0;
+
+      font-size: 100px;
+      line-height: 150px;
+    }
   }
 }
 
 .price-card__link {
   text-transform: uppercase;
   text-decoration: none;
+  padding: 25px 0;
 
   font-size: 12px;
   line-height: 100%;
+
   color: $base-primary;
+  border-color: inherit;
+
+  // @media ($desktop-breakpoint) {
+  //   25px
 }

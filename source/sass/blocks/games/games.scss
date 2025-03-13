@@ -1,4 +1,23 @@
 .games {
+  box-sizing: border-box;
+  min-width: $mobile;
   padding: 25px 15px;
   margin: 0;
+
+  @media ($tablet-breakpoint) {
+    padding: 60px 45px;
+  }
+
+  @media ($desktop-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 100px 45px;
+    align-items: center;
+  }
+}
+
+.games-card__image {
+  color: $base-white;
+  background-color: $primary-lighter;
 }

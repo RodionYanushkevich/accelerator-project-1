@@ -1,37 +1,125 @@
-.offers-big-card__container {
-  background-color: $base-red;
-  color: $base-white;
-}
-
-.offers-big-card__container h4 {
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 100%;
+.offers-big-card {
+  width: 100%;
 
   @media ($tablet-breakpoint) {
-    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+
+    // align-items: start;
+  }
+}
+
+.offers-big-card__container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: $mobile;
+
+  width: 100%;
+  min-height: 271px;
+  row-gap: 28px;
+  padding: 31px 30px 30px;
+
+  background-color: $base-red;
+  color: $base-white;
+
+  @media ($tablet-breakpoint) {
+    min-width: 278px;
+    width: min-content;
+    padding: 40px 25px;
+    row-gap: 42px;
+
+    align-items: start;
   }
 
   @media ($desktop-breakpoint) {
-    font-size: 26px;
+    min-width: 280px;
+
+    padding: 40px 45px;
+    row-gap: 42px;
+
+    align-items: start;
+  }
+}
+
+.offers-big-card__container h3 {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8px;
+
+  @media ($tablet-breakpoint) {
+    align-items: start;
+    row-gap: 20px;
   }
 }
 
 .offers-big-card__container span {
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 100%;
+  &:first-of-type {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+
+    @media ($tablet-breakpoint) {
+      font-size: 24px;
+    }
+
+    @media ($desktop-breakpoint) {
+      font-size: 26px;
+    }
+  }
+
+  &:nth-child(2) {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+
+    @media ($tablet-breakpoint) {
+      font-size: 70px;
+    }
+  }
+}
+
+.offers-big-card__container p {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
 
   @media ($tablet-breakpoint) {
-    font-size: 70px;
+    text-align: start;
+
+    font-size: 18px;
+    line-height: 133%;
   }
 }
 
 .offers-big-card__container a {
-  text-decoration: none;
-  text-transform: uppercase;
+  padding-bottom: 5px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 100%;
+
+  text-decoration: none;
+  text-transform: uppercase;
   color: inherit;
+  border-bottom: 1px solid $base-white;
+
+  @media ($tablet-breakpoint) {
+    margin-top: auto;
+    justify-self: flex-end;
+  }
+}
+
+.offers-big-card__image {
+  margin: 0 auto;
 }

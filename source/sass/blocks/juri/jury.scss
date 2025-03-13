@@ -1,3 +1,28 @@
 .juri {
-  display: none;
+  // position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 19px;
+  padding: 41px;
+
+  @media ($tablet-breakpoint) {
+    row-gap: 46px;
+    padding: 30px 0 60px;
+  }
+
+  @media ($desktop-breakpoint) {
+    padding: 100px 45px;
+    row-gap: 46px;
+  }
+}
+
+.juri__title {
+  @media ($tablet-breakpoint) {
+    font-weight: 600;
+    font-size: 54px;
+  }
 }

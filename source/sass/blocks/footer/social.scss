@@ -1,3 +1,36 @@
 .social {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
   list-style: none;
+  flex-wrap: wrap;
+
+  @media ($tablet-breakpoint) {
+    gap: 15px;
+  }
+
+  @media ($desktop-breakpoint) {
+    gap: 10px;
+  }
+}
+
+.social__link {
+  box-sizing: border-box;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 25px;
+  height: 25px;
+
+  background-color: $base-white;
+  border-radius: 50%;
+
+  // padding: 3px;
+}
+
+.social__link .social__ok-icon {
+  margin-left: 0.5px;
 }

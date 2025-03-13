@@ -4,7 +4,13 @@
 @import "./common/variables";
 @import "./common/fonts";
 @import "./common/global";
+@import "./common/button";
 @import "./common/visually-hidden";
+
+/* VENDOR */
+@import "./vendor/swiper.css";
+
+// @import "./vendor/swiper-bundle.min";
 
 /* BlOCKS */
 @import "./blocks/page/page";
@@ -22,6 +28,7 @@
 
 /* JURI */
 @import "./blocks/juri/jury";
+@import "./blocks/juri/slider/slider";
 
 /* GAMES */
 @import "./blocks/games/games";
@@ -38,13 +45,12 @@
 
 /* FAQ */
 @import "./blocks/faq/faq";
+@import "./blocks/faq/faq-buttons";
 @import "./blocks/faq/accordion";
-@import "./blocks/slider/slider";
 
 /* REVIEWS */
 @import "./blocks/reviews/reviews";
 @import "./blocks/reviews/reviews-slider";
-
 
 /* FORM */
 @import "./blocks/form-section/form-section";

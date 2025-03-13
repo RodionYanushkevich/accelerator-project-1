@@ -1,3 +1,48 @@
+
+.accordion {
+  box-sizing: border-box;
+  display: grid;
+
+  grid-template-columns: auto min-content;
+  grid-template-rows: min-content 1fr;
+  justify-content: space-between;
+
+  font-family: $primary-family;
+
+  column-gap: 22px;
+  row-gap: 20px;
+
+  padding: 20px 0;
+  border-top: 1px solid #74819c;
+
+  @media ($tablet-breakpoint) {
+    row-gap: 10px;
+    column-gap: 78px;
+
+    padding: 24px 0 22px;
+  }
+
+  @media ($desktop-breakpoint) {
+    padding: 23px 0 22px;
+    grid-template-columns: 660px min-content;
+    row-gap: 23px;
+  }
+}
+
+.faq__accordion-list {
+  @media ($tablet-breakpoint) {
+    margin-top: 1px;
+  }
+
+  @media ($desktop-breakpoint) {
+    margin-top: 0;
+  }
+}
+
+.accordion:last-child {
+  border-bottom: 1px solid #74819c;
+}
+
 .accordion h5 {
   margin: 0;
   padding: 0;
@@ -6,7 +51,11 @@
   line-height: 100%;
 
   @media ($tablet-breakpoint) {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
     font-size: 22px;
+    align-self: center;
   }
 
   @media ($desktop-breakpoint) {
@@ -14,7 +63,16 @@
   }
 }
 
+// Разберись
+.accordion br {
+  @media ($tablet-breakpoint) {
+    display: none;
+  }
+}
+
 .accordion p {
+  margin: 0;
+  padding: 0;
   font-weight: 300;
   font-size: 16px;
   line-height: 125%;
@@ -23,4 +81,71 @@
     font-size: 18px;
     line-height: 133%;
   }
+}
+
+.accordion__button {
+  align-self: center;
+  justify-self: end;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid $base-primary;
+  background-color: transparent;
+  color: $base-primary;
+
+  @media ($tablet-breakpoint) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &--checked {
+    color: $base-white;
+    background-color: $primary-lighter;
+  }
+}
+
+.accordion__button svg {
+  &:not(:nth-child(2)) {
+    color: $base-white;
+    width: 14px;
+    height: 2px;
+  }
+
+  &:last-child {
+    color: #1c3374;
+  }
+
+  @media ($tablet-breakpoint) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.accordion__button svg:first-of-type {
+  display: none;
+}
+
+
+// глянь критерии
+.accordion__button--checked svg {
+  &:first-of-type {
+    display: block;
+  }
+
+  &:last-of-type {
+    display: none;
+  }
+}
+
+.accordion:not(:first-child) {
+  & p {
+    display: none;
+  }
+
+  row-gap: 0;
 }

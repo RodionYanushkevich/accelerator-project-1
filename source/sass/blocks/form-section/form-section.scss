@@ -1,0 +1,36 @@
+.form-section {
+  box-sizing: border-box;
+
+  // justify-self: center;
+  width: 100%;
+
+  background-color: $base-primary;
+  padding: 70px 15px;
+  display: flex;
+  flex-direction: column;
+
+  // align-items: center;
+  color: $base-white;
+  row-gap: 36px;
+
+  @media ($tablet-breakpoint) {
+    padding: 60px 164px;
+    align-items: center;
+  }
+
+  @media ($desktop-breakpoint) {
+    align-items: unset;
+    padding: 60px 103px;
+    width: 683px;
+  }
+}
+
+.form-section__tittle {
+  @media ($tablet-breakpoint) {
+    font-size: 54px;
+  }
+
+  @media ($desktop-breakpoint) {
+    text-align: start;
+  }
+}
