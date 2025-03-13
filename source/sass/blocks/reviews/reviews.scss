@@ -1,6 +1,23 @@
 .reviews {
+  box-sizing: border-box;
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 39px;
   padding: 40px;
+  width: 100%;
+
+  @media ($tablet-breakpoint) {
+    padding: 60px 0;
+    row-gap: 34px;
+  }
+
+  @media ($desktop-breakpoint) {
+    padding: 100px 0;
+    row-gap: 75px;
+  }
 }
 
 .reviews__title {

@@ -496,41 +496,52 @@
     <section class="body__reviews reviews" data-test="reviews">
       <h3 class="reviews__title title ">Отзывы</h3>
 
-      <div class="reviews__slider-containter reviews-slider">
-        <div class="reviews-slider__slider-container">
-          <!-- слайд 1 -->
-          <div class="reviews-slider__slide">
-            <h6>Анна Орлова</h6>
-            <picture>
-              <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
-              <img src="img/reviews/rewiew-mobile@1x.webp" srcset="img/reviews/rewiew-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
-            </picture>
-            <blockquote>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
-          </div>
-          <!-- слайд 2 -->
-          <div class="reviews-slider__slide">
-            <h6 class="reviews-slider__title">РЫБА РЫБА</h6>
-            <picture>
-              <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/img/reviews/anna-photo-tablet@1x.webp 1x, img/reviews/default-photo-tablet@2x.webp 2x" width="80" height="80">
-              <img class="reviews-slider__image" src="img/reviews/default-photo-mobile@1x.webp" srcset="img/reviews/default-photo-mobile@2x.webp" alt="фотография клиента" width="68" height="68">
-            </picture>
-            <blockquote class="reviews-slider__description">РЫБА ТЕКСТА ЦЫТАТЫ
-            </blockquote>
-          </div>
-          <!-- слайд 3 -->
-          <div class="reviews-slider__slide">
-            <h6 class="reviews-slider__title">РЫБА РЫБА</h6>
-            <picture>
-              <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/img/reviews/anna-photo-tablet@1x.webp 1x, img/reviews/default-photo-tablet@2x.webp 2x" width="80" height="80">
-              <img class="reviews-slider__image" src="img/reviews/default-photo-mobile@1x.webp" srcset="img/reviews/default-photo-mobile@2x.webp" alt="фотография клиента" width="68" height="68">
-            </picture>
-            <blockquote class="reviews-slider__description">РЫБА ТЕКСТА ЦЫТАТЫ
-            </blockquote>
-          </div>
+      <div class="reviews__swiper-buutons-wrapper">
+        <!-- REVIEWS SWIPER -->
+        <div class="reviews__slider-containter reviews-slider">
+          <div class="reviews-slider__slider-container swiper-wrapper">
+            <!-- слайд 1 -->
+            <div class="reviews-slider__slide swiper-slide">
+              <h6>Анна Орлова</h6>
+              <picture>
+                <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
+                <img src="img/reviews/rewiew-mobile@1x.webp" srcset="img/reviews/rewiew-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
+              </picture>
+              <blockquote>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
+            </div>
+            <!-- слайд 2 -->
+            <div class="reviews-slider__slide swiper-slide">
+              <h6 class="reviews-slider__title">РЫБА РЫБА</h6>
+              <picture>
+                <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
+                <img src="img/reviews/rewiew-mobile@1x.webp" srcset="img/reviews/rewiew-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
+              </picture>
+              <blockquote class="reviews-slider__description">РЫБА ТЕКСТА ЦЫТАТЫ
+              </blockquote>
+            </div>
+            <!-- слайд 3 -->
+            <div class="reviews-slider__slide swiper-slide">
+              <h6 class="reviews-slider__title">РЫБА РЫБА</h6>
+              <picture>
+                <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
+                <img src="img/reviews/rewiew-mobile@1x.webp" srcset="img/reviews/rewiew-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
+              </picture>
+              <blockquote class="reviews-slider__description">РЫБА ТЕКСТА ЦЫТАТЫ
+              </blockquote>
+            </div>
 
+          </div>
+          <div class="reviews-slider__button swiper-button-next">
+            <svg width="16" height="32">
+              <use href="__spritemap#sprite-arrow"></use>
+            </svg>
+          </div>
+          <div class="reviews-slider__button swiper-button-prev">
+            <svg width="16" height="32">
+              <use href="__spritemap#sprite-arrow"></use>
+            </svg>
+          </div>
         </div>
-        <div class="reviews-slider__button"></div>
-        <div class="reviews-slider__button"></div>
       </div>
     </section>
 
