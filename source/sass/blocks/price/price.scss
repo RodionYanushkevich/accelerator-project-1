@@ -126,13 +126,39 @@
   @media ($desktop-breakpoint) {
     font-size: 20px;
   }
+
+  &:hover {
+    opacity: 1;
+    color: rgba(16, 38, 84, 0.7);
+    box-shadow: 0 2px 0 0 #787878;
+  }
+
+  &:focus-visible {
+    opacity: 1;
+    outline: none;
+    color: $base-primary;
+    box-shadow: 0 2px 0 0 $base-primary;
+  }
+
+  &:active {
+    opacity: 1;
+    border: none;
+    color: $base-primary;
+
+    box-shadow: 0 2px 0 0 $red-darker;
+  }
+
+  // &:disabled {}
 }
 
-.price__filter-item--current .price__filter-button {
+.price__filter-button-current {
   opacity: 1;
-  background-color: transparent;
-  border: none;
+
+  // background-color: transparent;
+  // border: none;
   box-shadow: 0 2px 0 0 $red-darker;
+
+  pointer-events: none;
 }
 
 .price__cards-list {
