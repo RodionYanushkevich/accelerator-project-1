@@ -5,12 +5,12 @@
     display: flex;
     justify-content: center;
 
-    width: calc($tablet - 101px);
+    width: calc($tablet - 101px + 34px);
 
     // margin: 0 51px;
 
     @media ($desktop-breakpoint) {
-      width: calc($desktop - 101px);
+      width: calc($desktop - 101px + 34px);
     }
   }
 }
@@ -61,33 +61,4 @@
   display: flex;
 
   justify-content: center;
-}
-
-.slider-juri__slider-button {
-  position: absolute;
-  top: 50%;
-
-  display: none;
-  transform: translateY(-50%);
-
-  z-index: 10;
-  color: $base-primary;
-  user-select: none;
-  cursor: pointer;
-
-  @media ($tablet-breakpoint) {
-    height: 32px;
-    width: 16px;
-    display: block;
-    position: absolute;
-  }
-}
-
-.slider-juri__slider-button.swiper-button-prev {
-  left: 0;
-  transform: translateY(-50%) rotate(180deg);
-}
-
-.slider-juri__slider-button.swiper-button-next {
-  right: 0;
 }
