@@ -25,7 +25,9 @@
   }
 
   @media ($desktop-breakpoint) {
-    min-height: unset;
+    min-height: 174px;
+
+    // min-height: unset;
     height: 100%;
     width: 100%;
 
