@@ -8,10 +8,10 @@
     width: calc($tablet - 101px + 34px);
 
     // margin: 0 51px;
+  }
 
-    @media ($desktop-breakpoint) {
-      width: calc($desktop - 101px + 34px);
-    }
+  @media ($desktop-breakpoint) {
+    width: calc($desktop - 101px + 34px);
   }
 }
 
@@ -23,6 +23,8 @@
   width: $mobile;
 
   @media ($tablet-breakpoint) {
+    display: flex;
+    justify-content: center;
     width: 601px;
   }
 
@@ -59,6 +61,11 @@
 
 .slider-juri__slide {
   display: flex;
-
   justify-content: center;
+}
+
+.slider-juri__wrapper {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
