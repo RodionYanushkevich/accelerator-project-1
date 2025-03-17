@@ -43,7 +43,7 @@
   </div>
   <main class="page__main">
     <!-- ABOUT -->
-    <section class="body__about about" data-test="about">
+    <section class="body__about about" data-test="about" id="about">
       <div class="about__wrapper">
         <h3 class="about__title title">Тренажёрный зал</h3>
         <h6 class="about__subtitle">Просторный зал площадью 900 кв/м</h6>
@@ -153,7 +153,7 @@
       </article>
     </section>
     <!-- СЛАЙДЕР -->
-    <section class="body__juri juri" data-test="juri">
+    <section class="body__juri juri" data-test="juri" id="juri">
       <h3 class="juri__title title ">Жюри</h3>
       <span class="visually-hidden">Список членов жюри</span>
 
@@ -272,7 +272,7 @@
     </section>
 
     <!-- АКЦИИ -->
-    <section class="body__offers offers" data-test="offers">
+    <section class="body__offers offers" data-test="offers" id="offers">
       <h2 class="offers__title title ">Акции</h2>
 
       <ul class="offers__list">
@@ -582,11 +582,11 @@
           </li>
           <li class="contacts__item">
             <h5 class="contacts__item-title">Телефон:</h5>
-            <a class="contacts__item-description" href="tel:+78005555555">8 800 555-55-55</a>
+            <a class="contacts__item-description contacts__link" href="tel:+78005555555">8 800 555-55-55</a>
           </li>
           <li class="contacts__item">
             <h5 class="contacts__item-title">Email:</h5>
-            <a class="contacts__item-description" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
+            <a class="contacts__item-description contacts__link" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
           </li>
         </ul>
       </section>
@@ -604,16 +604,16 @@
 
         <ul class="navigation__list">
           <li class="navigation__list-item">
-            <a class="navigation__link" href="#">Услуги</a>
+            <a class="navigation__link" href="#about">Услуги</a>
           </li>
           <li class="navigation__list-item">
-            <a class="navigation__link" href="#">Абонементы</a>
+            <a class="navigation__link" href="#price">Абонементы</a>
           </li>
           <li class="navigation__list-item">
-            <a class="navigation__link" href="#">Акции</a>
+            <a class="navigation__link" href="#offers">Акции</a>
           </li>
           <li class="navigation__list-item">
-            <a class="navigation__link" href="#">Тренеры</a>
+            <a class="navigation__link" href="#juri">Тренеры</a>
           </li>
           <li class="navigation__list-item">
             <a class="navigation__link" href="#">Расписание</a>
@@ -631,7 +631,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#" title="наша страница Однокласники">
+          <a class="social__link " href="#" title="наша страница Однокласники">
             <span class="visually-hidden">Однокласники</span>
             <svg class="social__ok-icon" width="10" height="17">
               <use href="/__spritemap#sprite-odnoklassniki"></use>
