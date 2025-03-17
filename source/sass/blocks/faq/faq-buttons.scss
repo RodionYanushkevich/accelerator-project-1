@@ -11,10 +11,17 @@
   }
 }
 
+.faq-buttons__list-item {
+  @media ($desktop-breakpoint) {
+    // flex-grow: 1;
+
+    width: 100%;
+  }
+}
 
 .faq-buttons__button {
   box-sizing: border-box;
-
+  min-height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,11 +39,13 @@
   border: 1px solid rgba(16, 38, 84, 0.2);
   background-color: transparent;
 
+  cursor: pointer;
+
   @media ($tablet-breakpoint) {
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
-
+    min-height: 46px;
     min-width: 162px;
     padding: 17px 0;
   }
@@ -44,26 +53,48 @@
   @media ($desktop-breakpoint) {
     padding: 20px 0 14px;
     width: 100%;
+    min-height: 54px;
+  }
+
+  &:hover {
+    border: 1px solid $base-primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $base-white;
+    border: 1px solid $base-primary;
+  }
+
+  &:active {
+    color: $base-white;
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    border: none;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    color: #c8c9cc;
+    border: 1px solid   rgba(16, 38, 84, 0.2);
   }
 }
 
-.faq-buttons__list-item {
-  @media ($desktop-breakpoint) {
-    // flex-grow: 1;
-
-    width: 100%;
-  }
-}
 
 .faq-buttons__button--current {
-  // градиент смещение, разберись
   min-height: 46px;
 
-  border: none;
   background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  border: none;
   color: $base-white;
 
-  @media ($tablet-breakpoint) {
-    min-height: 54px;
+  pointer-events: none;
+
+  &:focus-visible {
+    color: $base-primary;
+
+    background: none;
+    outline: none;
+    background-color: $base-white;
+    border: 1px solid $base-primary;
   }
 }

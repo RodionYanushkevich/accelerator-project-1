@@ -98,6 +98,8 @@
   background-color: transparent;
   color: $base-primary;
 
+  cursor: pointer;
+
   @media ($tablet-breakpoint) {
     width: 40px;
     height: 40px;
@@ -106,6 +108,30 @@
   &--checked {
     color: $base-white;
     background-color: $primary-lighter;
+  }
+
+  &:active,
+  &:hover {
+    color: $base-white;
+    border: 1px solid $primary-lighter;
+    background-color: $primary-lighter;
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    color: $base-white;
+    border: 1px solid $primary-lighter;
+    background-color: #353f54;
+
+    @media ($tablet-breakpoint) {
+      border: 1px solid $primary-lighter;
+      background-color: #74819c;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 
