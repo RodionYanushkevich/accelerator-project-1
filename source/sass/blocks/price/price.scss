@@ -148,7 +148,11 @@
     box-shadow: 0 2px 0 0 $red-darker;
   }
 
-  // &:disabled {}
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+    box-shadow: 0 2px 0 0 $base-primary;
+  }
 }
 
 .price__filter-button-current {

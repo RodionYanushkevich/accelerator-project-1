@@ -114,16 +114,17 @@
 }
 
 .price-card__link {
-  text-transform: uppercase;
-  text-decoration: none;
+  // text-transform: uppercase;
+  // text-decoration: none;
   padding: 25px 0;
-
+  min-height: 66px;
   font-size: 12px;
   line-height: 100%;
 
   color: $base-primary;
   border-color: inherit;
 
-  // @media ($desktop-breakpoint) {
-  //   25px
+  // @media ($tablet-breakpoint) {
+  //   min-height: 66px;
+  // }
 }

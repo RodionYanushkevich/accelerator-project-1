@@ -38,7 +38,7 @@
         <source type="image/webp" media="(min-width:1366px)" srcset="img/hero/hero-img-desktop@1x.webp 1x, img/hero/hero-img-desktop@2x.webp 2x" width="500" height="524">
         <img class="hero__image" src="/img/hero/hero-img-tablet@1x.webp" srcset="/img/hero/hero-img-tablet@2x.webp" alt="Мужчина в футболке Супермена" width="324" height="390">
       </picture>
-      <a class="hero__link button" href="#price" aria-label="Перейти к разделу с абонементами">Купить абонемент</a>
+      <a class="hero__link button" href="#price" aria-label="Перейти к разделу с абонементами" disabled>Купить абонемент</a>
     </section>
   </div>
   <main class="page__main">
@@ -80,9 +80,15 @@
     <section class="price" data-test="price" id="price">
       <h2 class="price__title title ">Абонементы</h2>
       <ul class="price__filter-list">
-        <li class="price__filter-item price__filter-item--current"><button class="price__filter-button price__filter-button-current" type="button" tabindex="-1">1 месяц</button></li>
-        <li class="price__filter-item "><button class="price__filter-button" type="button">6 месяцев</button></li>
-        <li class="price__filter-item"><button class="price__filter-button" type="button">12 месяцев</button></li>
+
+        <li class="price__filter-item price__filter-item--current">
+          <button class="price__filter-button price__filter-button-current" type="button" tabindex="-1">1 месяц</button>
+        </li>
+        <li class="price__filter-item ">
+          <button class="price__filter-button" type="button">6 месяцев</button>
+        </li>
+        <li class="price__filter-item"><button class="price__filter-button" type="button">12 месяцев</button>
+        </li>
       </ul>
 
       <ul class="price__cards-list">
@@ -92,7 +98,7 @@
             <h4 class="price-card__title">С тренером</h4>
             <p class="price-card__description">12 занятий</p>
             <span class="price-card__product-price">5000</span>
-            <a class="price-card__link button" href="#">Купить абонемент</a>
+            <a class="price-card__link button button--gradient-bg" href="#">Купить абонемент</a>
           </article>
         </li>
         <li class="price__cards-list-item">
@@ -101,7 +107,7 @@
             <h4 class="price-card__title">Дневной</h4>
             <p class="price-card__description">с 8:00 до 17:00</p>
             <span class="price-card__product-price">1700</span>
-            <a class="price-card__link button" href="#">Купить абонемент</a>
+            <a class="price-card__link button button--gradient-bg" href="#">Купить абонемент</a>
           </article>
         </li>
         <li class="price__cards-list-item">
@@ -110,7 +116,7 @@
             <h4 class="price-card__title">Полный день</h4>
             <p class="price-card__description">с 8:00 до 22:00</p>
             <span class="price-card__product-price">2700</span>
-            <a class="price-card__link button" href="#">Купить абонемент</a>
+            <a class="price-card__link button button--gradient-bg " href="#">Купить абонемент</a>
           </article>
         </li>
       </ul>
@@ -533,13 +539,13 @@
             </li>
 
           </ul>
-          <button class="slider-juri__slider-button slider-button swiper-button-prev" type="button">
+          <button class="reviews-slider__slider-button slider-button swiper-button-prev" type="button">
             <span class="visually-hidden">кнопка предыдущий слайд</span>
             <svg width="16" height="32">
               <use href="__spritemap#sprite-arrow"></use>
             </svg>
           </button>
-          <button class="slider-juri__slider-button slider-button swiper-button-next" type="button" disabled>
+          <button class="reviews-slider__slider-button slider-button swiper-button-next" type="button" disabled>
             <span class="visually-hidden">кнопка следущий слайд</span>
             <svg width="16" height="32">
               <use href="__spritemap#sprite-arrow"></use>
