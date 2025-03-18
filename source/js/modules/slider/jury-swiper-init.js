@@ -5,6 +5,7 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
 const slides = document.querySelectorAll('.slider-juri__slide');
+const slidesContainer = document.querySelector('.slider-juri');
 
 const swiper = new Swiper('.slider-juri__swiper', {
   modules: [Navigation],
@@ -27,41 +28,34 @@ const swiper = new Swiper('.slider-juri__swiper', {
       updateTabIndexAttribute(this);
     },
     slideChange: function () {
-      updateSlidesList(this);
       updateTabIndexAttribute(this);
     },
   },
 });
 
-function updateSlidesList(juriSwiper) {
-  slides.forEach((slide) => {
-    slide.addEventListener('focus', (evt) => {
-      if (juriSwiper.activeIndex < '4') {
-        if (evt.target.classList.contains('swiper-slide-next')) {
-          juriSwiper.slideNext();
-        }
-      }
-    });
 
+slidesContainer.addEventListener('focusin', (evt) => {
+  const focusedSlide = evt.target.closest('.slider-juri__slide');
+  if (focusedSlide) {
+    const index = Array.from(slides).indexOf(focusedSlide);
+    swiper.slideTo(index);
   }
-  );
-}
+});
 
 function updateTabIndexAttribute(juriSwiper) {
   slides.forEach((slide) => {
-    slide.setAttribute('tabindex', '-1');
+    if (juriSwiper.activeIndex < '3'){
+      slide.setAttribute('tabindex', '-1');
+    } else {
+      slide.setAttribute('tabindex', '0');
+
+    }
   });
+
   const activeSlide = juriSwiper.slides[juriSwiper.activeIndex];
   const nextSlide = juriSwiper.slides[juriSwiper.activeIndex + 1];
+
   activeSlide.setAttribute('tabindex', '0');
   nextSlide.setAttribute('tabindex', '0');
-  if (juriSwiper.activeIndex > '3') {
-    juriSwiper.slides[7].addEventListener('blur', () => {
-      juriSwiper.slideTo(0);
-    });
 
-    slides.forEach((slide) => {
-      slide.setAttribute('tabindex', '0');
-    });
-  }
 }
