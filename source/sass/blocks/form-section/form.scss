@@ -31,8 +31,33 @@
   border-bottom: 1px solid #74819c;
   min-height: 27px;
 
+  color: $base-white;
+
   @media ($tablet-breakpoint) {
     width: 50%;
+  }
+
+  &:focus {
+    outline-offset: -1px;
+    outline: 1px solid $base-white;
+  }
+
+  &:invalid {
+    border-bottom: 1px solid $red-lighter;
+  }
+
+  &:hover {
+    padding-bottom: 2px;
+    border-bottom: 1px solid $base-white;
+  }
+
+  &:disabled {
+    color: rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &:placeholder-shown {
+    border-bottom: 1px solid #74819c;
   }
 }
 

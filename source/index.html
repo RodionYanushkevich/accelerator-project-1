@@ -45,8 +45,8 @@
     <!-- ABOUT -->
     <section class="body__about about" data-test="about" id="about">
       <div class="about__wrapper">
-        <h3 class="about__title title">Тренажёрный зал</h3>
-        <h6 class="about__subtitle">Просторный зал площадью 900 кв/м</h6>
+        <h2 class="about__title title">Тренажёрный зал</h2>
+        <h3 class="about__subtitle">Просторный зал площадью 900 кв/м</h3>
         <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
         <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
       </div>
@@ -82,7 +82,7 @@
       <ul class="price__filter-list">
 
         <li class="price__filter-item price__filter-item--current">
-          <button class="price__filter-button price__filter-button-current" type="button" tabindex="-1">1 месяц</button>
+          <button class="price__filter-button price__filter-button-current" type="button">1 месяц</button>
         </li>
         <li class="price__filter-item ">
           <button class="price__filter-button" type="button">6 месяцев</button>
@@ -124,10 +124,10 @@
     <!-- Games -->
     <section class="body__games games" data-test="games">
       <!-- WHAAAAA -->
-      <h2 class="visually-hidden">СУПЕР ИГРА</h2>
+      <h2 class="visually-hidden">Специальное предложение</h2>
       <article class="games__card games-card">
         <div class="games-card__container">
-          <h2 class="games-card__title">SUPER GAMES</h2>
+          <h3 class="games-card__title">SUPER GAMES</h3>
 
           <div class="games-card__date-wrapper date-time">
             <div class="date-time__container">
@@ -154,7 +154,7 @@
     </section>
     <!-- СЛАЙДЕР -->
     <section class="body__juri juri" data-test="juri" id="juri">
-      <h3 class="juri__title title ">Жюри</h3>
+      <h2 class="juri__title title ">Жюри</h2>
       <span class="visually-hidden">Список членов жюри</span>
 
       <div class="slider-juri">
@@ -162,11 +162,20 @@
         <div class="slider-juri__swiper  swiper-container">
           <ul class="slider-juri__wrapper swiper-wrapper">
             <!-- слайд 1 -->
-            <li class="slider-juri__slide swiper-slide">
+            <li class="slider-juri__slide swiper-slide" tabindex="0">
               <figure class="slider-juri__figure">
                 <img class="slider-juri__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
                 <figcaption class="slider-juri__title">Анна Павлова</figcaption>
               </figure>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Анна Павлова</h3>
+                <p class="slide-hover__description">Фитнес-тренер</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Сертифицированный тренер по йоге</li>
+                  <li class="slide-hover__list-item">Победитель международных соревнований по фитнесу</li>
+                  <li class="slide-hover__list-item">Опыт — 8 лет</li>
+                </ul>
+              </div>
             </li>
             <!-- слайд 2 -->
             <li class="slider-juri__slide swiper-slide">
@@ -174,6 +183,15 @@
                 <img class="slider-juri__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
                 <figcaption class="slider-juri__title">Алексей Лавров</figcaption>
               </figure>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Алексей Лавров</h3>
+                <p class="slide-hover__description">Тренер по бодибилдингу</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Чемпион России по бодибилдингу</li>
+                  <li class="slide-hover__list-item">Сертифицированный тренер ISSA</li>
+                  <li class="slide-hover__list-item">Опыт — 10 лет</li>
+                </ul>
+              </div>
             </li>
             <!-- слайд 3 -->
             <li class="slider-juri__slide swiper-slide">
@@ -181,6 +199,15 @@
                 <img class="slider-juri__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
                 <figcaption class="slider-juri__title">Александр Пашков</figcaption>
               </figure>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Александр Пашков</h3>
+                <p class="slide-hover__description">CrossFit</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Certified Level 3 Trainer</li>
+                  <li class="slide-hover__list-item">Победитель чемпионата России по CrossFit</li>
+                  <li class="slide-hover__list-item">Опыт — 6 лет</li>
+                </ul>
+              </div>
             </li>
             <!-- слайд 4 -->
             <li class="slider-juri__slide swiper-slide">
@@ -188,6 +215,15 @@
                 <img class="slider-juri__image" src="img/slider/ketova-photo@1x.webp" srcset="img/slider/ketova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
                 <figcaption class="slider-juri__title">Мария Кетова</figcaption>
               </figure>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Мария Кетова</h3>
+                <p class="slide-hover__description">Тренер по пилатесу</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Сертифицированный тренер по пилатесу</li>
+                  <li class="slide-hover__list-item">Участник международных конференций по фитнесу</li>
+                  <li class="slide-hover__list-item">Опыт — 7 лет</li>
+                </ul>
+              </div>
             </li>
             <!-- слайд 5 -->
             <li class="slider-juri__slide swiper-slide">
@@ -195,6 +231,15 @@
                 <img class="slider-juri__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
                 <figcaption class="slider-juri__title">Алексей Лавров</figcaption>
               </figure>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Алексей Лавров</h3>
+                <p class="slide-hover__description">Тренер по бодибилдингу</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Чемпион России по бодибилдингу</li>
+                  <li class="slide-hover__list-item">Сертифицированный тренер ISSA</li>
+                  <li class="slide-hover__list-item">Опыт — 10 лет</li>
+                </ul>
+              </div>
             </li>
             <!-- слайд 6 -->
             <li class="slider-juri__slide swiper-slide">
@@ -202,6 +247,15 @@
                 <img class="slider-juri__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
                 <figcaption class="slider-juri__title">Анна Павлова</figcaption>
               </figure>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Анна Павлова</h3>
+                <p class="slide-hover__description">Фитнес-тренер</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Сертифицированный тренер по йоге</li>
+                  <li class="slide-hover__list-item">Победитель международных соревнований по фитнесу</li>
+                  <li class="slide-hover__list-item">Опыт — 8 лет</li>
+                </ul>
+              </div>
             </li>
             <!-- слайд 7 -->
             <li class="slider-juri__slide swiper-slide">
@@ -209,15 +263,32 @@
                 <img class="slider-juri__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
                 <figcaption class="slider-juri__title">Александр Пашков</figcaption>
               </figure>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Александр Пашков</h3>
+                <p class="slide-hover__description">CrossFit</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Certified Level 3 Trainer</li>
+                  <li class="slide-hover__list-item">Победитель чемпионата России по CrossFit</li>
+                  <li class="slide-hover__list-item">Опыт — 6 лет</li>
+                </ul>
+              </div>
             </li>
             <!-- слайд 8 -->
             <li class="slider-juri__slide swiper-slide">
-              <figure>
+              <figure class="slider-juri__figure">
                 <img class="slider-juri__image" src="img/slider/ketova-photo@1x.webp" srcset="img/slider/ketova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
                 <figcaption class="slider-juri__title">Мария Кетова</figcaption>
               </figure>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Мария Кетова</h3>
+                <p class="slide-hover__description">Тренер по пилатесу</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Сертифицированный тренер по пилатесу</li>
+                  <li class="slide-hover__list-item">Участник международных конференций по фитнесу</li>
+                  <li class="slide-hover__list-item">Опыт — 7 лет</li>
+                </ul>
+              </div>
             </li>
-            <!-- конец слайдов -->
           </ul>
           <button class="slider-juri__slider-button slider-button swiper-button-prev" type="button">
             <span class="visually-hidden">кнопка предыдущий слайд</span>
@@ -563,7 +634,7 @@
             <label class="form__label visually-hidden" for="name"></label>
             <input class="form__input" id="name" name="name" pattern="[A-Za-z]+" required autocomplete="off" placeholder="Имя">
             <label class="form__label visually-hidden" for="phone-number"></label>
-            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон">
+            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон" pattern="[\+0-9]+">
           </span>
           <button class="form__button button" type="submit">отправить</button>
         </form>

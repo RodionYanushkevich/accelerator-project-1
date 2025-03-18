@@ -60,8 +60,25 @@
 }
 
 .slider-juri__slide {
+  position: relative;
+
   display: flex;
   justify-content: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider-juri__slide:focus-visible .slider-juri__title,
+.slider-juri__slide:hover .slider-juri__title {
+  display: none;
+}
+
+.slider-juri__slide:hover .slide-hover,
+.slider-juri__slide:focus-visible .slide-hover {
+  // outline: none;
+  position: absolute;
+  top: 0;
+  display: flex;
 }
 
 .slider-juri__wrapper {
@@ -69,3 +86,4 @@
   padding: 0;
   list-style: none;
 }
+
