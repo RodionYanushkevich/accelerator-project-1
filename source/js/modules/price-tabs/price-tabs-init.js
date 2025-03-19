@@ -1,7 +1,9 @@
 const productPrices = document.querySelectorAll('.price-card__product-price');
 const priceFilterButtons = document.querySelectorAll('.price__filter-button');
 
+
 const priceFilterList = document.querySelector('.price__filter-list');
+const [priceClassesCount] = document.querySelectorAll('.price-card__description');
 
 const getPriceDeffault = () => {
   const prices = [];
@@ -11,6 +13,7 @@ const getPriceDeffault = () => {
   return prices;
 };
 
+const deffaultDescription = 12;
 const deffaultPrices = getPriceDeffault();
 
 const formatPrice = (price) => {
@@ -30,17 +33,32 @@ const updatePriceValues = (prices) => {
   }
 };
 
+const updatePriceDescriptionValue = (filterButton) => {
+  const monthvalue = filterButton.innerText.split(' ')[0];
+  const descriptionValue = deffaultDescription * monthvalue;
+  // const classesValue = priceClassesCount.innerHTML.split('&nbsp;')[0];
+  if (descriptionValue > 12) {
+    priceClassesCount.innerHTML = `${deffaultDescription * monthvalue} занятия`;
+  } else {
+    priceClassesCount.innerHTML = `${deffaultDescription * monthvalue} занятий`;
+  }
+};
+
 const updatePrice = (filterButton) => {
   const monthvalue = filterButton.innerText.split(' ')[0];
   const newValues = deffaultPrices.map((value) => value * monthvalue);
+  updatePriceDescriptionValue(filterButton);
   updatePriceValues(newValues);
 };
 
+
 priceFilterButtons.forEach((button) =>{
   button.addEventListener('click', (evt) => {
+
     priceFilterButtons.forEach((btn) => {
       btn.classList.remove('price__filter-button-current');
     });
+
     button.classList.add('price__filter-button-current');
     updatePrice(evt.target);
   });
