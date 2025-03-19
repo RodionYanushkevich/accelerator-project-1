@@ -14,10 +14,20 @@ const getPriceDeffault = () => {
 
 const deffaultPrices = getPriceDeffault();
 
+function formatPrice(price) {
+  let priceValue = price.toString();
+
+  if (priceValue.length >= 5) {
+    priceValue = `${priceValue.slice(0, 2) } ${ priceValue.slice(2)}`;
+  }
+  return priceValue;
+}
+
 const updatePriceValues = (prices) => {
   for (let i = 0; i < prices.length; i++) {
-    productPrices[i].innerHTML = prices[i];
-    productPrices[i].setAttribute('data-content', productPrices[i].innerHTML);
+    const formattedPrice = formatPrice(prices[i]);
+    productPrices[i].innerHTML = formattedPrice;
+    productPrices[i].setAttribute('data-content', prices[i]);
   }
 };
 
