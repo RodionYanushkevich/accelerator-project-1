@@ -4,19 +4,26 @@
 @import "./common/variables";
 @import "./common/fonts";
 @import "./common/global";
-@import "./common/button";
 @import "./common/visually-hidden";
 
 /* VENDOR */
 @import "./vendor/swiper.css";
 
-// @import "./vendor/swiper-bundle.min";
+/* OTHERS */
+@import "./blocks/others/button";
+@import "./blocks/others/more-link";
+@import "./blocks/others/slide-hover";
+@import "./blocks/others/slider-button";
 
 /* BlOCKS */
 @import "./blocks/page/page";
 @import "./blocks/body/body";
 @import "./blocks/title/title";
+
+// HEADER
 @import "./blocks/header/header";
+
+// HERO
 @import "./blocks/hero/hero";
 
 /* ABOUT */

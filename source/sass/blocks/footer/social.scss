@@ -27,8 +27,37 @@
 
   background-color: $base-white;
   border-radius: 50%;
+  color: #030a1a;
 
   // padding: 3px;
+
+  &:hover {
+    color: $base-white;
+    background-color: #353f54;
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: $base-white;
+    background-color: #103aae;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $base-primary;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    color: #030a1a;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.social__link--disabled {
+  pointer-events: none;
+  color: #030a1a;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .social__link .social__ok-icon {

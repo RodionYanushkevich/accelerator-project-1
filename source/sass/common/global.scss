@@ -19,3 +19,8 @@ img {
   display: block;
   object-fit: contain;
 }
+
+a,
+li {
+  -webkit-tap-highlight-color: transparent;
+}

@@ -38,15 +38,15 @@
         <source type="image/webp" media="(min-width:1366px)" srcset="img/hero/hero-img-desktop@1x.webp 1x, img/hero/hero-img-desktop@2x.webp 2x" width="500" height="524">
         <img class="hero__image" src="/img/hero/hero-img-tablet@1x.webp" srcset="/img/hero/hero-img-tablet@2x.webp" alt="Мужчина в футболке Супермена" width="324" height="390">
       </picture>
-      <a class="hero__link button" href="#price" aria-label="Перейти к разделу с абонементами">Купить абонемент</a>
+      <a class="hero__link button" href="#price" aria-label="Перейти к разделу с абонементами" disabled>Купить абонемент</a>
     </section>
   </div>
   <main class="page__main">
     <!-- ABOUT -->
-    <section class="body__about about" data-test="about">
+    <section class="body__about about" data-test="about" id="about">
       <div class="about__wrapper">
-        <h3 class="about__title title">Тренажёрный зал</h3>
-        <h6 class="about__subtitle">Просторный зал площадью 900 кв/м</h6>
+        <h2 class="about__title title">Тренажёрный зал</h2>
+        <h3 class="about__subtitle">Просторный зал площадью 900 кв/м</h3>
         <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
         <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
       </div>
@@ -78,11 +78,17 @@
     </section>
     <!-- PRICE -->
     <section class="price" data-test="price" id="price">
-      <h3 class="price__title title ">Абонементы</h3>
+      <h2 class="price__title title ">Абонементы</h2>
       <ul class="price__filter-list">
-        <li class="price__filter-item price__filter-item--current"><button class="price__filter-button" type="button">1 месяц</button></li>
-        <li class="price__filter-item "><button class="price__filter-button" type="button">6 месяцев</button></li>
-        <li class="price__filter-item"><button class="price__filter-button" type="button">12 месяцев</button></li>
+
+        <li class="price__filter-item price__filter-item--current">
+          <button class="price__filter-button price__filter-button-current" type="button">1 месяц</button>
+        </li>
+        <li class="price__filter-item ">
+          <button class="price__filter-button" type="button">6 месяцев</button>
+        </li>
+        <li class="price__filter-item"><button class="price__filter-button" type="button">12 месяцев</button>
+        </li>
       </ul>
 
       <ul class="price__cards-list">
@@ -92,7 +98,7 @@
             <h4 class="price-card__title">С тренером</h4>
             <p class="price-card__description">12 занятий</p>
             <span class="price-card__product-price">5000</span>
-            <a class="price-card__link button" href="#">Купить абонемент</a>
+            <a class="price-card__link button button--gradient-bg" href="#">Купить абонемент</a>
           </article>
         </li>
         <li class="price__cards-list-item">
@@ -101,7 +107,7 @@
             <h4 class="price-card__title">Дневной</h4>
             <p class="price-card__description">с 8:00 до 17:00</p>
             <span class="price-card__product-price">1700</span>
-            <a class="price-card__link button" href="#">Купить абонемент</a>
+            <a class="price-card__link button button--gradient-bg" href="#">Купить абонемент</a>
           </article>
         </li>
         <li class="price__cards-list-item">
@@ -110,7 +116,7 @@
             <h4 class="price-card__title">Полный день</h4>
             <p class="price-card__description">с 8:00 до 22:00</p>
             <span class="price-card__product-price">2700</span>
-            <a class="price-card__link button" href="#">Купить абонемент</a>
+            <a class="price-card__link button button--gradient-bg " href="#">Купить абонемент</a>
           </article>
         </li>
       </ul>
@@ -118,10 +124,10 @@
     <!-- Games -->
     <section class="body__games games" data-test="games">
       <!-- WHAAAAA -->
-      <h2 class="visually-hidden">СУПЕР ИГРА</h2>
+      <h2 class="visually-hidden">Специальное предложение</h2>
       <article class="games__card games-card">
         <div class="games-card__container">
-          <h2 class="games-card__title">SUPER GAMES</h2>
+          <h3 class="games-card__title">SUPER GAMES</h3>
 
           <div class="games-card__date-wrapper date-time">
             <div class="date-time__container">
@@ -147,82 +153,155 @@
       </article>
     </section>
     <!-- СЛАЙДЕР -->
-    <section class="body__juri juri" data-test="juri">
-      <h3 class="juri__title title ">Жюри</h3>
+    <section class="body__juri juri" data-test="juri" id="juri">
+      <h2 class="juri__title title ">Жюри</h2>
       <span class="visually-hidden">Список членов жюри</span>
 
       <div class="slider-juri">
         <!-- SWIPER -->
         <div class="slider-juri__swiper  swiper-container">
-          <div class="slider-juri__wrapper swiper-wrapper">
+          <ul class="slider-juri__wrapper swiper-wrapper">
             <!-- слайд 1 -->
-            <div class="slider-juri__slide swiper-slide">
+            <li class="slider-juri__slide swiper-slide" tabindex="0">
               <figure class="slider-juri__figure">
                 <img class="slider-juri__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
                 <figcaption class="slider-juri__title">Анна Павлова</figcaption>
               </figure>
-            </div>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Анна Павлова</h3>
+                <p class="slide-hover__description">Фитнес-тренер</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Сертифицированный тренер по йоге</li>
+                  <li class="slide-hover__list-item">Победитель международных соревнований по фитнесу</li>
+                  <li class="slide-hover__list-item">Опыт — 8 лет</li>
+                </ul>
+              </div>
+            </li>
             <!-- слайд 2 -->
-            <div class="slider-juri__slide swiper-slide">
+            <li class="slider-juri__slide swiper-slide">
               <figure class="slider-juri__figure">
                 <img class="slider-juri__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
                 <figcaption class="slider-juri__title">Алексей Лавров</figcaption>
               </figure>
-            </div>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Алексей Лавров</h3>
+                <p class="slide-hover__description">Тренер по бодибилдингу</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Чемпион России по бодибилдингу</li>
+                  <li class="slide-hover__list-item">Сертифицированный тренер ISSA</li>
+                  <li class="slide-hover__list-item">Опыт — 10 лет</li>
+                </ul>
+              </div>
+            </li>
             <!-- слайд 3 -->
-            <div class="slider-juri__slide swiper-slide">
+            <li class="slider-juri__slide swiper-slide">
               <figure class="slider-juri__figure">
                 <img class="slider-juri__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
                 <figcaption class="slider-juri__title">Александр Пашков</figcaption>
               </figure>
-            </div>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Александр Пашков</h3>
+                <p class="slide-hover__description">CrossFit</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Certified Level 3 Trainer</li>
+                  <li class="slide-hover__list-item">Победитель чемпионата России по CrossFit</li>
+                  <li class="slide-hover__list-item">Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
             <!-- слайд 4 -->
-            <div class="slider-juri__slide swiper-slide">
+            <li class="slider-juri__slide swiper-slide">
               <figure class="slider-juri__figure">
                 <img class="slider-juri__image" src="img/slider/ketova-photo@1x.webp" srcset="img/slider/ketova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
                 <figcaption class="slider-juri__title">Мария Кетова</figcaption>
               </figure>
-            </div>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Мария Кетова</h3>
+                <p class="slide-hover__description">Тренер по пилатесу</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Сертифицированный тренер по пилатесу</li>
+                  <li class="slide-hover__list-item">Участник международных конференций по фитнесу</li>
+                  <li class="slide-hover__list-item">Опыт — 7 лет</li>
+                </ul>
+              </div>
+            </li>
             <!-- слайд 5 -->
-            <div class="slider-juri__slide swiper-slide">
+            <li class="slider-juri__slide swiper-slide">
               <figure class="slider-juri__figure">
                 <img class="slider-juri__image" src="img/slider/lavrov-photo@1x.webp" srcset="img/slider/lavrov-photo@2x.webp" alt="фотография члена жюри Алексея Лаврова" width="260" height="300">
                 <figcaption class="slider-juri__title">Алексей Лавров</figcaption>
               </figure>
-            </div>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Алексей Лавров</h3>
+                <p class="slide-hover__description">Тренер по бодибилдингу</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Чемпион России по бодибилдингу</li>
+                  <li class="slide-hover__list-item">Сертифицированный тренер ISSA</li>
+                  <li class="slide-hover__list-item">Опыт — 10 лет</li>
+                </ul>
+              </div>
+            </li>
             <!-- слайд 6 -->
-            <div class="slider-juri__slide swiper-slide">
+            <li class="slider-juri__slide swiper-slide">
               <figure class="slider-juri__figure">
                 <img class="slider-juri__image" src="img/slider/pavlova-photo@1x.webp" srcset="img/slider/pavlova-photo@2x.webp" alt="фотография члена жюри Анны Павловой" width="260" height="300">
                 <figcaption class="slider-juri__title">Анна Павлова</figcaption>
               </figure>
-            </div>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Анна Павлова</h3>
+                <p class="slide-hover__description">Фитнес-тренер</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Сертифицированный тренер по йоге</li>
+                  <li class="slide-hover__list-item">Победитель международных соревнований по фитнесу</li>
+                  <li class="slide-hover__list-item">Опыт — 8 лет</li>
+                </ul>
+              </div>
+            </li>
             <!-- слайд 7 -->
-            <div class="slider-juri__slide swiper-slide">
+            <li class="slider-juri__slide swiper-slide">
               <figure class="slider-juri__figure">
                 <img class="slider-juri__image" src="img/slider/pashkov-photo@1x.webp" srcset="img/slider/pashkov-photo@2x.webp" alt="фотография члена жюри Александра Пашкова" width="260" height="300">
                 <figcaption class="slider-juri__title">Александр Пашков</figcaption>
               </figure>
-            </div>
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Александр Пашков</h3>
+                <p class="slide-hover__description">CrossFit</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Certified Level 3 Trainer</li>
+                  <li class="slide-hover__list-item">Победитель чемпионата России по CrossFit</li>
+                  <li class="slide-hover__list-item">Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
             <!-- слайд 8 -->
-            <div class="slider-juri__slide swiper-slide">
-              <figure>
+            <li class="slider-juri__slide swiper-slide">
+              <figure class="slider-juri__figure">
                 <img class="slider-juri__image" src="img/slider/ketova-photo@1x.webp" srcset="img/slider/ketova-photo@2x.webp" alt="фотография члена жюри Марии Кетовой" width="260" height="300">
                 <figcaption class="slider-juri__title">Мария Кетова</figcaption>
               </figure>
-            </div>
-            <!-- конец слайдов -->
-          </div>
-          <div class="slider-juri__slider-button swiper-button-prev">
+              <div class="slider-juri__slide-description-container slide-hover">
+                <h3 class="slide-hover__title">Мария Кетова</h3>
+                <p class="slide-hover__description">Тренер по пилатесу</p>
+                <ul class="slide-hover__list">
+                  <li class="slide-hover__list-item">Сертифицированный тренер по пилатесу</li>
+                  <li class="slide-hover__list-item">Участник международных конференций по фитнесу</li>
+                  <li class="slide-hover__list-item">Опыт — 7 лет</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <button class="slider-juri__slider-button slider-button swiper-button-prev" type="button">
+            <span class="visually-hidden">кнопка предыдущий слайд</span>
             <svg width="16" height="32">
               <use href="__spritemap#sprite-arrow"></use>
             </svg>
-          </div>
-          <div class="slider-juri__slider-button swiper-button-next">
+          </button>
+          <button class="slider-juri__slider-button slider-button swiper-button-next" type="button" disabled>
+            <span class="visually-hidden">кнопка следущий слайд</span>
             <svg width="16" height="32">
               <use href="__spritemap#sprite-arrow"></use>
             </svg>
-          </div>
+          </button>
         </div>
       </div>
     </section>
@@ -244,7 +323,7 @@
           <p>Вы всегда найдёте место для своей машины на нашей парковке</p>
         </li>
 
-        <li class="features__list-item">
+        <li class="features__list-item features__list-item--blue-bg">
           <h3><span>100</span><span>Тренажёров</span></h3>
           <p>Современные тренажёры на все группы мышц</p>
         </li>
@@ -264,18 +343,18 @@
     </section>
 
     <!-- АКЦИИ -->
-    <section class="body__offers offers" data-test="offers">
+    <section class="body__offers offers" data-test="offers" id="offers">
       <h2 class="offers__title title ">Акции</h2>
 
       <ul class="offers__list">
-        <li class="offers__list-item">
+        <li class="offers__list-item offers__big-card-wrapper">
 
           <article class="offers__card offers-big-card">
             <!-- КОНТЕНТНТНАЯ ОбЛАСТЬ -->
             <div class="offers-big-card__container">
               <h3><span>Год</span><span>4999</span></h3>
               <p>Безлимитный абонемент в тренажёрный зал</p>
-              <a href="#">подробнее</a>
+              <a class="offers-big-card__link more-link" href="#">подробнее</a>
             </div>
             <!--  -->
             <picture>
@@ -286,19 +365,19 @@
           </article>
         </li>
 
-        <li class="offers__list-item">
+        <li class="offers__list-item offers__small-card-wrapper">
           <article class="offers__card offers-small-card">
             <h3>Месяц бесплатно</h3>
             <p>Приведи друга, получи абонемент в подарок</p>
-            <a href="#">подробнее</a>
+            <a class="offers-small-card__link more-link" href="#">подробнее</a>
           </article>
         </li>
 
-        <li class="offers__list-item">
+        <li class="offers__list-item offers__small-card-wrapper">
           <article class="offers__card offers-small-card">
             <h3>Скидка 20%</h3>
             <p>Корпоративный фитнес с командой</p>
-            <a href="#">подробнее</a>
+            <a class="offers-small-card__link more-link" href="#">подробнее</a>
           </article>
         </li>
       </ul>
@@ -309,7 +388,7 @@
 
       <ul class="faq__buttons-list faq-buttons">
         <li class="faq-buttons__list-item">
-          <button class="faq-buttons__button faq-buttons__button--current" type="button">Центр</button>
+          <button class="faq-buttons__button faq-buttons__button--current" type="button" tabindex="-1">Центр</button>
         </li>
         <li class="faq-buttons__list-item">
           <button class="faq-buttons__button" type="button">Абонемент</button>
@@ -499,18 +578,18 @@
       <div class="reviews__swiper-buutons-wrapper">
         <!-- REVIEWS SWIPER -->
         <div class="reviews__slider-containter reviews-slider">
-          <div class="reviews-slider__slider-container swiper-wrapper">
+          <ul class="reviews-slider__slider-container swiper-wrapper">
             <!-- слайд 1 -->
-            <div class="reviews-slider__slide swiper-slide">
+            <li class="reviews-slider__slide swiper-slide">
               <h6>Анна Орлова</h6>
               <picture>
                 <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
                 <img src="img/reviews/rewiew-mobile@1x.webp" srcset="img/reviews/rewiew-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
               </picture>
               <blockquote>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
-            </div>
+            </li>
             <!-- слайд 2 -->
-            <div class="reviews-slider__slide swiper-slide">
+            <li class="reviews-slider__slide swiper-slide">
               <h6 class="reviews-slider__title">РЫБА РЫБА</h6>
               <picture>
                 <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
@@ -518,9 +597,9 @@
               </picture>
               <blockquote class="reviews-slider__description">РЫБА ТЕКСТА ЦЫТАТЫ
               </blockquote>
-            </div>
+            </li>
             <!-- слайд 3 -->
-            <div class="reviews-slider__slide swiper-slide">
+            <li class="reviews-slider__slide swiper-slide">
               <h6 class="reviews-slider__title">РЫБА РЫБА</h6>
               <picture>
                 <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
@@ -528,19 +607,21 @@
               </picture>
               <blockquote class="reviews-slider__description">РЫБА ТЕКСТА ЦЫТАТЫ
               </blockquote>
-            </div>
+            </li>
 
-          </div>
-          <div class="reviews-slider__button swiper-button-next">
+          </ul>
+          <button class="reviews-slider__slider-button slider-button swiper-button-prev" type="button">
+            <span class="visually-hidden">кнопка предыдущий слайд</span>
             <svg width="16" height="32">
               <use href="__spritemap#sprite-arrow"></use>
             </svg>
-          </div>
-          <div class="reviews-slider__button swiper-button-prev">
+          </button>
+          <button class="reviews-slider__slider-button slider-button swiper-button-next" type="button" disabled>
+            <span class="visually-hidden">кнопка следущий слайд</span>
             <svg width="16" height="32">
               <use href="__spritemap#sprite-arrow"></use>
             </svg>
-          </div>
+          </button>
         </div>
       </div>
     </section>
@@ -553,7 +634,7 @@
             <label class="form__label visually-hidden" for="name"></label>
             <input class="form__input" id="name" name="name" pattern="[A-Za-z]+" required autocomplete="off" placeholder="Имя">
             <label class="form__label visually-hidden" for="phone-number"></label>
-            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон">
+            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон" pattern="[\+0-9]+">
           </span>
           <button class="form__button button" type="submit">отправить</button>
         </form>
@@ -572,11 +653,11 @@
           </li>
           <li class="contacts__item">
             <h5 class="contacts__item-title">Телефон:</h5>
-            <a class="contacts__item-description" href="tel:+78005555555">8 800 555-55-55</a>
+            <a class="contacts__item-description contacts__link" href="tel:+78005555555">8 800 555-55-55</a>
           </li>
           <li class="contacts__item">
             <h5 class="contacts__item-title">Email:</h5>
-            <a class="contacts__item-description" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
+            <a class="contacts__item-description contacts__link" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
           </li>
         </ul>
       </section>
@@ -594,16 +675,16 @@
 
         <ul class="navigation__list">
           <li class="navigation__list-item">
-            <a class="navigation__link" href="#">Услуги</a>
+            <a class="navigation__link" href="#about">Услуги</a>
           </li>
           <li class="navigation__list-item">
-            <a class="navigation__link" href="#">Абонементы</a>
+            <a class="navigation__link" href="#price">Абонементы</a>
           </li>
           <li class="navigation__list-item">
-            <a class="navigation__link" href="#">Акции</a>
+            <a class="navigation__link" href="#offers">Акции</a>
           </li>
           <li class="navigation__list-item">
-            <a class="navigation__link" href="#">Тренеры</a>
+            <a class="navigation__link" href="#juri">Тренеры</a>
           </li>
           <li class="navigation__list-item">
             <a class="navigation__link" href="#">Расписание</a>
@@ -621,7 +702,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#" title="наша страница Однокласники">
+          <a class="social__link " href="#" title="наша страница Однокласники">
             <span class="visually-hidden">Однокласники</span>
             <svg class="social__ok-icon" width="10" height="17">
               <use href="/__spritemap#sprite-odnoklassniki"></use>

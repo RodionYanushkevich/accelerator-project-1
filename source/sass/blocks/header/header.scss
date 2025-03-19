@@ -19,6 +19,7 @@
 }
 
 .header__link {
+  box-sizing: border-box;
   font-family: $primary-family;
   font-weight: 700;
   font-size: 22px;
@@ -34,5 +35,27 @@
   @media ($desktop-breakpoint) {
     font-size: 26px;
     align-self: end;
+  }
+
+  &:hover {
+    color: $primary-lighter;
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $base-primary;
+    padding-bottom: 6px;
+    margin-bottom: -7px;
+    border-bottom: 1px solid $base-primary;
+  }
+
+  &:disabled {
+    color: #f8f9fc;
+    opacity: 0.5;
   }
 }

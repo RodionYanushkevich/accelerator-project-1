@@ -1,0 +1,54 @@
+.slide-hover {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 260px;
+
+  row-gap: 8.16px;
+
+  color: $base-white;
+  background-color: rgba(16, 38, 84, 0.89);
+}
+
+.slide-hover__title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 100%;
+}
+
+.slide-hover__description {
+  margin: 0;
+  padding: 0;
+
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+
+  color: #b6bdcc;
+}
+
+.slide-hover__list {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 12px;
+  padding: 0;
+  margin: 0;
+
+  width: 144px;
+  margin-top: 25.51px;
+  margin-left: 16px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 157%;
+  list-style-type: disc;
+}
