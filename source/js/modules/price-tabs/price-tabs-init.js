@@ -14,14 +14,14 @@ const getPriceDeffault = () => {
 
 const deffaultPrices = getPriceDeffault();
 
-function formatPrice(price) {
+const formatPrice = (price) => {
   let priceValue = price.toString();
 
   if (priceValue.length >= 5) {
     priceValue = `${priceValue.slice(0, 2) } ${ priceValue.slice(2)}`;
   }
   return priceValue;
-}
+};
 
 const updatePriceValues = (prices) => {
   for (let i = 0; i < prices.length; i++) {
