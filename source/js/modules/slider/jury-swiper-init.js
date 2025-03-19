@@ -5,7 +5,13 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
 const slides = document.querySelectorAll('.slider-juri__slide');
-const slidesContainer = document.querySelector('.slider-juri');
+const slidesContainer = document.querySelector('.slider-juri__swiper');
+
+const mousePreventDeffault = () => {
+  slidesContainer.addEventListener('mousedown', (evt) => {
+    evt.preventDefault();
+  });
+};
 
 const swiper = new Swiper('.slider-juri__swiper', {
   modules: [Navigation],
@@ -15,47 +21,40 @@ const swiper = new Swiper('.slider-juri__swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-    },
-    1366: {
-      slidesPerView: 4,
-    },
-  },
   on: {
     init: function () {
       updateTabIndexAttribute(this);
     },
     slideChange: function () {
       updateTabIndexAttribute(this);
+      if (window.innerWidth >= 1366) {
+        mousePreventDeffault();
+      }
+    },
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1366: {
+      slidesPerView: 4,
+      simulateTouch: false,
     },
   },
 });
 
-
+// еще подумай
 slidesContainer.addEventListener('focusin', (evt) => {
   const focusedSlide = evt.target.closest('.slider-juri__slide');
   if (focusedSlide) {
-    const index = Array.from(slides).indexOf(focusedSlide);
+    const index = focusedSlide.getAttribute('data-swiper-slide-index');
     swiper.slideTo(index);
+    // swiper.slides[swiper.activeIndex + 1].setAttribute('tabindex', '0');
   }
 });
 
 function updateTabIndexAttribute(juriSwiper) {
   slides.forEach((slide) => {
-    if (juriSwiper.activeIndex < '3'){
-      slide.setAttribute('tabindex', '-1');
-    } else {
-      slide.setAttribute('tabindex', '0');
-
-    }
+    slide.setAttribute('tabindex', '0');
   });
-
-  const activeSlide = juriSwiper.slides[juriSwiper.activeIndex];
-  const nextSlide = juriSwiper.slides[juriSwiper.activeIndex + 1];
-
-  activeSlide.setAttribute('tabindex', '0');
-  nextSlide.setAttribute('tabindex', '0');
-
 }
