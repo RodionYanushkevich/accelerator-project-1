@@ -58,8 +58,7 @@
   }
 }
 
-
-.faq__accordion-list:not(:first-child) {
+.faq__accordion-list:not(.faq__accordion-list--current) {
   display: none;
 }
 

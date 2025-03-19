@@ -1,7 +1,7 @@
 .faq-buttons {
   display: flex;
   flex-direction: row;
-
+  justify-content: space-between;
 
   gap: 10px;
   flex-wrap: wrap;
@@ -45,7 +45,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
-    min-height: 46px;
+    min-height: 54px;
     min-width: 162px;
     padding: 17px 0;
   }
@@ -81,13 +81,11 @@
 
 
 .faq-buttons__button--current {
-  min-height: 46px;
-
   background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   border: none;
   color: $base-white;
 
-  pointer-events: none;
+  // pointer-events: none;
 
   &:focus-visible {
     color: $base-primary;

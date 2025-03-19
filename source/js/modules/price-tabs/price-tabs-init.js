@@ -3,7 +3,6 @@ const priceFilterButtons = document.querySelectorAll('.price__filter-button');
 
 const priceFilterList = document.querySelector('.price__filter-list');
 
-
 const getPriceDeffault = () => {
   const prices = [];
   productPrices.forEach((price) => {
