@@ -4,16 +4,19 @@
   display: grid;
 
   grid-template-columns: auto min-content;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: min-content 0fr;
   justify-content: space-between;
 
   font-family: $primary-family;
 
   column-gap: 22px;
+
   row-gap: 20px;
 
   padding: 20px 0;
   border-top: 1px solid #74819c;
+
+  transition: grid-template-rows 1000ms, row-gap 1000ms, opacity 1000ms;
 
   @media ($tablet-breakpoint) {
     row-gap: 10px;
@@ -77,6 +80,13 @@
   font-size: 16px;
   line-height: 125%;
 
+  overflow: hidden;
+
+  opacity: 1;
+  transition: opacity 500ms;
+
+  grid-column: 1/2;
+
   @media ($tablet-breakpoint) {
     font-size: 18px;
     line-height: 133%;
@@ -136,14 +146,19 @@
 }
 
 .accordion__button svg {
-  &:not(:nth-child(2)) {
+  &:first-of-type {
     color: $base-white;
-    width: 14px;
+
+    // width: 14px;
     height: 2px;
+    display: none;
   }
 
-  &:last-child {
-    color: #1c3374;
+  &:last-of-type {
+    color: inherit;
+    display: block;
+
+    // width: 14px;
   }
 
   @media ($tablet-breakpoint) {
@@ -152,12 +167,7 @@
   }
 }
 
-.accordion__button svg:first-of-type {
-  display: none;
-}
 
-
-// глянь критерии
 .accordion__button--checked svg {
   &:first-of-type {
     display: block;
@@ -168,10 +178,20 @@
   }
 }
 
-.accordion:not(:first-child) {
-  & p {
-    display: none;
-  }
+.accordion--unhidden {
+  grid-template-rows: min-content  1fr;
+}
 
+.accordion--unhidden p {
+  transition: opacity 1200ms;
+  opacity: 1;
+}
+
+.accordion--hidden {
+  grid-template-rows: min-content 0fr;
   row-gap: 0;
+}
+
+.accordion--hidden p {
+  opacity: 0;
 }

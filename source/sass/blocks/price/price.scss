@@ -158,11 +158,11 @@
 .price__filter-button-current {
   opacity: 1;
 
-  // background-color: transparent;
-  // border: none;
   box-shadow: 0 2px 0 0 $red-darker;
 
-  pointer-events: none;
+  &:hover {
+    box-shadow: 0 2px 0 0 $red-darker;
+  }
 }
 
 .price__cards-list {

@@ -81,7 +81,7 @@
       <h2 class="price__title title ">Абонементы</h2>
       <ul class="price__filter-list">
 
-        <li class="price__filter-item price__filter-item--current">
+        <li class="price__filter-item ">
           <button class="price__filter-button price__filter-button-current" type="button">1 месяц</button>
         </li>
         <li class="price__filter-item ">
@@ -93,29 +93,30 @@
 
       <ul class="price__cards-list">
         <li class="price__cards-list-item">
-          <!-- card1 -->
+          <!-- card 1 -->
           <article class="price__card-wrapper price-card">
             <h4 class="price-card__title">С тренером</h4>
             <p class="price-card__description">12 занятий</p>
-            <span class="price-card__product-price">5000</span>
+            <span class="price-card__product-price" data-content="5000">5000</span>
+            <!-- <span class="price-card__product-price-shadow">5000</span> -->
             <a class="price-card__link button button--gradient-bg" href="#">Купить абонемент</a>
           </article>
         </li>
         <li class="price__cards-list-item">
-          <!-- card2 -->
+          <!-- card 2 -->
           <article class="price__card-wrapper price-card">
             <h4 class="price-card__title">Дневной</h4>
             <p class="price-card__description">с 8:00 до 17:00</p>
-            <span class="price-card__product-price">1700</span>
+            <span class="price-card__product-price" data-content="1700">1700</span>
             <a class="price-card__link button button--gradient-bg" href="#">Купить абонемент</a>
           </article>
         </li>
         <li class="price__cards-list-item">
-          <!-- card2 -->
+          <!-- card 3 -->
           <article class="price__card-wrapper price-card">
             <h4 class="price-card__title">Полный день</h4>
             <p class="price-card__description">с 8:00 до 22:00</p>
-            <span class="price-card__product-price">2700</span>
+            <span class="price-card__product-price" data-content="2700">2700</span>
             <a class="price-card__link button button--gradient-bg " href="#">Купить абонемент</a>
           </article>
         </li>
@@ -388,7 +389,7 @@
 
       <ul class="faq__buttons-list faq-buttons">
         <li class="faq-buttons__list-item">
-          <button class="faq-buttons__button faq-buttons__button--current" type="button" tabindex="-1">Центр</button>
+          <button class="faq-buttons__button faq-buttons__button--current" type="button">Центр</button>
         </li>
         <li class="faq-buttons__list-item">
           <button class="faq-buttons__button" type="button">Абонемент</button>
@@ -402,10 +403,13 @@
       </ul>
 
       <div class="faq__wrapper">
-        <ul class="faq__accordion-list">
-          <li class="faq__accordion-item accordion">
+
+        <!-- 1 список -->
+        <ul class="faq__accordion-list faq__accordion-list--current">
+          <li class="faq__accordion-item accordion accordion--unhidden">
             <h5>Как стать членом <br>фитнес-центра?</h5>
-            <button class="accordion__button accordion__button--checked" type="button"><span class="visually-hidden">кнопка показать / скрыть ответ</span>
+            <button class="accordion__button accordion__button--checked" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
                 <use href="/__spritemap#sprite-minus"></use>
               </svg>
@@ -419,47 +423,52 @@
           <li class="faq__accordion-item accordion">
             <h5>Где можно посмотреть расписание?</h5>
             <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
                 <use href="/__spritemap#sprite-minus"></use>
               </svg>
               <svg width="14" height="14">
                 <use href="/__spritemap#sprite-plus"></use>
               </svg>
-              <span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
+            </button>
             <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
           </li>
 
           <li class="faq__accordion-item accordion">
             <h5>Есть кулеры в центре? Предоставляются полотенца?</h5>
             <button class="accordion__button" type="button">
-              <svg width="14" height="2">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
+              <svg class="accordion__button-icon" width="14" height="2">
                 <use href="/__spritemap#sprite-minus"></use>
               </svg>
-              <svg width="14" height="14">
+              <svg class="accordion__button-icon" width="14" height="14">
                 <use href="/__spritemap#sprite-plus"></use>
               </svg>
-              <span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
-            <p class="test">ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы</p>
+            </button>
+            <p>Да, в нашем центре есть кулеры с питьевой водой и полотенца, которые можно взять на ресепшене.</p>
           </li>
 
           <li class="faq__accordion-item accordion">
             <h5>Сколько тренеров работает в клубе и какова их квалификация?</h5>
             <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
                 <use href="/__spritemap#sprite-minus"></use>
               </svg>
               <svg width="14" height="14">
                 <use href="/__spritemap#sprite-plus"></use>
               </svg>
-              <span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
-            <p>ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы</p>
+            </button>
+            <p>В нашем клубе работает 15 тренеров, каждый из которых имеет высшее образование в области физической культуры и спорта, а также сертификаты по различным направлениям фитнеса.</p>
           </li>
         </ul>
 
+        <!-- 2ой список -->
         <ul class="faq__accordion-list">
           <li class="faq__accordion-item accordion">
             <h5>Занятия с тренером входят в абонемент?</h5>
-            <button class="accordion__button accordion__button--checked" type="button">
+            <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
                 <use href="/__spritemap#sprite-minus"></use>
               </svg>
@@ -472,101 +481,155 @@
           <li class="faq__accordion-item accordion">
             <h5>Можно ли заморозить абонемент?</h5>
             <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
                 <use href="/__spritemap#sprite-minus"></use>
               </svg>
               <svg width="14" height="14">
                 <use href="/__spritemap#sprite-plus"></use>
               </svg>
-              <span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
-            <p>ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы</p>
+            </button>
+            <p>Да, вы можете заморозить абонемент на срок до 3 месяцев. Для этого необходимо обратиться к менеджеру клуба и заполнить соответствующее заявление.</p>
           </li>
           <li class="faq__accordion-item accordion">
             <h5>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h5>
             <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
                 <use href="/__spritemap#sprite-minus"></use>
               </svg>
               <svg width="14" height="14">
                 <use href="/__spritemap#sprite-plus"></use>
               </svg>
-              <span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
-            <p>ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы</p>
+            </button>
+            <p>Нет, у нас нет лимита на посещения тренажерного зала. Вы можете посещать его и групповые занятия неограниченное количество раз в течение срока действия абонемента.</p>
           </li>
           <li class="faq__accordion-item accordion">
             <h5>Что такое семейный доступ и доступ для друзей?</h5>
             <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
                 <use href="/__spritemap#sprite-minus"></use>
               </svg>
               <svg width="14" height="14">
                 <use href="/__spritemap#sprite-plus"></use>
               </svg>
-              <span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
-            <p>ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы</p>
+            </button>
+            <p>Семейный доступ позволяет членам вашей семьи пользоваться абонементом, предоставляя возможность посещать тренажерный зал и групповые занятия. Доступ для друзей позволяет вам приглашать друзей в клуб на определенные занятия или мероприятия. Условия и количество доступов могут варьироваться в зависимости от типа абонемента, поэтому рекомендуется уточнить детали у менеджера клуба.</p>
           </li>
         </ul>
 
+        <!-- 3ий список -->
         <ul class="faq__accordion-list">
           <li class="faq__accordion-item accordion">
-            <h5>Предлагает ли клуб услуги
-              по консультированию
-              по вопросам питания?</h5>
-            <button class="accordion__button accordion__button--checked" type="button">
+            <h5>Предлагает ли клуб услуги по консультированию по вопросам питания?</h5>
+            <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
                 <use href="/__spritemap#sprite-minus"></use>
               </svg>
               <svg width="14" height="14">
                 <use href="/__spritemap#sprite-plus"></use>
               </svg>
-              <span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
+            </button>
             <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
           </li>
           <li class="faq__accordion-item accordion">
             <h5>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h5>
             <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
                 <use href="/__spritemap#sprite-minus"></use>
               </svg>
               <svg width="14" height="14">
                 <use href="/__spritemap#sprite-plus"></use>
               </svg>
-              <span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
-            <p>ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы</p>
+            </button>
+            <p>Да, в нашем клубе регулярно проводятся различные мероприятия и соревнования. Мы организуем как спортивные турниры, так и фитнес-мероприятия, которые позволяют нашим членам продемонстрировать свои навыки и поучаствовать в дружеском соревновании. Следите за объявлениями на сайте клуба и в социальных сетях, чтобы не пропустить информацию о предстоящих событиях!</p>
           </li>
           <li class="faq__accordion-item accordion">
             <h5>Можно ли приобрести в центре спортивное питание?</h5>
-            <button class="accordion__button" type="button"><span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
-            <p>ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы</p>
+            <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
+              <svg width="14" height="2">
+                <use href="/__spritemap#sprite-minus"></use>
+              </svg>
+              <svg width="14" height="14">
+                <use href="/__spritemap#sprite-plus"></use>
+              </svg>
+            </button>
+            <p>Да, в нашем центре вы можете приобрести разнообразные виды спортивного питания. Наши консультанты всегда готовы помочь вам выбрать подходящие продукты в зависимости от ваших потребностей и предпочтений.</p>
           </li>
           <li class="faq__accordion-item accordion">
             <h5>Есть ли в центре детская комната?</h5>
-            <button class="accordion__button" type="button"><span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
-            <p>ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы</p>
+            <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
+              <svg width="14" height="2">
+                <use href="/__spritemap#sprite-minus"></use>
+              </svg>
+              <svg width="14" height="14">
+                <use href="/__spritemap#sprite-plus"></use>
+              </svg>
+            </button>
+            <p>В нашем центре имеется детская комната, где дети могут играть под присмотром воспитателей.</p>
           </li>
         </ul>
 
+        <!-- 4ый список -->
         <ul class="faq__accordion-list">
           <li class="faq__accordion-item accordion">
             <h5>Есть в фитнес-центре дресс-код?</h5>
-            <button class="accordion__button accordion__button--checked" type="button"><span class="visually-hidden">кнопка показать / скрыть ответ</span>
+            <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
+              <svg width="14" height="2">
+                <use href="/__spritemap#sprite-minus"></use>
+              </svg>
+              <svg width="14" height="14">
+                <use href="/__spritemap#sprite-plus"></use>
+              </svg>
             </button>
             <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
           </li>
+
           <li class="faq__accordion-item accordion">
             <h5>Можно ли приводить с собой детей на тренировки?</h5>
-            <button class="accordion__button" type="button"><span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
-            <p>ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы</p>
+            <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
+              <svg width="14" height="2">
+                <use href="/__spritemap#sprite-minus"></use>
+              </svg>
+              <svg width="14" height="14">
+                <use href="/__spritemap#sprite-plus"></use>
+              </svg>
+            </button>
+            <p>Конечно! Дети могут находиться в центре во время тренировок, но рекомендуется использовать детскую комнату для их безопасности и удобства.</p>
           </li>
+
           <li class="faq__accordion-item accordion">
             <h5>Какие дополнительные правила посещения центра?</h5>
-            <button class="accordion__button" type="button"><span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
-            <p>ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы</p>
+            <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
+              <svg width="14" height="2">
+                <use href="/__spritemap#sprite-minus"></use>
+              </svg>
+              <svg width="14" height="14">
+                <use href="/__spritemap#sprite-plus"></use>
+              </svg>
+            </button>
+            <p>Посетители должны соблюдать чистоту, а также уважать других участников. Запрещается приносить еду и напитки в тренировочные зоны. Важно следовать указаниям тренеров и администрации центра.</p>
           </li>
           <li class="faq__accordion-item accordion">
             <h5>Нужна ли медицинская справка для посещения залов и бассейна?</h5>
-            <button class="accordion__button" type="button"><span class="visually-hidden">кнопка показать / скрыть ответ</span></button>
-            <p>ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы. ТЕКСТ РЫБА ответ на часто задаваемые вопросы вопросы</p>
+            <button class="accordion__button" type="button">
+              <span class="visually-hidden">кнопка показать / скрыть ответ</span>
+              <svg width="14" height="2">
+                <use href="/__spritemap#sprite-minus"></use>
+              </svg>
+              <svg width="14" height="14">
+                <use href="/__spritemap#sprite-plus"></use>
+              </svg>
+            </button>
+            <p>Да, для посещения залов и бассейна требуется медицинская справка, подтверждающая отсутствие противопоказаний к занятиям спортом. Рекомендуется обновлять справку раз в год.</p>
           </li>
         </ul>
       </div>

@@ -93,9 +93,10 @@
   }
 
   &::before {
+    // content: "5000";
+    content: attr(data-content);
     position: absolute;
     bottom: 24px;
-    content: "5000";
     display: inline;
     font-weight: 700;
     font-size: 80px;
