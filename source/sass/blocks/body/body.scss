@@ -8,10 +8,9 @@
 .body__hero-wrapper {
   display: flex;
   flex-direction: column;
-
   width: 100%;
-  color: $base-white;
 
+  color: $base-white;
   background: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
 }
 
@@ -23,6 +22,7 @@
   @media ($desktop-breakpoint) {
     flex-direction: row;
     justify-content: center;
+
     background: linear-gradient(to right, $base-primary 50%, $base-white 50%);
   }
 }

@@ -53,7 +53,7 @@ slidesContainer.addEventListener('focusin', (evt) => {
   }
 });
 
-function updateTabIndexAttribute(juriSwiper) {
+function updateTabIndexAttribute() {
   slides.forEach((slide) => {
     slide.setAttribute('tabindex', '0');
   });

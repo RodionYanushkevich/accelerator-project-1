@@ -13,12 +13,7 @@ const swiper = new Swiper('.reviews-slider', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev', },
   breakpoints: {
-    768: {
-      // slidesPerView: 2,
-      // spaceBetween: 40,
-    },
     1366: {
-      // slidesPerView: 4,
-      // spaceBetween: 40,
+      simulateTouch: false,
     },
   }});

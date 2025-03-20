@@ -1,6 +1,8 @@
+const DEFAULT_CLASSES_COUNT = 12;
+
+
 const productPrices = document.querySelectorAll('.price-card__product-price');
 const priceFilterButtons = document.querySelectorAll('.price__filter-button');
-
 
 const priceFilterList = document.querySelector('.price__filter-list');
 const [priceClassesCount] = document.querySelectorAll('.price-card__description');
@@ -13,8 +15,7 @@ const getPriceDeffault = () => {
   return prices;
 };
 
-const deffaultDescription = 12;
-const deffaultPrices = getPriceDeffault();
+const defaultPrices = getPriceDeffault();
 
 const formatPrice = (price) => {
   let priceValue = price.toString();
@@ -35,18 +36,17 @@ const updatePriceValues = (prices) => {
 
 const updatePriceDescriptionValue = (filterButton) => {
   const monthvalue = filterButton.innerText.split(' ')[0];
-  const descriptionValue = deffaultDescription * monthvalue;
-  // const classesValue = priceClassesCount.innerHTML.split('&nbsp;')[0];
+  const descriptionValue = DEFAULT_CLASSES_COUNT * monthvalue;
   if (descriptionValue > 12) {
-    priceClassesCount.innerHTML = `${deffaultDescription * monthvalue} занятия`;
+    priceClassesCount.innerHTML = `${DEFAULT_CLASSES_COUNT * monthvalue} занятия`;
   } else {
-    priceClassesCount.innerHTML = `${deffaultDescription * monthvalue} занятий`;
+    priceClassesCount.innerHTML = `${DEFAULT_CLASSES_COUNT * monthvalue} занятий`;
   }
 };
 
 const updatePrice = (filterButton) => {
   const monthvalue = filterButton.innerText.split(' ')[0];
-  const newValues = deffaultPrices.map((value) => value * monthvalue);
+  const newValues = defaultPrices.map((value) => value * monthvalue);
   updatePriceDescriptionValue(filterButton);
   updatePriceValues(newValues);
 };

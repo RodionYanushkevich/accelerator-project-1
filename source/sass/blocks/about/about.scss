@@ -4,10 +4,12 @@
   box-sizing: border-box;
   align-self: center;
   display: flex;
-  max-width: 320px;
   flex-direction: column;
+
   row-gap: 36px;
   padding: 41px 0 40px;
+
+  max-width: 100%;
 
   @media ($tablet-breakpoint) {
     max-width: 768px;
@@ -104,10 +106,11 @@
 
 
   @media ($tablet-breakpoint) {
-    transform: translateX(-50%);
     position: absolute;
     left: 50%;
     bottom: 35px;
+
+    transform: translateX(-50%);
   }
 
   @media ($desktop-breakpoint) {
@@ -116,10 +119,18 @@
   }
 }
 
+.about__image {
+  @media (width <= 768px) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .about__video-button {
   position: absolute;
   left: 50%;
   top: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,7 +142,6 @@
   border-radius: 50%;
   background-color: transparent;
   color: $base-white;
-
   border: 2px solid rgba(209, 10, 66, 0.2);
 
   transform: translateY(-50%) translateX(-50%);
@@ -174,10 +184,9 @@
   }
 
   &:disabled {
-    opacity: 0.4;
-
     color: $base-primary;
     border: 2px solid $base-primary;
+    opacity: 0.4;
 
     &::after {
       background: #ffffff;

@@ -65,11 +65,11 @@
 .faq__accordion-list {
   margin: 0;
   padding: 0;
-  list-style: none;
-
   justify-content: space-between;
   display: flex;
   flex-direction: column;
+
+  list-style: none;
 
   @media ($desktop-breakpoint) {
     grid-column: 2/3;
