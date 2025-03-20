@@ -416,7 +416,7 @@
             <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
           </li>
 
-          <li class="faq__accordion-item accordion">
+          <li class="faq__accordion-item accordion accordion--hidden">
             <h3>Где можно посмотреть расписание?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
@@ -430,7 +430,7 @@
             <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
           </li>
 
-          <li class="faq__accordion-item accordion">
+          <li class="faq__accordion-item accordion accordion--hidden">
             <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
@@ -444,7 +444,7 @@
             <p>Да, в нашем центре есть кулеры с питьевой водой и полотенца, которые можно взять на ресепшене.</p>
           </li>
 
-          <li class="faq__accordion-item accordion">
+          <li class="faq__accordion-item accordion accordion--hidden">
             <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
@@ -691,9 +691,11 @@
         <form class="form-section__form form" method="post" action="https://echo.htmlacademy.ru">
           <span class="form__inputs-wrapper">
             <label class="form__label visually-hidden" for="name">поле ввода имени</label>
-            <input class="form__input" id="name" name="name" pattern="[A-Za-z]+" required autocomplete="off" placeholder="Имя">
+            <input class="form__input" id="name" name="name" required autocomplete="off" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\s]+">
+            <span class="form__error-message form__error-message--hidden">Введите только буквы</span>
             <label class="form__label visually-hidden" for="phone-number">поле ввода номера телефона</label>
-            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон" pattern="[\+0-9]+">
+            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон" pattern="[0-9\-]+">
+            <span class="form__error-message form__error-message--hidden">Введите только цыфры</span>
           </span>
           <button class="form__button button" type="submit">отправить</button>
         </form>
