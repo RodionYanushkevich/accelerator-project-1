@@ -692,10 +692,10 @@
           <span class="form__inputs-wrapper">
             <label class="form__label visually-hidden" for="name">поле ввода имени</label>
             <input class="form__input" id="name" name="name" required autocomplete="off" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\s]+">
-            <span class="form__error-message form__error-message--hidden">Введите только буквы</span>
+            <span class="form__error-message form__error-message--hidden">Только из букв и пробелов</span>
             <label class="form__label visually-hidden" for="phone-number">поле ввода номера телефона</label>
-            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон" pattern="[0-9\-]+">
-            <span class="form__error-message form__error-message--hidden">Введите только цыфры</span>
+            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон" pattern="[0-9\-\s]+">
+            <span class="form__error-message form__error-message--hidden">Только из цифр и символов</span>
           </span>
           <button class="form__button button" type="submit">отправить</button>
         </form>

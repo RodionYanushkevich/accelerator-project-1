@@ -11,23 +11,31 @@
   background: $base-white;
 
   @media ($tablet-breakpoint) {
+    min-width: 380px;
     padding: 65px;
     row-gap: 24px;
   }
 
   @media ($desktop-breakpoint) {
-    min-width: 360px;
     row-gap: 17px;
+    min-width: 360px;
   }
 
   &:hover {
-    padding: 46px 35px;
+    position: relative;
+    background-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
 
-    border: 7px solid;
-    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 7px;
 
-    @media ($tablet-breakpoint) {
-      padding: 65px - 7px;
+      display: block;
+      width: calc(100% - 14px);
+      height: calc(100% - 14px);
+
+      background-color: $base-white;
     }
   }
 }
@@ -39,6 +47,7 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 100%;
+  z-index: 1;
 
   @media ($tablet-breakpoint) {
     font-size: 24px;
@@ -52,6 +61,7 @@
 .price-card__description {
   margin: 0;
   padding: 0;
+  z-index: 1;
 
   @media ($tablet-breakpoint) {
     font-size: 16px;
@@ -134,7 +144,15 @@
 
   font-size: 12px;
   line-height: 100%;
-
+  z-index: 1;
   color: $base-primary;
   border-color: inherit;
+
+  @media ($tablet-breakpoint) {
+    min-width: 250px;
+  }
+
+  @media ($tablet-breakpoint) {
+    min-width: 230px;
+  }
 }

@@ -2,39 +2,69 @@
 // import 'swiper/css';
 
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 const slides = document.querySelectorAll('.slider-juri__slide');
 const slidesContainer = document.querySelector('.slider-juri__swiper');
 
-const mousePreventDeffault = () => {
-  slidesContainer.addEventListener('mousedown', (evt) => {
-    evt.preventDefault();
+let isActive = false;
+
+const mousePreventDeffault = (evt) => {
+  evt.preventDefault();
+};
+
+const updateTabIndexAttribute = () => {
+  slides.forEach((slide) => {
+    slide.setAttribute('tabindex', '0');
+  });
+};
+
+const focusSwiperInit = () => {
+  slidesContainer.addEventListener('focusin', (evt) => {
+
+    if(evt.target.tagName === 'LI') {
+      document.addEventListener('keydown', tabKeydownPreventDeffault);
+    }
+
+  }
+  );
+  slidesContainer.addEventListener('focusout', () => {
+    document.removeEventListener('keydown', tabKeydownPreventDeffault);
   });
 };
 
 const swiper = new Swiper('.slider-juri__swiper', {
-  modules: [Navigation],
+  modules: [Navigation, Keyboard],
   loop: true,
   slidesPerView: 1,
+  keyboard: {
+    enabled: true,
+    pageUpDown: true,
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   on: {
     init: function () {
-      updateTabIndexAttribute(this);
+      focusSwiperInit(this);
+      updateTabIndexAttribute();
     },
     slideChange: function () {
-      updateTabIndexAttribute(this);
-      if (window.innerWidth >= 1366) {
-        mousePreventDeffault();
+      if (window.innerWidth >= 1366 && !isActive) {
+        slidesContainer.addEventListener('mousedown', mousePreventDeffault);
+        isActive = true ;
+      }
+      if (window.innerWidth < 1366 && isActive) {
+        slidesContainer.removeEventListener('mousedown', mousePreventDeffault);
+        isActive = false ;
       }
     },
   },
   breakpoints: {
     768: {
       slidesPerView: 2,
+      simulateTouch: true,
     },
     1366: {
       slidesPerView: 4,
@@ -43,18 +73,25 @@ const swiper = new Swiper('.slider-juri__swiper', {
   },
 });
 
-// еще подумай
-slidesContainer.addEventListener('focusin', (evt) => {
-  const focusedSlide = evt.target.closest('.slider-juri__slide');
-  if (focusedSlide) {
-    const index = focusedSlide.getAttribute('data-swiper-slide-index');
-    swiper.slideTo(index);
-    // swiper.slides[swiper.activeIndex + 1].setAttribute('tabindex', '0');
-  }
-});
+function tabKeydownPreventDeffault (evt) {
+  const prevSlide = document.querySelector('.swiper-slide-active');
+  const nextSlide = document.querySelector('.swiper-slide-next');
 
-function updateTabIndexAttribute() {
-  slides.forEach((slide) => {
-    slide.setAttribute('tabindex', '0');
-  });
+  if (evt.key === 'Tab') {
+    evt.preventDefault();
+    if (evt.shiftKey) {
+
+      swiper.slidePrev();
+      prevSlide.focus();
+    } else {
+
+      swiper.slideNext();
+      nextSlide.focus();
+    }
+  }
+
+  if (evt.key === 'Escape') {
+    evt.preventDefault();
+    slidesContainer.querySelector('.swiper-button-next').focus();
+  }
 }

@@ -6,12 +6,31 @@ const [nameError, phoneNumberError] = errors;
 
 const DEFFAULT_NAME_ERRORS_MESSAGES = [nameError.innerHTML ,phoneNumberError.innerHTML];
 
+const inputFormatter = (input) => {
+  const trimmedValue = input.value.trim();
+  input.value = trimmedValue;
+
+  if (input === inputs[1] && input.checkValidity()){
+    const newValue = input.value
+      .replace(/\s+/g, '-')
+      .replace(/-{2,}/g, '-');
+
+    input.value = newValue;
+
+  }
+};
+
+
 form.setAttribute('novalidate', '');
 
 inputs.forEach((input, index) => {
   input.addEventListener('focus', () => {
     errors[index].innerHTML = DEFFAULT_NAME_ERRORS_MESSAGES[index];
     errors[index].classList.add('form__error-message--hidden');
+  });
+
+  input.addEventListener('focusout', () => {
+    inputFormatter(input);
   });
 });
 
