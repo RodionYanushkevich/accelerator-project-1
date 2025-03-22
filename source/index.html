@@ -9,7 +9,6 @@
   <link rel="preload" href="./fonts/roboto/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/roboto/RobotoCondensed-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/roboto/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <script type="module" src="js/main.js" defer></script>
 
   <link rel="icon" href="img/favicon.png">
   <title>SUPERGYM</title>
@@ -17,6 +16,7 @@
 </head>
 
 <body class="page__body body">
+
   <div class="body__hero-wrapper" data-test="hero">
     <!-- HEADER -->
     <header class="body__header header">
@@ -57,23 +57,23 @@
         <img class="about__image" src="img/about/about-mobile@1x.webp" srcset="img/about/about-mobile@2x.webp" alt="Фото тренажерного зала" width="320" height="280">
       </picture>
 
-      <div class="about__iframe-video-wrapper">
+      <div class="about__iframe-video-wrapper" data-video="https://www.youtube.com/embed/9TZXsZItgdw?si=Zd_cBYEzV_VapEPN">
+
         <button class="about__video-button" type="button">
           <span class="visually-hidden">Кнопка проигрывания видео</span>
           <svg width="12" height="12">
             <use href="__spritemap#sprite-play-button"></use>
           </svg>
         </button>
+
         <picture>
           <source type="image/webp" media="(min-width:1366px)" srcset="img/about/about-video-desktop@1x.webp 1x, img/about/about-video-desktop@2x.webp 2x" width="360" height="230">
           <source type="image/webp" media="(min-width:768px)" srcset="img/about/about-video-tablet@1x.webp 1x, img/about/about-video-tablet@2x.webp 2x" width="270" height="170">
           <img class="about__image" src="img/about/about-video-mobile@2x.webp" srcset="img/about/about-video-mobile@2x.webp" alt=" превью видео тренажерного зала" width="320" height="170">
         </picture>
-
-        <!-- <iframe width="320" height="170" src="https://www.youtube.com/embed/9TZXsZItgdw?si=Zd_cBYEzV_VapEPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen aria-label="Видео HtmlAcademy Бесплатные интерактивные онлайн-курсы на Ютубе"></iframe> -->
-
       </div>
     </section>
+
     <!-- PRICE -->
     <section class="price" data-test="price" id="price">
       <h2 class="price__title title ">Абонементы</h2>
@@ -119,7 +119,8 @@
         </li>
       </ul>
     </section>
-    <!-- Games -->
+
+    <!-- GAMES -->
     <section class="body__games games" data-test="games">
       <h2 class="visually-hidden">Специальное предложение</h2>
       <article class="games__card games-card">
@@ -149,7 +150,8 @@
         </picture>
       </article>
     </section>
-    <!-- СЛАЙДЕР -->
+
+    <!-- JURI -->
     <section class="body__juri juri" data-test="juri" id="juri">
       <h2 class="juri__title title ">Жюри</h2>
       <span class="visually-hidden">Список членов жюри</span>
@@ -379,6 +381,7 @@
         </li>
       </ul>
     </section>
+
     <!-- FAQ -->
     <section class="body__faq faq" data-test="faq">
       <h2 class="faq__title title ">Вопросы и ответы</h2>
@@ -403,7 +406,9 @@
         <!-- 1 список -->
         <ul class="faq__accordion-list faq__accordion-list--current">
           <li class="faq__accordion-item accordion accordion--unhidden">
+
             <h3>Как стать членом <br>фитнес-центра?</h3>
+
             <button class="accordion__button accordion__button--checked" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -413,6 +418,7 @@
                 <use href="/__spritemap#sprite-plus"></use>
               </svg>
             </button>
+
             <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
           </li>
 
@@ -530,6 +536,7 @@
             </button>
             <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
           </li>
+
           <li class="faq__accordion-item accordion">
             <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
             <button class="accordion__button" type="button">
@@ -543,6 +550,7 @@
             </button>
             <p>Да, в нашем клубе регулярно проводятся различные мероприятия и соревнования. Мы организуем как спортивные турниры, так и фитнес-мероприятия, которые позволяют нашим членам продемонстрировать свои навыки и поучаствовать в дружеском соревновании. Следите за объявлениями на сайте клуба и в социальных сетях, чтобы не пропустить информацию о предстоящих событиях!</p>
           </li>
+
           <li class="faq__accordion-item accordion">
             <h3>Можно ли приобрести в центре спортивное питание?</h3>
             <button class="accordion__button" type="button">
@@ -638,6 +646,7 @@
         <!-- REVIEWS SWIPER -->
         <div class="reviews__slider-containter reviews-slider">
           <ul class="reviews-slider__slider-container swiper-wrapper">
+
             <!-- слайд 1 -->
             <li class="reviews-slider__slide swiper-slide">
               <h3>Анна Орлова</h3>
@@ -647,9 +656,10 @@
               </picture>
               <blockquote>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
             </li>
+
             <!-- слайд 2 -->
             <li class="reviews-slider__slide swiper-slide">
-              <h3 class="reviews-slider__title">Анна Смирнова</h3>
+              <h3>Анна Смирнова</h3>
               <picture>
                 <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
                 <img src="img/reviews/rewiew-mobile@1x.webp" srcset="img/reviews/rewiew-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
@@ -657,9 +667,10 @@
               <blockquote class="reviews-slider__description">«Занимаюсь в Supergym уже год и не собираюсь менять клуб. Атмосфера дружелюбная, и тренеры внимательно следят за техникой выполнения упражнений, что очень важно для меня!»
               </blockquote>
             </li>
+
             <!-- слайд 3 -->
             <li class="reviews-slider__slide swiper-slide">
-              <h3 class="reviews-slider__title">Екатерина Иванова</h3>
+              <h3>Екатерина Иванова</h3>
               <picture>
                 <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
                 <img src="img/reviews/rewiew-mobile@1x.webp" srcset="img/reviews/rewiew-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
@@ -675,7 +686,7 @@
               <use href="__spritemap#sprite-arrow"></use>
             </svg>
           </button>
-          <button class="reviews-slider__slider-button slider-button swiper-button-next" type="button" disabled>
+          <button class="reviews-slider__slider-button slider-button swiper-button-next" type="button">
             <span class="visually-hidden">кнопка следущий слайд</span>
             <svg width="16" height="32">
               <use href="__spritemap#sprite-arrow"></use>
@@ -695,7 +706,7 @@
             <span class="form__error-message form__error-message--hidden">Только из букв и пробелов</span>
             <label class="form__label visually-hidden" for="phone-number">поле ввода номера телефона</label>
             <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон" pattern="[0-9\-\s]+">
-            <span class="form__error-message form__error-message--hidden">Только из цифр и символов</span>
+            <span class="form__error-message form__error-message--hidden">Только из цифр и дефиса</span>
           </span>
           <button class="form__button button" type="submit">отправить</button>
         </form>
@@ -782,6 +793,7 @@
     </div>
   </footer>
 
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

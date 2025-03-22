@@ -124,4 +124,12 @@
   margin: 0 auto;
   color: $base-white;
   background-color: #1c3374;
+
+  width: 100%;
+  height: 100%;
+
+  @media ($tablet-breakpoint) {
+    width: unset;
+    height: unset;
+  }
 }

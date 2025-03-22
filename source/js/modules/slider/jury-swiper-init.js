@@ -1,6 +1,3 @@
-// https://swiperjs.com/get-started#installation
-// import 'swiper/css';
-
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 
@@ -21,14 +18,13 @@ const updateTabIndexAttribute = () => {
 
 const focusSwiperInit = () => {
   slidesContainer.addEventListener('focusin', (evt) => {
-
     if(evt.target.tagName === 'LI') {
       document.addEventListener('keydown', tabKeydownPreventDeffault);
     }
-
   }
   );
   slidesContainer.addEventListener('focusout', () => {
+
     document.removeEventListener('keydown', tabKeydownPreventDeffault);
   });
 };
@@ -84,7 +80,6 @@ function tabKeydownPreventDeffault (evt) {
       swiper.slidePrev();
       prevSlide.focus();
     } else {
-
       swiper.slideNext();
       nextSlide.focus();
     }

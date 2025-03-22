@@ -30,8 +30,8 @@
   padding: 0;
   list-style: none;
 
-  width: $mobile;
-
+  // width: $mobile;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,7 +120,10 @@
 }
 
 .offers__big-card-wrapper {
+  width: 100%;
+
   @media ($tablet-breakpoint) {
+    width: unset;
     grid-column: 1/3;
   }
 
