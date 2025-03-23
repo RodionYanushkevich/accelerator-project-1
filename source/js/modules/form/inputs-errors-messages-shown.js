@@ -6,6 +6,8 @@ const [nameError, phoneNumberError] = errors;
 
 const DEFFAULT_NAME_ERRORS_MESSAGES = [nameError.innerHTML ,phoneNumberError.innerHTML];
 
+form.setAttribute('novalidate', '');
+
 const inputFormatter = (input) => {
   const trimmedValue = input.value.trim();
   input.value = trimmedValue;
@@ -19,8 +21,6 @@ const inputFormatter = (input) => {
 
   }
 };
-
-form.setAttribute('novalidate', '');
 
 inputs.forEach((input, index) => {
   input.addEventListener('focus', () => {

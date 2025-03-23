@@ -1,7 +1,6 @@
 const accordionButtons = document.querySelectorAll('.accordion__button');
 const accordions = document.querySelectorAll('.accordion');
 
-
 const descriprionsCheck = (accordion) => {
   const accordionCurrentDescriptions = accordion.querySelectorAll('p');
   const descriprionsCount = accordionCurrentDescriptions.length;
