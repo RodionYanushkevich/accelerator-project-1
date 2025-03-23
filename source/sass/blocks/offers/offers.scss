@@ -2,15 +2,9 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 41px 0;
-
-  // padding: 41px 0 40px;
-
-
   align-items: center;
-
+  padding: 41px 0;
   row-gap: 39px;
-
   width: 100%;
 
   @media ($tablet-breakpoint) {
@@ -30,7 +24,6 @@
   padding: 0;
   list-style: none;
 
-  // width: $mobile;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -145,9 +138,3 @@
     grid-row: 2/3;
   }
 }
-
-// .offers__list-item:nth-child(3) {
-//   @media ($desktop-breakpoint) {
-//     grid-row: 3/4;
-//   }
-// }

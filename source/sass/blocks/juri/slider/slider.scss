@@ -6,14 +6,10 @@
     display: flex;
     justify-content: center;
     width: 701px;
-
-    // width: calc($tablet - 101px + 34px);
   }
 
   @media ($desktop-breakpoint) {
     width: 1299px;
-
-    // width: calc($desktop - 101px + 34px);
   }
 }
 
@@ -67,7 +63,10 @@
   display: flex;
   justify-content: center;
   outline: none;
-  cursor: pointer;
+
+  @media ($desktop-breakpoint) {
+    cursor: pointer;
+  }
 }
 
 

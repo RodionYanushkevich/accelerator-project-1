@@ -3,15 +3,7 @@ const playButton = videoFrame.querySelector('.about__video-button');
 const videoImageWrapper = videoFrame.querySelector('.about__image');
 
 const videoLink = videoFrame.dataset.video;
-
-// const idVideo = videoLink.substring('https://www.youtube.com/embed/'.length, videoLink.length);
-
-
-const generateUrl = () => {
-  const query = '?rel=0&showinfo=0&autoplay=1';
-  return videoLink + query;
-};
-
+const query = '?rel=0&showinfo=0&autoplay=1';
 
 const createIframe = () => {
   const iframe = document.createElement('iframe');
@@ -20,8 +12,9 @@ const createIframe = () => {
   iframe.setAttribute('allowfullscreen', '');
   iframe.setAttribute('aria-label', 'Видео HtmlAcademy Бесплатные интерактивные онлайн-курсы на Ютубе');
   iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media');
-  iframe.setAttribute('src', generateUrl());
+  iframe.setAttribute('src', videoLink + query);
   iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('loading', 'lazy');
 
   return iframe;
 };
@@ -31,10 +24,4 @@ playButton.addEventListener ('click', () => {
   videoImageWrapper.style.display = 'none';
 
   videoFrame.appendChild(createIframe());
-
-  // iframeVideo.addEventListener ('mousedown' ,()=> {
-  //   videoImageWrapper.style.display = 'block';
-  //   playButton.style.display = 'flex';
-
-  // });
 });

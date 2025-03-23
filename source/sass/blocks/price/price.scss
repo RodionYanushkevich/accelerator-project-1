@@ -36,15 +36,17 @@
 
   @media ($tablet-breakpoint) {
     content: "";
-    transform: translateX(123px) rotate(150deg);
     bottom: 12px;
     left: 50%;
     display: block;
     width: 275px;
     height: 328px;
+
     background-image: url("../../../img/price/price-background-tablet@1x.webp");
     background-repeat: no-repeat;
     background-size: 100%;
+
+    transform: translateX(123px) rotate(150deg);
 
     @media (resolution >= 2dppx) {
       background-image: url(".../../../img/price/price-background-tablet@2x.webp");
@@ -53,15 +55,17 @@
 
   @media ($desktop-breakpoint) {
     content: "";
-    transform: translateX(455px) rotate(150deg);
     bottom: 7px;
     left: 50%;
     display: block;
     width: 321px;
     height: 384px;
+
     background-image: url("../../../img/price/price-background-desktop@1x.webp");
     background-repeat: no-repeat;
     background-size: 100%;
+
+    transform: translateX(455px) rotate(150deg);
 
     @media (resolution >= 2dppx) {
       background-image: url(".../../../img/price/price-background-desktop@2x.webp");

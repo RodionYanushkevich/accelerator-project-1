@@ -20,7 +20,6 @@ const inputFormatter = (input) => {
   }
 };
 
-
 form.setAttribute('novalidate', '');
 
 inputs.forEach((input, index) => {
@@ -50,6 +49,4 @@ form.addEventListener('submit' , (evt) => {
       return;
     }
   }
-
 });
-

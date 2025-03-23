@@ -1,14 +1,10 @@
-// .reviews-slider__slide:not(:first-child) {
-//   display: none;
-// }
+
 .reviews__swiper-buutons-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 240px;
-
-  // width: 100%;
 
   @media ($tablet-breakpoint) {
     width: 678px + 34px;
@@ -27,7 +23,6 @@
 
 .reviews-slider {
   color: $base-white;
-
   width: 100%;
 
   overflow: hidden;
@@ -47,21 +42,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 25px 27px;
-  row-gap: 11px;
   text-align: center;
   max-width: 240px;
-  background-color: $primary-lighter;
+  padding: 30px 25px 27px;
+  row-gap: 11px;
 
-  // overflow: hidden;
-  // min-height: 100%;
+  background-color: $primary-lighter;
 
   @media ($tablet-breakpoint) {
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-rows: repeat(2, min-content);
 
-    // grid-template-rows: repeat(2, min-content);
     align-items: start;
     text-align: start;
     column-gap: 40px;
@@ -95,7 +87,6 @@
 
 .reviews-slider blockquote {
   margin: 0;
-
   padding-top: 7px;
 
   font-weight: 300;

@@ -20,6 +20,10 @@ img {
   object-fit: contain;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a,
 li,
 button {

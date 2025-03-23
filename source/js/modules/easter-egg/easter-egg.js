@@ -10,7 +10,7 @@ const KONAMI_CODE = [
 
 let buttonsKeyDown = [];
 
-const createGitHubIcon = `
+const GitHubIcon = `
       <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
@@ -22,8 +22,9 @@ const createGitHubIcon = `
 
 const activateEasterEgg = () => {
   reddit.innerHTML = '';
-  reddit.innerHTML = createGitHubIcon;
+  reddit.innerHTML = GitHubIcon;
   reddit.setAttribute('href', 'https://github.com/RodionYanushkevich/accelerator-project-1');
+  reddit.setAttribute('title', 'Github Акселератор, первый проект');
 };
 
 const checkKonamiCode = () => {

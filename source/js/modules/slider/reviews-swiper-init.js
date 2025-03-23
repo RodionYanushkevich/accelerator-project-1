@@ -1,10 +1,8 @@
-// https://swiperjs.com/get-started#installation
-// import 'swiper/css';
 
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 
-const swiper = new Swiper('.reviews-slider', {
+new Swiper('.reviews-slider', {
   modules:[Navigation],
   loop: false,
   slidesPerView: 1,

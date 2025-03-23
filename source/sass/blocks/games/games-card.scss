@@ -1,7 +1,6 @@
 .games-card {
   display: flex;
   flex-direction: column;
-
   width: 290px;
 
   @media ($tablet-breakpoint) {
@@ -19,11 +18,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: minmax(108px, min-content) minmax(72px, min-content) 1fr;
+  padding: 40px;
 
   background-color: $base-red;
   color: $base-white;
-
-  padding: 40px;
 
   @media ($tablet-breakpoint) {
     grid-template-rows: minmax(108px, min-content) minmax(68px, min-content) 1fr;
@@ -34,7 +32,6 @@
   @media ($desktop-breakpoint) {
     padding: 61px 80px;
     grid-template-rows: minmax(108px, min-content) minmax(83px, min-content) min-content;
-
     column-gap: 78px;
   }
 }
@@ -79,22 +76,18 @@
   grid-row: 2/3;
   grid-column: 1/-1;
 
+  display: flex;
   align-items: center;
 
   font-weight: 300;
   font-size: 16px;
   line-height: 125%;
-  display: flex;
 
   @media ($tablet-breakpoint) {
     font-weight: 300;
     font-size: 18px;
     line-height: 133%;
   }
-
-  // @media ($destop-breakpoint) {
-
-  // }
 }
 
 .games-card__description br {

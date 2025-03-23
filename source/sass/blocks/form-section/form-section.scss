@@ -1,17 +1,13 @@
 .form-section {
   box-sizing: border-box;
-
-  // justify-self: center;
-  width: 100%;
-
-  background-color: $base-primary;
-  padding: 70px 15px;
   display: flex;
   flex-direction: column;
-
-  // align-items: center;
-  color: $base-white;
+  width: 100%;
+  padding: 70px 15px;
   row-gap: 36px;
+
+  background-color: $base-primary;
+  color: $base-white;
 
   @media ($tablet-breakpoint) {
     padding: 60px 164px;

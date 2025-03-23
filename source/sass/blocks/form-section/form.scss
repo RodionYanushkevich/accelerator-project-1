@@ -1,8 +1,8 @@
 .form {
-  width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 36px;
+  width: 100%;
 
   color: $base-white;
   background-color: $base-primary;
@@ -37,8 +37,8 @@
   outline: none;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #74819c;
   color: $base-white;
+  border-bottom: 1px solid #74819c;
 
 
   @media ($tablet-breakpoint) {
@@ -96,6 +96,8 @@
 }
 
 .form__button {
+  cursor: pointer;
+
   @media ($tablet-breakpoint) {
     padding: 25px 0;
   }
@@ -119,7 +121,6 @@
     left: 0;
   }
 
-
   &:last-child {
     top: 90px;
 
@@ -136,7 +137,6 @@
     }
   }
 }
-
 
 .form__error-message--hidden {
   display: none;

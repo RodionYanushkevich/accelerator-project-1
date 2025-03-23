@@ -19,13 +19,13 @@
 
 .faq-buttons__button {
   box-sizing: border-box;
-  min-height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 46px;
+  min-width: 140px;
   padding: 14px 0;
   margin: 0;
-  min-width: 140px;
 
   font-family: $primary-family;
   font-weight: 400;
@@ -33,19 +33,19 @@
   line-height: 100%;
 
   color: $base-primary;
-
   border: 1px solid rgba(16, 38, 84, 0.2);
   background-color: transparent;
 
   cursor: pointer;
 
   @media ($tablet-breakpoint) {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 100%;
     min-height: 54px;
     min-width: 162px;
     padding: 17px 0;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
   }
 
   @media ($desktop-breakpoint) {
@@ -59,9 +59,9 @@
   }
 
   &:focus-visible {
-    outline: none;
     background-color: $base-white;
     border: 1px solid $base-primary;
+    outline: none;
   }
 
   &:active {
@@ -77,17 +77,13 @@
   }
 }
 
-
 .faq-buttons__button--current {
   background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   border: none;
   color: $base-white;
 
-  // pointer-events: none;
-
   &:focus-visible {
     color: $base-primary;
-
     background: none;
     outline: none;
     background-color: $base-white;

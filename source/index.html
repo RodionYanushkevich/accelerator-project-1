@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Фитнес-зал 'SUPERGYM' предлагает современные тренажеры, групповые занятия и персональные тренировки. Начните свой путь к здоровью и хорошей форме с нами!">
   <link rel="preload" href="./fonts/alumni-sans/AlumniSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/alumni-sans/AlumniSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/roboto/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -16,32 +17,33 @@
 </head>
 
 <body class="page__body body">
-
-  <div class="body__hero-wrapper" data-test="hero">
-    <!-- HEADER -->
-    <header class="body__header header">
-      <picture>
-        <source type="image/svg+xml" media="(min-width:1366px)" srcset="img/logo-desktop.svg" width="130" height="26">
-        <source type="image/svg+xml" media="(min-width:768px)" srcset="img/logo-tablet.svg" width="110" height="22">
-        <img class="header__logo-image logo-image" src="img/logo-mobile.svg" alt="Логотип SUPERGYM" width="100" height="20">
-      </picture>
-
-      <a class="header__link" href="tel:+78005555555">8 800 555-55-55</a>
-    </header>
-    <!-- HERO -->
-    <section class="body__hero hero">
-      <p class="hero__city-descripion">Омск</p>
-      <h1 class="hero__title">Фитнес центр</h1>
-      <p class="hero__description">Тренажёрный зал Групповые занятия
-        Кардио-зона</p>
-      <picture>
-        <source type="image/webp" media="(min-width:1366px)" srcset="img/hero/hero-img-desktop@1x.webp 1x, img/hero/hero-img-desktop@2x.webp 2x" width="500" height="524">
-        <img class="hero__image" src="/img/hero/hero-img-tablet@1x.webp" srcset="/img/hero/hero-img-tablet@2x.webp" alt="Мужчина в футболке Супермена" width="324" height="390">
-      </picture>
-      <a class="hero__link button" href="#price" aria-label="Перейти к разделу с абонементами">Купить абонемент</a>
-    </section>
-  </div>
   <main class="page__main">
+
+    <section class="hero" data-test="hero">
+      <!-- HEADER -->
+      <header class="hero__header header">
+        <picture>
+          <source type="image/svg+xml" media="(min-width:1366px)" srcset="img/logo-desktop.svg" width="130" height="26">
+          <source type="image/svg+xml" media="(min-width:768px)" srcset="img/logo-tablet.svg" width="110" height="22">
+          <img class="header__logo-image logo-image" src="img/logo-mobile.svg" alt="Логотип SUPERGYM" width="100" height="20">
+        </picture>
+        <a class="header__link" href="tel:+78005555555">8 800 555-55-55</a>
+      </header>
+      <!-- HERO -->
+      <div class="hero__container">
+        <p class="hero__city-descripion">Омск</p>
+        <h1 class="hero__title">Фитнес центр</h1>
+        <p class="hero__description">Тренажёрный зал Групповые занятия
+          Кардио-зона</p>
+
+        <picture>
+          <source type="image/webp" media="(min-width:1366px)" srcset="img/hero/hero-img-desktop@1x.webp 1x, img/hero/hero-img-desktop@2x.webp 2x" width="500" height="524">
+          <img class="hero__image" src="/img/hero/hero-img-tablet@1x.webp" srcset="/img/hero/hero-img-tablet@2x.webp" alt="Мужчина в футболке Супермена" width="324" height="390">
+        </picture>
+
+        <a class="hero__link button" href="#price" aria-label="Перейти к разделу с абонементами">Купить абонемент</a>
+      </div>
+    </section>
     <!-- ABOUT -->
     <section class="body__about about" data-test="about" id="about">
       <div class="about__wrapper">
@@ -406,9 +408,7 @@
         <!-- 1 список -->
         <ul class="faq__accordion-list faq__accordion-list--current">
           <li class="faq__accordion-item accordion accordion--unhidden">
-
             <h3>Как стать членом <br>фитнес-центра?</h3>
-
             <button class="accordion__button accordion__button--checked" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -418,7 +418,6 @@
                 <use href="/__spritemap#sprite-plus"></use>
               </svg>
             </button>
-
             <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
           </li>
 
@@ -702,10 +701,10 @@
         <form class="form-section__form form" method="post" action="https://echo.htmlacademy.ru">
           <span class="form__inputs-wrapper">
             <label class="form__label visually-hidden" for="name">поле ввода имени</label>
-            <input class="form__input" id="name" name="name" required autocomplete="off" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\s]+">
+            <input class="form__input" type="text" id="name" name="name" required autocomplete="off" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\s]+">
             <span class="form__error-message form__error-message--hidden">Только из букв и пробелов</span>
             <label class="form__label visually-hidden" for="phone-number">поле ввода номера телефона</label>
-            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон" pattern="[0-9\-\s]+">
+            <input class="form__input" type="text" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон" pattern="[0-9\-\s]+">
             <span class="form__error-message form__error-message--hidden">Только из цифр и дефиса</span>
           </span>
           <button class="form__button button" type="submit">отправить</button>
@@ -766,7 +765,7 @@
 
       <ul class="footer__social-list social">
         <li class="social__item">
-          <a class="social__link" href="#" title="наша страница ВКонтекте">
+          <a class="social__link" href="https://vk.com/htmlacademy" title="наша страница ВКонтекте">
             <span class="visually-hidden">Вконтакте</span>
             <svg class="social__vk-icon" width="13" height="8">
               <use href="/__spritemap#sprite-vk"></use>
@@ -774,7 +773,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link " href="#" title="наша страница Однокласники">
+          <a class="social__link " href="https://htmlacademy.ru/courses" title="наша страница Однокласники">
             <span class="visually-hidden">Однокласники</span>
             <svg class="social__ok-icon" width="10" height="17">
               <use href="/__spritemap#sprite-odnoklassniki"></use>
@@ -782,7 +781,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#" title="наша страница Reddit">
+          <a class="social__link" href="https://htmlacademy.ru/profession/frontender/individual" title="наша страница Reddit">
             <span class="visually-hidden">Reddit</span>
             <svg class="social__reddit-icon" width="15" height="15">
               <use href="/__spritemap#sprite-reddit"></use>
