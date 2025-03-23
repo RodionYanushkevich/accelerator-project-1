@@ -1,18 +1,15 @@
 .faq {
   box-sizing: border-box;
-
-  // padding: 70px 15px;
-  padding: 70px 15px;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: 35px;
   align-items: center;
+  width: 100%;
+  padding: 70px 15px;
+  row-gap: 35px;
 
   background-color: #f8f9fc;
 
   @media ($tablet-breakpoint) {
-    // row-gap: 45px;
     row-gap: 44px;
     padding: 61px 45px;
   }
@@ -21,7 +18,6 @@
     box-sizing: border-box;
     padding: 100px 103px;
 
-    // max-width: $desktop;
     column-gap: 40px;
     row-gap: 49px;
 
@@ -44,12 +40,11 @@
   margin: 0;
   padding: 0;
   display: flex;
+
   list-style: none;
 
   @media ($tablet-breakpoint) {
     margin: 0;
-
-    // margin-bottom: 1px;
   }
 
   @media ($desktop-breakpoint) {
@@ -65,14 +60,13 @@
 .faq__accordion-list {
   margin: 0;
   padding: 0;
-  list-style: none;
-
   justify-content: space-between;
   display: flex;
   flex-direction: column;
+
+  list-style: none;
 
   @media ($desktop-breakpoint) {
     grid-column: 2/3;
   }
 }
-

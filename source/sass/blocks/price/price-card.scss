@@ -1,4 +1,6 @@
 .price-card {
+  position: relative;
+
   box-sizing: border-box;
   padding: 53px 42px;
   text-align: center;
@@ -9,13 +11,32 @@
   background: $base-white;
 
   @media ($tablet-breakpoint) {
+    min-width: 380px;
     padding: 65px;
     row-gap: 24px;
   }
 
   @media ($desktop-breakpoint) {
-    min-width: 360px;
     row-gap: 17px;
+    min-width: 360px;
+  }
+
+  &:hover {
+    position: relative;
+    background-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 7px;
+
+      display: block;
+      width: calc(100% - 14px);
+      height: calc(100% - 14px);
+
+      background-color: $base-white;
+    }
   }
 }
 
@@ -26,6 +47,7 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 100%;
+  z-index: 1;
 
   @media ($tablet-breakpoint) {
     font-size: 24px;
@@ -39,6 +61,7 @@
 .price-card__description {
   margin: 0;
   padding: 0;
+  z-index: 1;
 
   @media ($tablet-breakpoint) {
     font-size: 16px;
@@ -48,7 +71,9 @@
 
 .price-card__product-price {
   position: relative;
+
   justify-self: end;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +83,7 @@
   font-weight: 700;
   font-size: 48px;
   line-height: 150%;
+
   color: $base-secondary;
 
   z-index: 1;
@@ -78,13 +104,10 @@
     display: block;
     width: 24px;
     height: 33px;
+
     background-size: 100%;
     background-repeat: no-repeat;
-
-    // background-image: url("../../../img/sprite/rubl.svg");
     background-image: url("../__spritemap#sprite-rubl-view");
-
-    // background-image: url("../../../img/sprite/rubl.svg");
 
     @media ($tablet-breakpoint) {
       width: 30px;
@@ -93,11 +116,12 @@
   }
 
   &::before {
-    // content: "5000";
     content: attr(data-content);
     position: absolute;
     bottom: 24px;
+
     display: inline;
+
     font-weight: 700;
     font-size: 80px;
     color: #e8e8e8;
@@ -115,17 +139,20 @@
 }
 
 .price-card__link {
-  // text-transform: uppercase;
-  // text-decoration: none;
   padding: 25px 0;
   min-height: 66px;
+
   font-size: 12px;
   line-height: 100%;
-
+  z-index: 1;
   color: $base-primary;
   border-color: inherit;
 
-  // @media ($tablet-breakpoint) {
-  //   min-height: 66px;
-  // }
+  @media ($tablet-breakpoint) {
+    min-width: 250px;
+  }
+
+  @media ($tablet-breakpoint) {
+    min-width: 230px;
+  }
 }

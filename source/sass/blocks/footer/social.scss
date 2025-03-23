@@ -3,8 +3,9 @@
   margin: 0;
   padding: 0;
   gap: 20px;
-  list-style: none;
   flex-wrap: wrap;
+
+  list-style: none;
 
   @media ($tablet-breakpoint) {
     gap: 15px;
@@ -18,18 +19,14 @@
 .social__link {
   box-sizing: border-box;
   display: flex;
-
   justify-content: center;
   align-items: center;
-
   width: 25px;
   height: 25px;
 
   background-color: $base-white;
   border-radius: 50%;
   color: #030a1a;
-
-  // padding: 3px;
 
   &:hover {
     color: $base-white;

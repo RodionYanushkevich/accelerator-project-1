@@ -20,7 +20,12 @@ img {
   object-fit: contain;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a,
-li {
+li,
+button {
   -webkit-tap-highlight-color: transparent;
 }

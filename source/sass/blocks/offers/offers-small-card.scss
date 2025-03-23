@@ -27,11 +27,9 @@
   @media ($desktop-breakpoint) {
     min-height: 174px;
 
-    // min-height: unset;
     height: 100%;
     width: 100%;
 
-    // ПОЧЕМУ?  градиент
     border-image: linear-gradient(107deg, #d10a42 0%, #00359f 100%) 1;
   }
 }

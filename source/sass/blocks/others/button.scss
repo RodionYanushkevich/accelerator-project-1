@@ -1,9 +1,10 @@
 .button {
   box-sizing: border-box;
-  padding: 22px 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 22px 0;
 
   font-family: $primary-family;
   font-style: normal;
@@ -14,11 +15,10 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: inherit;
 
+  color: inherit;
   background-color: transparent;
   border: 2px solid $base-white;
-
 
   @media ($tablet-breakpoint) {
     padding: 20px 0;

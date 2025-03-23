@@ -1,6 +1,7 @@
 .slider-button {
   position: absolute;
   top: 50%;
+
   box-sizing: border-box;
   width: 50px;
   height: 50px;
@@ -11,16 +12,16 @@
   z-index: 10;
   color: $base-primary;
 
-  // user-select: none;
   cursor: pointer;
 
   @media ($tablet-breakpoint) {
-    background-color: transparent;
-    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border: none;
     border-radius: 50%;
+    background-color: transparent;
   }
 
   &:hover {

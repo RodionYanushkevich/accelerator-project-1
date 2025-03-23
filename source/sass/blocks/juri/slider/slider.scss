@@ -1,26 +1,23 @@
 .slider-juri {
   @media ($tablet-breakpoint) {
     position: relative;
+
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-
-    width: calc($tablet - 101px + 34px);
-
-    // margin: 0 51px;
+    width: 701px;
   }
 
   @media ($desktop-breakpoint) {
-    width: calc($desktop - 101px + 34px);
+    width: 1299px;
   }
 }
 
 .slider-juri__swiper {
-  // position: relative;
   box-sizing: border-box;
+  width: $mobile;
 
   overflow: hidden;
-  width: $mobile;
 
   @media ($tablet-breakpoint) {
     display: flex;
@@ -35,6 +32,7 @@
 
 .slider-juri figure {
   position: relative;
+
   margin: 0;
   padding: 0;
   width: min-content;
@@ -44,17 +42,17 @@
 .slider-juri__title {
   position: absolute;
   left: 50%;
-
   bottom: 25px;
+
+  width: max-content;
 
   font-weight: 400;
   font-size: 22px;
   line-height: 100%;
-  width: max-content;
-  color: $base-white;
-  cursor: default;
 
-  // pointer-events: none;
+  color: $base-white;
+
+  cursor: default;
 
   transform: translateX(-50%);
 }
@@ -65,25 +63,45 @@
   display: flex;
   justify-content: center;
   outline: none;
-  cursor: pointer;
+
+  @media ($desktop-breakpoint) {
+    cursor: pointer;
+  }
 }
 
-.slider-juri__slide:focus-visible .slider-juri__title,
-.slider-juri__slide:hover .slider-juri__title {
+
+.slider-juri__slide:focus-visible .slider-juri__title {
   display: none;
 }
 
-.slider-juri__slide:hover .slide-hover,
+.slider-juri__slide:hover .slider-juri__title {
+  @media ($desktop-breakpoint) {
+    display: none;
+  }
+}
+
 .slider-juri__slide:focus-visible .slide-hover {
-  // outline: none;
   position: absolute;
   top: 0;
+
   display: flex;
+
+  outline: none;
+}
+
+.slider-juri__slide:hover .slide-hover {
+  @media ($desktop-breakpoint) {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+  }
 }
 
 .slider-juri__wrapper {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 

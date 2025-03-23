@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Фитнес-зал 'SUPERGYM' предлагает современные тренажеры, групповые занятия и персональные тренировки. Начните свой путь к здоровью и хорошей форме с нами!">
   <link rel="preload" href="./fonts/alumni-sans/AlumniSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/alumni-sans/AlumniSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/roboto/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/roboto/RobotoCondensed-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/roboto/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <script type="module" src="js/main.js" defer></script>
 
   <link rel="icon" href="img/favicon.png">
   <title>SUPERGYM</title>
@@ -17,31 +17,33 @@
 </head>
 
 <body class="page__body body">
-  <div class="body__hero-wrapper" data-test="hero">
-    <!-- HEADER -->
-    <header class="body__header header">
-      <picture>
-        <source type="image/svg+xml" media="(min-width:1366px)" srcset="img/logo-desktop.svg" width="130" height="26">
-        <source type="image/svg+xml" media="(min-width:768px)" srcset="img/logo-tablet.svg" width="110" height="22">
-        <img class="header__logo-image logo-image" src="img/logo-mobile.svg" alt="Логотип SUPERGYM" width="100" height="20">
-      </picture>
-
-      <a class="header__link" href="tel:+78005555555">8 800 555-55-55</a>
-    </header>
-    <!-- HERO -->
-    <section class="body__hero hero">
-      <h3 class="hero__city-descripion">Омск</h3>
-      <h1 class="hero__title">Фитнес центр</h1>
-      <p class="hero__description">Тренажёрный зал Групповые занятия
-        Кардио-зона</p>
-      <picture>
-        <source type="image/webp" media="(min-width:1366px)" srcset="img/hero/hero-img-desktop@1x.webp 1x, img/hero/hero-img-desktop@2x.webp 2x" width="500" height="524">
-        <img class="hero__image" src="/img/hero/hero-img-tablet@1x.webp" srcset="/img/hero/hero-img-tablet@2x.webp" alt="Мужчина в футболке Супермена" width="324" height="390">
-      </picture>
-      <a class="hero__link button" href="#price" aria-label="Перейти к разделу с абонементами" disabled>Купить абонемент</a>
-    </section>
-  </div>
   <main class="page__main">
+
+    <section class="hero" data-test="hero">
+      <!-- HEADER -->
+      <header class="hero__header header">
+        <picture>
+          <source type="image/svg+xml" media="(min-width:1366px)" srcset="img/logo-desktop.svg" width="130" height="26">
+          <source type="image/svg+xml" media="(min-width:768px)" srcset="img/logo-tablet.svg" width="110" height="22">
+          <img class="header__logo-image logo-image" src="img/logo-mobile.svg" alt="Логотип SUPERGYM" width="100" height="20">
+        </picture>
+        <a class="header__link" href="tel:+78005555555">8 800 555-55-55</a>
+      </header>
+      <!-- HERO -->
+      <div class="hero__container">
+        <p class="hero__city-descripion">Омск</p>
+        <h1 class="hero__title">Фитнес центр</h1>
+        <p class="hero__description">Тренажёрный зал Групповые занятия
+          Кардио-зона</p>
+
+        <picture>
+          <source type="image/webp" media="(min-width:1366px)" srcset="img/hero/hero-img-desktop@1x.webp 1x, img/hero/hero-img-desktop@2x.webp 2x" width="500" height="524">
+          <img class="hero__image" src="/img/hero/hero-img-tablet@1x.webp" srcset="/img/hero/hero-img-tablet@2x.webp" alt="Мужчина в футболке Супермена" width="324" height="390">
+        </picture>
+
+        <a class="hero__link button" href="#price" aria-label="Перейти к разделу с абонементами">Купить абонемент</a>
+      </div>
+    </section>
     <!-- ABOUT -->
     <section class="body__about about" data-test="about" id="about">
       <div class="about__wrapper">
@@ -57,25 +59,23 @@
         <img class="about__image" src="img/about/about-mobile@1x.webp" srcset="img/about/about-mobile@2x.webp" alt="Фото тренажерного зала" width="320" height="280">
       </picture>
 
-      <div class="about__iframe-video-wrapper">
+      <div class="about__iframe-video-wrapper" data-video="https://www.youtube.com/embed/9TZXsZItgdw?si=Zd_cBYEzV_VapEPN">
+
         <button class="about__video-button" type="button">
           <span class="visually-hidden">Кнопка проигрывания видео</span>
           <svg width="12" height="12">
             <use href="__spritemap#sprite-play-button"></use>
           </svg>
         </button>
+
         <picture>
           <source type="image/webp" media="(min-width:1366px)" srcset="img/about/about-video-desktop@1x.webp 1x, img/about/about-video-desktop@2x.webp 2x" width="360" height="230">
           <source type="image/webp" media="(min-width:768px)" srcset="img/about/about-video-tablet@1x.webp 1x, img/about/about-video-tablet@2x.webp 2x" width="270" height="170">
           <img class="about__image" src="img/about/about-video-mobile@2x.webp" srcset="img/about/about-video-mobile@2x.webp" alt=" превью видео тренажерного зала" width="320" height="170">
         </picture>
-
-        <!-- нагружает -->
-
-        <!-- <iframe width="320" height="170" src="https://www.youtube.com/embed/9TZXsZItgdw?si=Zd_cBYEzV_VapEPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen aria-label="Видео HtmlAcademy Бесплатные интерактивные онлайн-курсы на Ютубе"></iframe> -->
-
       </div>
     </section>
+
     <!-- PRICE -->
     <section class="price" data-test="price" id="price">
       <h2 class="price__title title ">Абонементы</h2>
@@ -95,17 +95,16 @@
         <li class="price__cards-list-item">
           <!-- card 1 -->
           <article class="price__card-wrapper price-card">
-            <h4 class="price-card__title">С тренером</h4>
+            <h3 class="price-card__title">С тренером</h3>
             <p class="price-card__description">12 занятий</p>
             <span class="price-card__product-price" data-content="5000">5000</span>
-            <!-- <span class="price-card__product-price-shadow">5000</span> -->
             <a class="price-card__link button button--gradient-bg" href="#">Купить абонемент</a>
           </article>
         </li>
         <li class="price__cards-list-item">
           <!-- card 2 -->
           <article class="price__card-wrapper price-card">
-            <h4 class="price-card__title">Дневной</h4>
+            <h3 class="price-card__title">Дневной</h3>
             <p class="price-card__description">с 8:00 до 17:00</p>
             <span class="price-card__product-price" data-content="1700">1700</span>
             <a class="price-card__link button button--gradient-bg" href="#">Купить абонемент</a>
@@ -114,7 +113,7 @@
         <li class="price__cards-list-item">
           <!-- card 3 -->
           <article class="price__card-wrapper price-card">
-            <h4 class="price-card__title">Полный день</h4>
+            <h3 class="price-card__title">Полный день</h3>
             <p class="price-card__description">с 8:00 до 22:00</p>
             <span class="price-card__product-price" data-content="2700">2700</span>
             <a class="price-card__link button button--gradient-bg " href="#">Купить абонемент</a>
@@ -122,9 +121,9 @@
         </li>
       </ul>
     </section>
-    <!-- Games -->
+
+    <!-- GAMES -->
     <section class="body__games games" data-test="games">
-      <!-- WHAAAAA -->
       <h2 class="visually-hidden">Специальное предложение</h2>
       <article class="games__card games-card">
         <div class="games-card__container">
@@ -153,7 +152,8 @@
         </picture>
       </article>
     </section>
-    <!-- СЛАЙДЕР -->
+
+    <!-- JURI -->
     <section class="body__juri juri" data-test="juri" id="juri">
       <h2 class="juri__title title ">Жюри</h2>
       <span class="visually-hidden">Список членов жюри</span>
@@ -383,9 +383,10 @@
         </li>
       </ul>
     </section>
+
     <!-- FAQ -->
     <section class="body__faq faq" data-test="faq">
-      <h3 class="faq__title title ">Вопросы и ответы</h3>
+      <h2 class="faq__title title ">Вопросы и ответы</h2>
 
       <ul class="faq__buttons-list faq-buttons">
         <li class="faq-buttons__list-item">
@@ -407,7 +408,7 @@
         <!-- 1 список -->
         <ul class="faq__accordion-list faq__accordion-list--current">
           <li class="faq__accordion-item accordion accordion--unhidden">
-            <h5>Как стать членом <br>фитнес-центра?</h5>
+            <h3>Как стать членом <br>фитнес-центра?</h3>
             <button class="accordion__button accordion__button--checked" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -420,8 +421,8 @@
             <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
           </li>
 
-          <li class="faq__accordion-item accordion">
-            <h5>Где можно посмотреть расписание?</h5>
+          <li class="faq__accordion-item accordion accordion--hidden">
+            <h3>Где можно посмотреть расписание?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -434,8 +435,8 @@
             <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
           </li>
 
-          <li class="faq__accordion-item accordion">
-            <h5>Есть кулеры в центре? Предоставляются полотенца?</h5>
+          <li class="faq__accordion-item accordion accordion--hidden">
+            <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg class="accordion__button-icon" width="14" height="2">
@@ -448,8 +449,8 @@
             <p>Да, в нашем центре есть кулеры с питьевой водой и полотенца, которые можно взять на ресепшене.</p>
           </li>
 
-          <li class="faq__accordion-item accordion">
-            <h5>Сколько тренеров работает в клубе и какова их квалификация?</h5>
+          <li class="faq__accordion-item accordion accordion--hidden">
+            <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -466,7 +467,7 @@
         <!-- 2ой список -->
         <ul class="faq__accordion-list">
           <li class="faq__accordion-item accordion">
-            <h5>Занятия с тренером входят в абонемент?</h5>
+            <h3>Занятия с тренером входят в абонемент?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -479,7 +480,7 @@
             <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
           </li>
           <li class="faq__accordion-item accordion">
-            <h5>Можно ли заморозить абонемент?</h5>
+            <h3>Можно ли заморозить абонемент?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -492,7 +493,7 @@
             <p>Да, вы можете заморозить абонемент на срок до 3 месяцев. Для этого необходимо обратиться к менеджеру клуба и заполнить соответствующее заявление.</p>
           </li>
           <li class="faq__accordion-item accordion">
-            <h5>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h5>
+            <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -505,7 +506,7 @@
             <p>Нет, у нас нет лимита на посещения тренажерного зала. Вы можете посещать его и групповые занятия неограниченное количество раз в течение срока действия абонемента.</p>
           </li>
           <li class="faq__accordion-item accordion">
-            <h5>Что такое семейный доступ и доступ для друзей?</h5>
+            <h3>Что такое семейный доступ и доступ для друзей?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -522,7 +523,7 @@
         <!-- 3ий список -->
         <ul class="faq__accordion-list">
           <li class="faq__accordion-item accordion">
-            <h5>Предлагает ли клуб услуги по консультированию по вопросам питания?</h5>
+            <h3>Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -534,8 +535,9 @@
             </button>
             <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
           </li>
+
           <li class="faq__accordion-item accordion">
-            <h5>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h5>
+            <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -547,8 +549,9 @@
             </button>
             <p>Да, в нашем клубе регулярно проводятся различные мероприятия и соревнования. Мы организуем как спортивные турниры, так и фитнес-мероприятия, которые позволяют нашим членам продемонстрировать свои навыки и поучаствовать в дружеском соревновании. Следите за объявлениями на сайте клуба и в социальных сетях, чтобы не пропустить информацию о предстоящих событиях!</p>
           </li>
+
           <li class="faq__accordion-item accordion">
-            <h5>Можно ли приобрести в центре спортивное питание?</h5>
+            <h3>Можно ли приобрести в центре спортивное питание?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -561,7 +564,7 @@
             <p>Да, в нашем центре вы можете приобрести разнообразные виды спортивного питания. Наши консультанты всегда готовы помочь вам выбрать подходящие продукты в зависимости от ваших потребностей и предпочтений.</p>
           </li>
           <li class="faq__accordion-item accordion">
-            <h5>Есть ли в центре детская комната?</h5>
+            <h3>Есть ли в центре детская комната?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -578,7 +581,7 @@
         <!-- 4ый список -->
         <ul class="faq__accordion-list">
           <li class="faq__accordion-item accordion">
-            <h5>Есть в фитнес-центре дресс-код?</h5>
+            <h3>Есть в фитнес-центре дресс-код?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -592,7 +595,7 @@
           </li>
 
           <li class="faq__accordion-item accordion">
-            <h5>Можно ли приводить с собой детей на тренировки?</h5>
+            <h3>Можно ли приводить с собой детей на тренировки?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -606,7 +609,7 @@
           </li>
 
           <li class="faq__accordion-item accordion">
-            <h5>Какие дополнительные правила посещения центра?</h5>
+            <h3>Какие дополнительные правила посещения центра?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -619,7 +622,7 @@
             <p>Посетители должны соблюдать чистоту, а также уважать других участников. Запрещается приносить еду и напитки в тренировочные зоны. Важно следовать указаниям тренеров и администрации центра.</p>
           </li>
           <li class="faq__accordion-item accordion">
-            <h5>Нужна ли медицинская справка для посещения залов и бассейна?</h5>
+            <h3>Нужна ли медицинская справка для посещения залов и бассейна?</h3>
             <button class="accordion__button" type="button">
               <span class="visually-hidden">кнопка показать / скрыть ответ</span>
               <svg width="14" height="2">
@@ -636,39 +639,42 @@
     </section>
 
     <section class="body__reviews reviews" data-test="reviews">
-      <h3 class="reviews__title title ">Отзывы</h3>
+      <h2 class="reviews__title title ">Отзывы</h2>
 
       <div class="reviews__swiper-buutons-wrapper">
         <!-- REVIEWS SWIPER -->
         <div class="reviews__slider-containter reviews-slider">
           <ul class="reviews-slider__slider-container swiper-wrapper">
+
             <!-- слайд 1 -->
             <li class="reviews-slider__slide swiper-slide">
-              <h6>Анна Орлова</h6>
+              <h3>Анна Орлова</h3>
               <picture>
                 <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
                 <img src="img/reviews/rewiew-mobile@1x.webp" srcset="img/reviews/rewiew-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
               </picture>
               <blockquote>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
             </li>
+
             <!-- слайд 2 -->
             <li class="reviews-slider__slide swiper-slide">
-              <h6 class="reviews-slider__title">РЫБА РЫБА</h6>
+              <h3>Анна Смирнова</h3>
               <picture>
                 <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
                 <img src="img/reviews/rewiew-mobile@1x.webp" srcset="img/reviews/rewiew-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
               </picture>
-              <blockquote class="reviews-slider__description">РЫБА ТЕКСТА ЦЫТАТЫ
+              <blockquote class="reviews-slider__description">«Занимаюсь в Supergym уже год и не собираюсь менять клуб. Атмосфера дружелюбная, и тренеры внимательно следят за техникой выполнения упражнений, что очень важно для меня!»
               </blockquote>
             </li>
+
             <!-- слайд 3 -->
             <li class="reviews-slider__slide swiper-slide">
-              <h6 class="reviews-slider__title">РЫБА РЫБА</h6>
+              <h3>Екатерина Иванова</h3>
               <picture>
                 <source type="image/webp" media="(min-width:768px)" srcset="img/reviews/review-tablet@1x.webp 1x, img/reviews/review-tablet@2x.webp 2x" width="80" height="80">
                 <img src="img/reviews/rewiew-mobile@1x.webp" srcset="img/reviews/rewiew-mobile@2x.webp" alt="фотография клиента " width="68" height="68">
               </picture>
-              <blockquote class="reviews-slider__description">РЫБА ТЕКСТА ЦЫТАТЫ
+              <blockquote class="reviews-slider__description">«Персонал всегда приветливый и готов помочь, а тренажёры в отличном состоянии. Зал просторный,что делает тренировки комфортными!»
               </blockquote>
             </li>
 
@@ -679,7 +685,7 @@
               <use href="__spritemap#sprite-arrow"></use>
             </svg>
           </button>
-          <button class="reviews-slider__slider-button slider-button swiper-button-next" type="button" disabled>
+          <button class="reviews-slider__slider-button slider-button swiper-button-next" type="button">
             <span class="visually-hidden">кнопка следущий слайд</span>
             <svg width="16" height="32">
               <use href="__spritemap#sprite-arrow"></use>
@@ -694,10 +700,12 @@
         <h2 class="form-section__tittle title ">Бесплатное занятие</h2>
         <form class="form-section__form form" method="post" action="https://echo.htmlacademy.ru">
           <span class="form__inputs-wrapper">
-            <label class="form__label visually-hidden" for="name"></label>
-            <input class="form__input" id="name" name="name" pattern="[A-Za-z]+" required autocomplete="off" placeholder="Имя">
-            <label class="form__label visually-hidden" for="phone-number"></label>
-            <input class="form__input" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон" pattern="[\+0-9]+">
+            <label class="form__label visually-hidden" for="name">поле ввода имени</label>
+            <input class="form__input" type="text" id="name" name="name" required autocomplete="off" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\s]+">
+            <span class="form__error-message form__error-message--hidden">Только из букв и пробелов</span>
+            <label class="form__label visually-hidden" for="phone-number">поле ввода номера телефона</label>
+            <input class="form__input" type="text" id="phone-number" name="phone-number" required autocomplete="off" placeholder="Телефон" pattern="[0-9\-\s]+">
+            <span class="form__error-message form__error-message--hidden">Только из цифр и дефиса</span>
           </span>
           <button class="form__button button" type="submit">отправить</button>
         </form>
@@ -707,19 +715,19 @@
         <h2 class="contacts__tittle title">Контакты</h2>
         <ul class="contacts__list">
           <li class="contacts__item">
-            <h5 class="contacts__item-title">Адрес:</h5>
+            <h3 class="contacts__item-title">Адрес:</h3>
             <address class="contacts__item-description">г. Омск, ул. 60 лет Октября, 7</address>
           </li>
           <li class="contacts__item">
-            <h5 class="contacts__item-title">График работы:</h5>
+            <h3 class="contacts__item-title">График работы:</h3>
             <p class="contacts__item-description">Пн-Вс: с 8:00 до 22:00</p>
           </li>
           <li class="contacts__item">
-            <h5 class="contacts__item-title">Телефон:</h5>
+            <h3 class="contacts__item-title">Телефон:</h3>
             <a class="contacts__item-description contacts__link" href="tel:+78005555555">8 800 555-55-55</a>
           </li>
           <li class="contacts__item">
-            <h5 class="contacts__item-title">Email:</h5>
+            <h3 class="contacts__item-title">Email:</h3>
             <a class="contacts__item-description contacts__link" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
           </li>
         </ul>
@@ -757,7 +765,7 @@
 
       <ul class="footer__social-list social">
         <li class="social__item">
-          <a class="social__link" href="#" title="наша страница ВКонтекте">
+          <a class="social__link" href="https://vk.com/htmlacademy" title="наша страница ВКонтекте">
             <span class="visually-hidden">Вконтакте</span>
             <svg class="social__vk-icon" width="13" height="8">
               <use href="/__spritemap#sprite-vk"></use>
@@ -765,7 +773,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link " href="#" title="наша страница Однокласники">
+          <a class="social__link " href="https://htmlacademy.ru/courses" title="наша страница Однокласники">
             <span class="visually-hidden">Однокласники</span>
             <svg class="social__ok-icon" width="10" height="17">
               <use href="/__spritemap#sprite-odnoklassniki"></use>
@@ -773,7 +781,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#" title="наша страница Reddit">
+          <a class="social__link" href="https://htmlacademy.ru/profession/frontender/individual" title="наша страница Reddit">
             <span class="visually-hidden">Reddit</span>
             <svg class="social__reddit-icon" width="15" height="15">
               <use href="/__spritemap#sprite-reddit"></use>
@@ -784,6 +792,7 @@
     </div>
   </footer>
 
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
