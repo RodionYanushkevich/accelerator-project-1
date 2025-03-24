@@ -1,5 +1,4 @@
-import Swiper from 'swiper';
-import { Navigation, Keyboard } from 'swiper/modules';
+import Swiper from '../../vendor/swiper-bundle.min';
 
 const slides = document.querySelectorAll('.slider-juri__slide');
 const slidesContainer = document.querySelector('.slider-juri__swiper');
@@ -30,8 +29,8 @@ const focusSwiperInit = () => {
 };
 
 const swiper = new Swiper('.slider-juri__swiper', {
-  modules: [Navigation, Keyboard],
   loop: true,
+  speed: 300,
   slidesPerView: 1,
   keyboard: {
     enabled: true,
@@ -69,9 +68,12 @@ const swiper = new Swiper('.slider-juri__swiper', {
   },
 });
 
+let isTabPressed = false;
+
 function tabKeydownPreventDeffault (evt) {
   const prevSlide = document.querySelector('.swiper-slide-active');
   const nextSlide = document.querySelector('.swiper-slide-next');
+
 
   if (evt.key === 'Tab') {
     evt.preventDefault();
@@ -79,11 +81,18 @@ function tabKeydownPreventDeffault (evt) {
 
       swiper.slidePrev();
       prevSlide.focus();
-    } else {
-      swiper.slideNext();
+    } else if(!isTabPressed){
       nextSlide.focus();
+      swiper.slideNext();
+
+      isTabPressed = true;
+
+      setTimeout(() => {
+        isTabPressed = false;
+      }, 300);
     }
   }
+
 
   if (evt.key === 'Escape') {
     evt.preventDefault();

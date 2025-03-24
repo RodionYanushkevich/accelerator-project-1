@@ -1,9 +1,6 @@
-
-import Swiper from 'swiper';
-import {Navigation} from 'swiper/modules';
+import Swiper from '../../vendor/swiper-bundle.min';
 
 new Swiper('.reviews-slider', {
-  modules:[Navigation],
   loop: false,
   slidesPerView: 1,
   spaceBetween: 20,
