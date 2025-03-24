@@ -4,6 +4,7 @@ const slides = document.querySelectorAll('.slider-juri__slide');
 const slidesContainer = document.querySelector('.slider-juri__swiper');
 
 let isActive = false;
+let isTabPressed = false;
 
 const mousePreventDeffault = (evt) => {
   evt.preventDefault();
@@ -68,7 +69,6 @@ const swiper = new Swiper('.slider-juri__swiper', {
   },
 });
 
-let isTabPressed = false;
 
 function tabKeydownPreventDeffault (evt) {
   const prevSlide = document.querySelector('.swiper-slide-active');
