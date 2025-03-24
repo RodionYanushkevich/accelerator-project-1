@@ -1,7 +1,7 @@
 import Swiper from '../../vendor/swiper-bundle.min';
 
-const slides = document.querySelectorAll('.slider-juri__slide');
 const slidesContainer = document.querySelector('.slider-juri__swiper');
+const slides = document.querySelectorAll('.slider-juri__slide');
 
 let isActive = false;
 let isTabPressed = false;
@@ -9,6 +9,7 @@ let isTabPressed = false;
 const mousePreventDeffault = (evt) => {
   evt.preventDefault();
 };
+
 
 const updateTabIndexAttribute = () => {
   slides.forEach((slide) => {
@@ -24,7 +25,6 @@ const focusSwiperInit = () => {
   }
   );
   slidesContainer.addEventListener('focusout', () => {
-
     document.removeEventListener('keydown', tabKeydownPreventDeffault);
   });
 };
@@ -71,8 +71,8 @@ const swiper = new Swiper('.slider-juri__swiper', {
 
 
 function tabKeydownPreventDeffault (evt) {
-  const prevSlide = document.querySelector('.swiper-slide-active');
-  const nextSlide = document.querySelector('.swiper-slide-next');
+  const prevSlide = slidesContainer.querySelector('.swiper-slide-active');
+  const nextSlide = slidesContainer.querySelector('.swiper-slide-next');
 
 
   if (evt.key === 'Tab') {
@@ -82,8 +82,8 @@ function tabKeydownPreventDeffault (evt) {
       swiper.slidePrev();
       prevSlide.focus();
     } else if(!isTabPressed){
-      nextSlide.focus();
       swiper.slideNext();
+      nextSlide.focus();
 
       isTabPressed = true;
 
