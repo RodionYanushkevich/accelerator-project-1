@@ -1,11 +1,7 @@
-const DEFAULT_CLASSES_COUNT = 12;
-
-
 const productPrices = document.querySelectorAll('.price-card__product-price');
 const priceFilterButtons = document.querySelectorAll('.price__filter-button');
 
 const priceFilterList = document.querySelector('.price__filter-list');
-const [priceClassesCount] = document.querySelectorAll('.price-card__description');
 
 const getPriceDeffault = () => {
   const prices = [];
@@ -34,20 +30,9 @@ const updatePriceValues = (prices) => {
   }
 };
 
-const updatePriceDescriptionValue = (filterButton) => {
-  const monthvalue = filterButton.innerText.split(' ')[0];
-  const descriptionValue = DEFAULT_CLASSES_COUNT * monthvalue;
-  if (descriptionValue > 12) {
-    priceClassesCount.innerHTML = `${DEFAULT_CLASSES_COUNT * monthvalue} занятия`;
-  } else {
-    priceClassesCount.innerHTML = `${DEFAULT_CLASSES_COUNT * monthvalue} занятий`;
-  }
-};
-
 const updatePrice = (filterButton) => {
   const monthvalue = filterButton.innerText.split(' ')[0];
   const newValues = defaultPrices.map((value) => value * monthvalue);
-  updatePriceDescriptionValue(filterButton);
   updatePriceValues(newValues);
 };
 
