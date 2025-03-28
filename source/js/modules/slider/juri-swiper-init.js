@@ -2,6 +2,7 @@ import Swiper from '../../vendor/swiper-bundle.min';
 
 const slidesContainer = document.querySelector('.slider-juri__swiper');
 const slides = document.querySelectorAll('.slider-juri__slide');
+const nextButton = slidesContainer.querySelector('.swiper-button-next');
 
 let isActive = false;
 let isTabPressed = false;
@@ -20,12 +21,12 @@ const updateTabIndexAttribute = () => {
 const focusSwiperInit = () => {
   slidesContainer.addEventListener('focusin', (evt) => {
     if(evt.target.tagName === 'LI') {
-      document.addEventListener('keydown', tabKeydownPreventDeffault);
+      document.addEventListener('keydown', tabKeydownEvents);
     }
   }
   );
   slidesContainer.addEventListener('focusout', () => {
-    document.removeEventListener('keydown', tabKeydownPreventDeffault);
+    document.removeEventListener('keydown', tabKeydownEvents);
   });
 };
 
@@ -60,7 +61,6 @@ const swiper = new Swiper('.slider-juri__swiper', {
   breakpoints: {
     768: {
       slidesPerView: 2,
-      simulateTouch: true,
     },
     1366: {
       slidesPerView: 4,
@@ -70,10 +70,9 @@ const swiper = new Swiper('.slider-juri__swiper', {
 });
 
 
-function tabKeydownPreventDeffault (evt) {
+function tabKeydownEvents (evt) {
   const prevSlide = slidesContainer.querySelector('.swiper-slide-active');
   const nextSlide = slidesContainer.querySelector('.swiper-slide-next');
-
 
   if (evt.key === 'Tab') {
     evt.preventDefault();
@@ -81,7 +80,15 @@ function tabKeydownPreventDeffault (evt) {
 
       swiper.slidePrev();
       prevSlide.focus();
+
+
     } else if(!isTabPressed){
+
+      if (swiper.realIndex === swiper.slides.length - 1 && +prevSlide.getAttribute('data-swiper-slide-index') === swiper.slides.length - 1) {
+        nextButton.focus();
+        return;
+      }
+
       swiper.slideNext();
       nextSlide.focus();
 
@@ -93,9 +100,8 @@ function tabKeydownPreventDeffault (evt) {
     }
   }
 
-
   if (evt.key === 'Escape') {
     evt.preventDefault();
-    slidesContainer.querySelector('.swiper-button-next').focus();
+    nextButton.focus();
   }
 }

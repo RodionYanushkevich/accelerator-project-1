@@ -184,5 +184,7 @@
     padding-top: 20px;
     flex-direction: row;
     column-gap: 40px;
+    max-width: $desktop;
+    flex-wrap: wrap;
   }
 }
